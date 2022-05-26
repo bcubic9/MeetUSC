@@ -1,1 +1,1 @@
-This is a test.
+The MeetUSC Application for CSCE 247
