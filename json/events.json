@@ -5,5 +5,19 @@
     "address":"209 S Sumter St Columbia, SC 29201 United States",
     "size": 20,
     "inPerson": true
+  },
+  {
+    "id":"840b1734-dd18-11ec-9d64-0242ac120002",
+    "name":"Axe Throwing",
+    "address":"700 Gervais St b2, Columbia, SC 29201",
+    "size": 10,
+    "inPerson": true
+  },
+  {
+    "id":"c7c1448a-dd18-11ec-9d64-0242ac120002",
+    "name":"Counter-Strike: Global Offensive",
+    "address":"???",
+    "size": 5,
+    "inPerson": false
   }
 ]
