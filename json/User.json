@@ -1,0 +1,18 @@
+[
+    {"userId" : "fd2a1d6d-3419-401c-a021-cbd2b444d86c"}, 
+    {"password" : "qwertyPASS"},
+    {"displayName" : "JohnS00"},
+    {"name" : "John Smith"},
+    {"gender" : "Male"},
+    {"age" : 22},
+    {"date" : "05-26-22"},
+    {"numOfGroups" : 0},
+    {"hobby" : ""},
+    {"email address" : "jsmith00@gmail.com"},
+    {"hasAgreedToTerms" : true},
+    {"profileIsPublic" : false},
+    {"favoriteGroups" : ["ColumbiaFireFliesWatchers", "River-Rafters of Columbia"]},
+    {"categoriesOfInterest" : ["sports", "outdoors"]},
+    {"adminPrivileges" : false},
+    {"authorPrileges" : true}
+]
