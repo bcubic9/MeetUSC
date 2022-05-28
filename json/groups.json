@@ -40,5 +40,19 @@
         "author" : "Samantha King",
         "chat" : ["Hello, everyone reading this. I hope you would like to come and help us help others"],
         "authorContact" : "samami@gmail.com"
+    },
+    {
+        "groupID":"3bcfa771-6433-4c61-bd72-a66d628c7b20",
+        "groupName":"Frisbee disc throwing",
+        "subseqEvents" : ["None"],
+        "groupSize": 2,
+        "typesOfCategories" : ["Outdoors", "Frisbee"],
+        "members" : ["John Smith", "Samantha King"],
+        "shortDescription" : "frisbee aficionados",
+        "longDescription" : "This group is for those who enjoy throwing the disc in the park.",
+        "rating" : 3,
+        "author" : "Samantha King",
+        "chat" : ["Hello, everyone reading this. Join us at the park sometime.", "Had a great time with John Smith at the park this past weekend."],
+        "authorContact" : "samami@gmail.com"
     }
 ]
