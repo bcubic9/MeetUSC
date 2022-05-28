@@ -1,9 +1,16 @@
 [
     {
-        "groupID":"UUID",
-        "groupName":"",
-        "groupSize":"",
-        ""
-
+        "groupID":"bc0113f6-c984-4bc4-8d14-b352fbee92ff",
+        "groupName":"River Rafters of Columbia",
+        "subseqEvents" : ["Congaree River Rafting on June 4th, 2022"],
+        "groupSize": 1,
+        "typesOfCategories" : ["Outdoors", "Rafting"],
+        "members" : ["John Smith"],
+        "shortDescription" : "Tranquil and high adrenaline river rafting",
+        "longDescription" : "This group is for the purpose of tranquil and high adrenaline river rafting",
+        "rating" : 5,
+        "author" : "John Smith",
+        "chat" : ["Hello, everyone reading this. I hope you would like to come and join me having fun rafting this weekend."],
+        "authorContact" : "jsmith00@gmail.com"
     }
 ]
