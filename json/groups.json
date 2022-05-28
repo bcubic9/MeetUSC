@@ -12,5 +12,33 @@
         "author" : "John Smith",
         "chat" : ["Hello, everyone reading this. I hope you would like to come and join me having fun rafting this weekend."],
         "authorContact" : "jsmith00@gmail.com"
+    },
+    {
+        "groupID":"bc0113f6-c984-4bc4-8d14-b352fbee92ff",
+        "groupName":"Builders of America",
+        "subseqEvents" : ["None"],
+        "groupSize": 100,
+        "typesOfCategories" : ["Outdoors", "Construction"],
+        "members" : ["John Smith", "Samantha King", "Robert Builder"],
+        "shortDescription" : "Building Homes across America for no profit",
+        "longDescription" : "This group is for the purpose of helping others who have suffered at the hands of natural disasters, fires, etc.",
+        "rating" : 5,
+        "author" : "Robert Builder",
+        "chat" : ["Hello, everyone reading this. I hope you would like to come and help us help others"],
+        "authorContact" : "bobbyboy@gmail.com"
+    },
+    {
+        "groupID":"2550890a-a64b-4ef8-9d0e-10501ae2e08f",
+        "groupName":"ColumbiaFireFliesWatchers",
+        "subseqEvents" : ["None"],
+        "groupSize": 3,
+        "typesOfCategories" : ["Outdoors", "Baseball"],
+        "members" : ["John Smith", "Samantha King", "Robert Builder"],
+        "shortDescription" : "Baseball fans",
+        "longDescription" : "This group is for going to the local minor league baseball team.",
+        "rating" : 3,
+        "author" : "Samantha King",
+        "chat" : ["Hello, everyone reading this. I hope you would like to come and help us help others"],
+        "authorContact" : "samami@gmail.com"
     }
 ]
