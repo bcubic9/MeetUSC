@@ -19,5 +19,12 @@
     "address":"???",
     "size": 5,
     "inPerson": false
+  },
+  {
+    "id":"a102b596-b30e-4de6-993a-e82afc7d8a1c",
+    "name":"Congaree River Rafting on June 4th, 2022",
+    "address":"Somewhere on the Congaree river, as of yet, undetermined",
+    "size": 1,
+    "inPerson": true
   }
 ]
