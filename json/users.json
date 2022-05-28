@@ -1,0 +1,54 @@
+[
+    {
+        "userId" : "fd2a1d6d-3419-401c-a021-cbd2b444d86c", "password" : "qwertyPASS",
+        "displayName" : "JohnS00",
+        "name" : "John Smith",
+        "gender" : "Male",
+        "age" : 22,
+        "date" : "05-26-22",
+        "numOfGroups" : 2,
+        "hobby" : ["Rafting", "Baseball"],
+        "email address" : "jsmith00@gmail.com",
+        "hasAgreedToTerms" : true,
+        "profileIsPublic" : false,
+        "favoriteGroups" : ["ColumbiaFireFliesWatchers", "River-Rafters of Columbia"],
+        "categoriesOfInterest" : ["sports", "outdoors"],
+        "adminPrivileges" : false,
+        "authorPrileges" : true
+    }, 
+    {
+        "userId" : "8258b3b4-bbb6-45a5-9bf2-267d3af21191", "password" : "qwerty2",
+        "displayName" : "Bob0123",
+        "name" : "Robert Builder",
+        "gender" : "Male",
+        "age" : 30,
+        "date" : "05-28-22",
+        "numOfGroups" : 0,
+        "hobby" : ["Building things", "Wearing Hardhats"],
+        "email address" : "bobbyboy@gmail.com",
+        "hasAgreedToTerms" : true,
+        "profileIsPublic" : true,
+        "favoriteGroups" : ["Builders of America", "Home Building for the Homeless"],
+        "categoriesOfInterest" : ["Construction", "outdoors"],
+        "adminPrivileges" : false,
+        "authorPrileges" : true
+    },
+    {
+        "userId" : "3cdec68b-0b06-4a8a-8bf3-76390bce6ae9", "password" : "poiuy123",
+        "displayName" : "SamIAm",
+        "name" : "Samantha King",
+        "gender" : "Female",
+        "age" : 25,
+        "date" : "05-28-22",
+        "numOfGroups" : 1,
+        "hobby" : ["Frisbee disc throwing"],
+        "email address" : "samami@gmail.com",
+        "hasAgreedToTerms" : true,
+        "profileIsPublic" : true,
+        "favoriteGroups" : ["Park Frisbee Group"],
+        "categoriesOfInterest" : ["Frisbee", "make-up"],
+        "adminPrivileges" : false,
+        "authorPrileges" : false
+    }
+    
+]
