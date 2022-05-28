@@ -48,7 +48,7 @@
         "favoriteGroups" : ["Park Frisbee Group"],
         "categoriesOfInterest" : ["Frisbee", "make-up"],
         "adminPrivileges" : false,
-        "authorPrileges" : false
+        "authorPrileges" : true
     }
     
 ]
