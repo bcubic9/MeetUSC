@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
+
 public class EventList{
+
     public EventList<Event> events;
     public ArrrayList<EventList> eventList;
 

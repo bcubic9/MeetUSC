@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Event{
     public boolean inPerson;
-    public ArrayList <Category> categories;
+    public ArrayList<Category> categories;
     public ArrayList <User> attendees;
     public String name;
     public String location; 
