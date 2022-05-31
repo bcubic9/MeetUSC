@@ -6,7 +6,7 @@ public class User {
 
 
     public void notifyOfMessage(String message) {
-        
+
     }
 
     public void addInterestCategories(ArrayList<Category> Category) {
@@ -18,6 +18,14 @@ public class User {
     }
 
     public void acceptMember(User member) {
+            
+    }
+
+    public void rejectMember(User member) {
+            
+    }
+
+    public void removeMember(User member, boolean adminPrivileges) {
             
     }
     
