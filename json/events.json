@@ -4,27 +4,34 @@
     "name":"Habitat for Humanity",
     "address":"209 S Sumter St Columbia, SC 29201 United States",
     "size": 20,
-    "inPerson": true
+    "inPerson": true,
+    "description": "Help us build houses!"
   },
   {
     "id":"840b1734-dd18-11ec-9d64-0242ac120002",
     "name":"Axe Throwing ",
     "address":"700 Gervais St b2, Columbia, SC 29201",
     "size": 10,
-    "inPerson": true
+    "inPerson": true,
+    "description": "Aim for the head!"
+
   },
   {
     "id":"c7c1448a-dd18-11ec-9d64-0242ac120002",
     "name":"Counter-Strike: Global Offensive",
     "address":"Not Applicable",
     "size": 5,
-    "inPerson": false
+    "inPerson": false,
+    "description": "Must be good to join"
+
   },
   {
     "id":"a102b596-b30e-4de6-993a-e82afc7d8a1c",
     "name":"Congaree River Rafting on June 4th, 2022",
     "address":"Somewhere on the Congaree river, as of yet, undetermined",
     "size": 1,
-    "inPerson": true
+    "inPerson": true,
+    "description": "Let's explorer the Congaree river!!"
+
   }
 ]
