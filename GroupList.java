@@ -22,12 +22,8 @@ public class GroupList {
 
     }
 
-    private void addGroup(Group group){
-
-    }
-
-    private Group addGroup(Group group){
-
+    private boolean addGroup(Group group){
+        return false;
     }
 
     private Group editGroup(Group group){

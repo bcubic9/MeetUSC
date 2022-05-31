@@ -1,14 +1,17 @@
-public class OnlineEvent {
+import java.util.Date;
+import java.util.ArrayList;
+public class OnlineEvent extends User {
 private Location location;
-private DateTime eDate;
+private Date eDate;
 private int numOfAttendees;
-    private User getAttendees(){
-
+private ArrayList<User> eventAttendees = new ArrayList<User>();
+    private ArrayList<User> getAttendees(){
+        return eventAttendees;
     }
     private void addAttendee(User  attendee){
 
     }
-    private String toString(){
-        
+    public String toString(){
+        return "";
     }
 }

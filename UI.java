@@ -5,6 +5,7 @@ public class UI
    private String password;
    public Character guestLogin; 
    public boolean exitApp;
+   private Event event;
 
    public ArrayList<Group> displayFavoriteGroups()
    {
@@ -21,7 +22,7 @@ public class UI
    public ArrayList<String> displayEventPage(Event event)
    {
        this.event = event;
-       ArrayList<String> eventPage = new ArrayList<String>(event);
+       ArrayList<String> eventPage = new ArrayList<String>();
        return eventPage;
    }
 
