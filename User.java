@@ -2,9 +2,6 @@ import java.util.ArrayList;
 
 public class User {
 
-
-
-
     public void notifyOfMessage(String message) {
         
     }
