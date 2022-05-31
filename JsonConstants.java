@@ -1,4 +1,4 @@
-class JsonConstants {
+public abstract class JsonConstants {
 
     // Event constants
     public static final String EVENTS_ID = "id";
