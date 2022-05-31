@@ -11,7 +11,7 @@ public class Event{
     public String shortDescription;
     public String longDescription;
     public ArrayList<Message> messages;
-    private Event event(){
+    private Event (){
 
     }
     public String toString(){
