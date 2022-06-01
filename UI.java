@@ -19,7 +19,13 @@ public class UI
      String username = input.nextLine().trim();
      System.out.println("\n Password:");
      String password = input.nextLine().trim();
-     User user = MeetUSCFacade.login(username, password);
+     /** 
+      * need to check and see if the boolean is true/false. if true, then allow them to edit items, etc. if false, don't allow them
+      * to do certain activities.
+      * 
+      * User won't be give the return of the login.
+      */
+     User user = MeetUSCFacade.login(username, password);  
     
      if(user != null)
      {

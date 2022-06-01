@@ -22,7 +22,7 @@ class MeetUSCFacade
         return null;
     }
 
-    public boolean login(User username, String password)
+    public boolean login(String username, String password)
     {
         return false;
     }
