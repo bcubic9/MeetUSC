@@ -1,6 +1,6 @@
 
 
-import java.lang.reflect.Array;
+//import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Group {
@@ -15,7 +15,7 @@ public class Group {
     private Author author;
     private ArrayList<String> chat;
     private User authorContact;
-    private ArrayList<Messsage> messages;
+    private ArrayList<Message> messages;
 
 
 
