@@ -1,8 +1,8 @@
 public abstract class JsonConstants {
 
     // File Names
-    public static final String EVENT_FILE_NAME = "events.json";
-    public static final String USER_FILE_NAME = "users.json";
+    public static final String EVENT_FILE_NAME = "../json/events.json";
+    public static final String USER_FILE_NAME = "../json/users.json";
     public static final String GROUP_FILE_NAME = "groups.json";
     // Event constants
     public static final String  EVENT_ID = "a102b596-b30e-4de6-993a-e82afc7d8a1c";
