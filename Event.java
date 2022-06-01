@@ -1,6 +1,9 @@
+
+import java.util.ArrayList;
+
 public class Event{
     public boolean inPerson;
-    public ArrayList <Category> categories;
+    public ArrayList<Category> categories;
     public ArrayList <User> attendees;
     public String name;
     public String location; 
@@ -9,14 +12,22 @@ public class Event{
     public String shortDescription;
     public String longDescription;
     public ArrayList<Message> messages;
-<<<<<<< HEAD
-    private Event event(){
-=======
->>>>>>> 8957bff49fabee6290a19104cfaf5cf41875a60e
 
 public Event event(String name, String shortDescription, ArrayList<Category> categories){
+    this.name = name;
+    this.shortDescription = shortDescription;
+    ArrayList<Category> categories = new ArrayList<>();
 }
-public Event event(UUID id, String name, String shortDescription, String longDescription, ArrayList<Category> categories, String ArrayList<User> attendees, ArrayList<Message> messages){
+public Event event(UUID id, String name, String shortDescription, String longDescription, 
+ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> messages){
+    this.id = id;
+    this.name = name;
+    this.shortDescription = shortDescription;
+    this.longDescription = longDescription;
+    ArrayList<Category> categories = new ArrayList<>();
+    ArrayList<User> attendees = new ArrayList<>();
+    ArrayList<Message> messages = new ArrayList<>();
+
 }
     public String toString(){
         return "";
