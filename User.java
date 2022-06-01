@@ -28,9 +28,9 @@ protected ArrayList<Category> categoriesOfInterest = null;
 //public boolean authorPrivileges(User user) {
 
 //}
-public User(String name){
-    
- }
+public User(String displayName){
+    this.displayName = name;
+}
 
 /**
  * Let's decrease the number of parameters given here. consider prompting 
@@ -52,13 +52,13 @@ private String getName(){
   return "";
 }
 private void setName(String newName){
-
+  
 }
 private String getDisplayName(){
-  return "";
+  return displayName;
 }
 private void setDisplayName(String newDisplayname){
-
+  this.displayName = newDisplayname;
 }
 private String etEmailAddress(){
   return "";
