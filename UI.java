@@ -1,12 +1,36 @@
-import java.util.ArrayList;
+import java.util.*;
 public class UI 
 {
-   public String username;
-   private String password;
-   public Character guestLogin; 
-   public boolean exitApp;
-   private Event event;
 
+    Scanner input = new Scanner(System.in);
+    MeetUSCFacade facade = new MeetUSCFacade();
+
+   public UI()
+   {
+
+   }
+
+   public void run()
+   {
+     
+     System.out.println("Welcome to MeetUSC."); 
+     System.out.println("\n Enter your login information below:");
+     System.out.println("\n Username:");
+     String username = input.nextLine().trim();
+     System.out.println("\n Password:");
+     String password = input.nextLine().trim();
+     User user = MeetUSCFacade.login(username, password);
+    
+     if(user != null)
+     {
+        displayUserPage(user);
+     }
+     else 
+     {
+         System.out.println("Oops! The user "+ username + " does not exist.");
+     }
+
+   }
    public ArrayList<Group> displayFavoriteGroups()
    {
         ArrayList<Group> favorites = new ArrayList<Group>();
@@ -21,7 +45,6 @@ public class UI
 
    public ArrayList<String> displayEventPage(Event event)
    {
-       this.event = event;
        ArrayList<String> eventPage = new ArrayList<String>();
        return eventPage;
    }
@@ -36,10 +59,5 @@ public class UI
    {
        ArrayList<String> userPage = new ArrayList<String>();
        return userPage;
-   }
-
-   public void exitSystem(boolean exit)
-   {
-       
    }
 }
