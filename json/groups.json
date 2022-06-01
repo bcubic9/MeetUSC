@@ -2,7 +2,7 @@
     {
         "groupID":"bc0113f6-c984-4bc4-8d14-b352fbee92ff",
         "groupName":"River Rafters of Columbia",
-        "subseqEvents" : ["Congaree River Rafting on June 4th, 2022"],
+        "upcomingEvents" : ["Congaree River Rafting on June 4th, 2022"],
         "groupSize": 1,
         "typesOfCategories" : ["Outdoors", "Rafting"],
         "members" : ["John Smith"],
@@ -16,7 +16,7 @@
     {
         "groupID":"bc0113f6-c984-4bc4-8d14-b352fbee92ff",
         "groupName":"Builders of America",
-        "subseqEvents" : ["None"],
+        "upcomingEvents" : ["None"],
         "groupSize": 100,
         "typesOfCategories" : ["Outdoors", "Construction"],
         "members" : ["John Smith", "Samantha King", "Robert Builder"],
@@ -30,7 +30,7 @@
     {
         "groupID":"2550890a-a64b-4ef8-9d0e-10501ae2e08f",
         "groupName":"ColumbiaFireFliesWatchers",
-        "subseqEvents" : ["None"],
+        "upcomingEvents" : ["None"],
         "groupSize": 3,
         "typesOfCategories" : ["Outdoors", "Baseball"],
         "members" : ["John Smith", "Samantha King", "Robert Builder"],
@@ -44,7 +44,7 @@
     {
         "groupID":"3bcfa771-6433-4c61-bd72-a66d628c7b20",
         "groupName":"Frisbee disc throwing",
-        "subseqEvents" : ["None"],
+        "upcomingEvents" : ["None"],
         "groupSize": 2,
         "typesOfCategories" : ["Outdoors", "Frisbee"],
         "members" : ["John Smith", "Samantha King"],
