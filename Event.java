@@ -18,7 +18,8 @@ public Event event(String name, String shortDescription, ArrayList<Category> cat
     this.shortDescription = shortDescription;
     ArrayList<Category> categories = new ArrayList<>();
 }
-public Event event(UUID id, String name, String shortDescription, String longDescription, 
+//can get rid of uuidmaker as a class and call the uuid method .run to store the variable returned.
+public Event event(UUIDMaker id, String name, String shortDescription, String longDescription, 
 ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> messages){
     this.id = id; //id isn't declared
     this.name = name;
