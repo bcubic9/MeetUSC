@@ -5,7 +5,7 @@ public UserList userList;
 public ArrayList<User> users;
 public ArrayList<User> tempBannedUsers;
 public ArrayList<User> bannedUsers;
-    private UserList(){
+    private UserList(String name){
 
     }
     public UserList getInstance(){
@@ -14,7 +14,7 @@ public ArrayList<User> bannedUsers;
     public ArrayList<User> getAllUsers(){
         return users;
     }
-    private void addUser(){
-
+    private void addUser(String name){
+        users.add(new User(name));
     }
 }

@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class User {
-protected UUID userId;
-protected String password
+protected UUIDMaker userId;
+protected String password;
 protected String displayName; 
 protected String name;
 protected String gender;
@@ -16,24 +16,31 @@ protected boolean hasAgreedToTerms;
 protected boolean profileIsPublic;
 protected ArrayList<Group> favoriteGroups; 
 protected ArrayList<Category> categoriesOfInterest = null;
-protected boolean adminPrivileges(User user) {
+/**
+ * May need to get rid of or alter this method.
+ */
+//public boolean adminPrivileges(User user) {
 
-}
-protected boolean authorPrivileges(User user) {
+//}
+/**
+ * May need to get rid of or alter this method.
+ */
+//public boolean authorPrivileges(User user) {
 
-}
-public User user (String name, String shortDescription, ArrayList<Category> categories){
+//}
+public User(String name){
     
  }
 
 /**
  * Let's decrease the number of parameters given here. consider prompting 
  * the user for them with System.out.println("Some prompt here");
+ * get rid of the string infront of arraylist. red line will appear. you need appropriate parameters.
  */ 
-public User user(UUID id, String name, String shortDescription, 
-                   String longDescription, ArrayList<Category> categories, 
-                   String ArrayList<User> attendees, ArrayList<Message> messages){
-                   }
+//public User(UUIDMaker id, String name, String shortDescription, 
+//                   String longDescription, ArrayList<Category> categories, 
+//                   ArrayList<User> attendees, ArrayList<Message> messages){
+//                   }
 public String toString(){
   return "";
 }
