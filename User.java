@@ -73,16 +73,16 @@ private void setUserId(String userID){
 
 }
 private ArrayList<String> getHobbies(){
-  return getHobbies;
+  return hobby;
 
 }
 private void setHobby(String hobby){
 
 }
-private ArrayList<String> getFavoriteGroups(){
-  return getFavoriteGroups;
+private ArrayList<Group> getFavoriteGroups(){
+  return favoriteGroups;
 }
-
+//may need to change this to addfavoritegroup instead of set.
 private void setFavoriteGroup(Group group){
 
 }

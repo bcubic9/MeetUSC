@@ -32,7 +32,7 @@ public class DataReader extends JsonConstants {
                 String  userAdminPrivileges = (String)userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 String  userAuthorPrivileges = (String)userJsonObject.get(USER_AUTHOR_PRIVILEGES);
                 
-                UserList.addUser(new User(String userDisplayName.));
+                UserList.addUser(new User(userDisplayName));
                 /*
                  *  public static final String     USER_ID = "fd2a1d6d-3419-401c-a021-cbd2b444d86c";
                     public static final String     USER_PASSWORD = "qwertyPASS";
