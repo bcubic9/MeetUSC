@@ -6,7 +6,7 @@ public class GroupList {
     private ArrayList<GroupList> eventList;
     
 
-    public GroupList(){
+    private GroupList(){
 
 
     }
@@ -16,17 +16,13 @@ public class GroupList {
 
     }
 
-    private ArrayList<Group> getGroups(){
+    public ArrayList<Group> getGroups(){
         return allGroups;
 
 
     }
 
-    private void addGroup(Group group){
-
-    }
-
-    private Group addGroup(Group group){
+    public void addGroup(Group group){
 
     }
 
@@ -35,22 +31,22 @@ public class GroupList {
 
     }
 
-    private Group removeGroup(Group group){
+    public Group removeGroup(Group group){
         return group;
 
     }
 
-    private Group searchForGroup(Group group){
+    public Group searchForGroup(Group group){
         return group;
 
     }
 
-    private ArrayList<Group> getFavoriteGroup(){
+    public ArrayList<Group> getFavoriteGroup(){
         return allGroups;
         
     }
 
-    private void addFavoriteGroup(Group group){
+    public void addFavoriteGroup(Group group){
 
     }
 
