@@ -1,13 +1,15 @@
 public class DataWriter {
-    public void saveUsers() {
+    public boolean saveUsers() {
+        return false;
 
     }
 
-    public void saveEvents() {
+    public boolean saveEvents() {
+        return false;
         
     }
 
-    public void saveGroups() {
-        
+    public boolean saveGroups() {
+        return false;
     }
 }
