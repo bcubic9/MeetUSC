@@ -11,23 +11,30 @@ protected int date;
 protected ArrayList<Group> groupsCreated;
 protected int NumberOfGroup;
 protected ArrayList<String> hobby;
-protected String emailAddress
+protected String emailAddress;
 protected boolean hasAgreedToTerms;
 protected boolean profileIsPublic;
 protected ArrayList<Group> favoriteGroups; 
-protected categoriesOfInterest = null;
-protected boolean adminPrivileges(User user);
-protected boolean authorPrivileges(User user);
+protected ArrayList<Category> categoriesOfInterest = null;
+protected boolean adminPrivileges(User user) {
+
+}
+protected boolean authorPrivileges(User user) {
+
+}
 public User user (String name, String shortDescription, ArrayList<Category> categories){
     
  }
 
-
+/**
+ * Let's decrease the number of parameters given here. consider prompting 
+ * the user for them with System.out.println("Some prompt here");
+ */ 
 public User user(UUID id, String name, String shortDescription, 
                    String longDescription, ArrayList<Category> categories, 
                    String ArrayList<User> attendees, ArrayList<Message> messages){
                    }
-private String toString(){
+public String toString(){
   return "";
 }
     
