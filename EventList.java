@@ -18,8 +18,10 @@ public class EventList{
     }
     public Event editEvent(Event event) {
         return events.get(0);
+        
     }
     public Event removeEvent(Event event){
+   
         return events.get(0);
     }
     public Event searchForEvent(Event Event){
