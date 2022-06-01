@@ -11,9 +11,11 @@ public class Event{
     public String shortDescription;
     public String longDescription;
     public ArrayList<Message> messages;
-    private Event (){
 
-    }
+public Event event(String name, String shortDescription, ArrayList<Category> categories){
+}
+public Event event(UUID id, String name, String shortDescription, String longDescription, ArrayList<Category> categories, String ArrayList<User> attendees, ArrayList<Message> messages){
+}
     public String toString(){
         return "";
     }
