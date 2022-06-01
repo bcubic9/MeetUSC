@@ -20,14 +20,17 @@ public class Group{
     private UUID id;
 
     
-    public Group(String name){
+    public Group(String name, String shortDesciption, ArrayList<Category> categories){
 
         id = UUID.randomUUID();
-      
         this.name = name;
+        this.shortDescription = shortDescription;
+        this.category = category;
    
 
     }
+
+
     private Group(UUID id, String name, String shortDescription, ArrayList<Category> categories, ArrayList<User> members, ArrayList<Event> events){
         this.id = id;
         this.name = name;
@@ -42,6 +45,7 @@ public class Group{
 
     public void joinGroup(User member){
 
+        
         
 
     }

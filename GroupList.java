@@ -1,24 +1,24 @@
 import java.util.ArrayList;
 
-public class GroupList {
+public class GroupList{
 
-    private ArrayList<Group> allGroups;
-    private ArrayList<GroupList> eventList;
+    private ArrayList<Group> groups;
+    private GroupList groupList;
     
 
     private GroupList(){
+       
 
 
     }
     
     public Group getInstance(){
-        return null;
+        return groups.get(0);
 
     }
 
     public ArrayList<Group> getGroups(){
-        return allGroups;
-
+        return groups;
 
     }
 
@@ -27,22 +27,23 @@ public class GroupList {
     }
 
     private Group editGroup(Group group){
-        return group;
+        return groups.get(0);
 
     }
 
     public Group removeGroup(Group group){
-        return group;
+        return groups.get(0);
+
 
     }
 
     public Group searchForGroup(Group group){
-        return group;
+        return groups.get(0);
 
     }
 
     public ArrayList<Group> getFavoriteGroup(){
-        return allGroups;
+        return groups;
         
     }
 
