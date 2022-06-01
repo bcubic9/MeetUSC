@@ -1,5 +1,6 @@
+import java.util.ArrayList;
 public class Author {
-    public ArrayList<event> myEvents;
+    public ArrayList<Event> myEvents;
     private void addEvents(){
     
     }
