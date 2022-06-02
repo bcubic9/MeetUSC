@@ -2,11 +2,6 @@
 import java.util.List;
 
 public class User {
-    enum Gender{
-        Male,
-        Famale,
-        Other
-    }
 
     private String userId;
     private String password;
@@ -22,6 +17,11 @@ public class User {
     private Boolean hasAgreedToTerms;
     private Boolean profilesPublic;
     private List<Group> favoriteGroups;
+
+    public User()
+    {
+
+    }
 
     public String getName() {
         return name;
