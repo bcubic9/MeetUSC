@@ -20,7 +20,7 @@ public class Group{
     private UUID id;
 
     
-    public Group(String name, String shortDesciption, ArrayList<Category> categories){
+    private Group(String name, String shortDesciption, ArrayList<Category> categories){
 
         id = UUID.randomUUID();
         this.name = name;
@@ -44,6 +44,7 @@ public class Group{
 
 
     public void joinGroup(User member){
+        member.acceptMember(member);
 
         
         
@@ -51,36 +52,55 @@ public class Group{
     }
 
     public void leaveGroup(User member){
+        member.removeMember(member, true);
          
 
     }
 
     public void displayMessage(User member){
 
+
     }
 
     public void displayShortDescription(String shortDescription){
+
+        
+        
+        
 
     }
 
     public void displayLongDescription(String longDescription){
 
+
+
     }
 
     public void displayGroupMember(ArrayList<User> members){
+
+        System.out.println(members);
 
     }
 
     public void displayTypesOfCategories(ArrayList<Category> typesOfCategories){
 
+        System.out.println(typesOfCategories);
+        
+
     }
 
     public void displayInPerson(Boolean inPerson){
+        if(inPerson == true){
+        
+        }
+
+        
 
     }
 
     public void addToAllGroups(Group group){
 
+        group.addToAllGroups(group);
     }   
 
 
