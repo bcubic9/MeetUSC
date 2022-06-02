@@ -1,20 +1,8 @@
-import java.util.ArrayList;
+import java.util.List;
 
-public class UserList{
-//public static UserList userList = null; //careful for nullpointer exception
-public ArrayList<User> users = new ArrayList<User>();
-public ArrayList<User> tempBannedUsers;
-public ArrayList<User> bannedUsers;
-    private UserList(String name){
-
-    }
-    public UserList getInstance(){
-        return null;
-    }
-    public ArrayList<User> getAllUsers(){
-        return users;
-    }
-    private void addUser(String name){
-        users.add(new User(name));
-    }
+public class UserList {
+    private UserList userList;
+    private List<User> users;
+    private List<User> tempBannedUsers;
+    private List<User> bannedUsers;
 }

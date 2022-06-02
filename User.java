@@ -1,142 +1,69 @@
-import java.util.ArrayList;
+
+import java.util.List;
 
 public class User {
-protected UUIDMaker userId;
-protected String password;
-protected String displayName; 
-protected String name;
-protected String gender;
-protected int age;
-protected int date;
-protected ArrayList<Group> groupsCreated;
-protected int NumberOfGroup;
-protected ArrayList<String> hobby;
-protected String emailAddress;
-protected boolean hasAgreedToTerms;
-protected boolean profileIsPublic;
-protected ArrayList<Group> favoriteGroups; 
-protected ArrayList<Category> categoriesOfInterest = null;
-/**
- * May need to get rid of or alter this method.
- */
-//public boolean adminPrivileges(User user) {
-
-//}
-/**
- * May need to get rid of or alter this method.
- */
-//public boolean authorPrivileges(User user) {
-
-//}
-public User(String displayName){
-    this.displayName = name;
-}
-
-/**
- * Let's decrease the number of parameters given here. consider prompting 
- * the user for them with System.out.println("Some prompt here");
- * get rid of the string infront of arraylist. red line will appear. you need appropriate parameters.
- */ 
-//public User(UUIDMaker id, String name, String shortDescription, 
-//                   String longDescription, ArrayList<Category> categories, 
-//                   ArrayList<User> attendees, ArrayList<Message> messages){
-//                   }
-public String toString(){
-  return "";
-}
-    
-
-
-
-private String getName(){
-  return "";
-}
-private void setName(String newName){
-  
-}
-private String getDisplayName(){
-  return displayName;
-}
-private void setDisplayName(String newDisplayname){
-  this.displayName = newDisplayname;
-}
-private String etEmailAddress(){
-  return "";
-}
-private void setEmailAddress(String email){
-
-}
-private String getUserId(){
-  return "";
-}
-private void setUserId(String userID){
-
-}
-private ArrayList<String> getHobbies(){
-  return hobby;
-
-}
-private void setHobby(String hobby){
-
-}
-private ArrayList<Group> getFavoriteGroups(){
-  return favoriteGroups;
-}
-//may need to change this to addfavoritegroup instead of set.
-private void setFavoriteGroup(Group group){
-
-}
-    public void notifyOfMessage(String message) {
-
+    enum Gender{
+        Male,
+        Famale,
+        Other
     }
 
-    public void addInterestCategories(ArrayList<Category> Category) {
-        
+    private String userId;
+    private String password;
+    private String displayName;
+    private String name;
+    private String gender;
+    private Integer age;
+    private Integer date;
+    private List<Group> groupsCreated;
+    private Integer NumberOfGroup;
+    private List<String> hobby;
+    private String emailAddress;
+    private Boolean hasAgreedToTerms;
+    private Boolean profilesPublic;
+    private List<Group> favoriteGroups;
+
+    public String getName() {
+        return name;
     }
 
-    public boolean determinePrivileges(User user) {
-        return false;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void acceptMember(User member) {
-            
+    public String getDisplayName() {
+        return displayName;
     }
 
-    public void rejectMember(User member) {
-            
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
-    public void removeMember(User member, boolean adminPrivileges) {
-            
-    }
-    private void removeMemberFromGroup(User member, boolean adminPrivileges){
-
-    } 
-    private void tempUserBan(User user, boolean adminPrivileges){
-
-    }
-    private void tempGroupBan(Group group, boolean adminPrivileges){
-
-    }
-    private void userBan(User member, boolean adminPrivileges){
-
-    }
-    private void groupBan(Group group, boolean adminPrivileges){
-
-    }
-    private void removeGroup(Group group, boolean adminPrivileges){
-
-    }
-    private void removeEvent(Event event, boolean adminPrivileges){
-
-    }
-    private String warnUserOfViolation(User user, boolean adminPrivileges){
-      return "";
-    }
-    private String warnGroupOfViolation(Group group, boolean adminPrivileges){
-      return "";
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
 
-    
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public List<String> getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(List<String> hobby) {
+        this.hobby = hobby;
+    }
+
+    public List<Group> getFavoriteGroups() {
+        return favoriteGroups;
+    }
 }
