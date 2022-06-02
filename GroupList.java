@@ -3,19 +3,21 @@ import java.util.ArrayList;
 public class GroupList{
 
     private ArrayList<Group> groups;
-    private GroupList groupList;
+    private static GroupList groupList = null;
+
     
 
     private GroupList(){
-       
-
-
+      this.groups = new ArrayList<Group>();
     }
     
     public Group getInstance(){
-        return groups.get(0);
-
+        if (groupList == null) {
+          groupList = new GroupList();
+        }
+        return groupList;
     }
+
 
     public ArrayList<Group> getGroups(){
         return groups;
@@ -32,8 +34,8 @@ public class GroupList{
     }
 
     public Group removeGroup(Group group){
-        return groups.get(0);
-
+      groups.remove(event);
+      return events;
 
     }
 
@@ -41,15 +43,9 @@ public class GroupList{
         return groups.get(0);
 
     }
+    
 
-    public ArrayList<Group> getFavoriteGroup(){
-        return groups;
-        
-    }
 
-    public void addFavoriteGroup(Group group){
-
-    }
 
 
 
