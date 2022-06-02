@@ -1,5 +1,5 @@
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class User {
 
@@ -10,17 +10,18 @@ public class User {
     private String gender;
     private Integer age;
     private Integer date;
-    private List<Group> groupsCreated;
+    private ArrayList<Group> groupsCreated;
     private Integer NumberOfGroup;
-    private List<String> hobby;
+    private ArrayList<String> hobby;
     private String emailAddress;
     private Boolean hasAgreedToTerms;
     private Boolean profilesPublic;
-    private List<Group> favoriteGroups;
+    private ArrayList<Group> favoriteGroups;
+    protected ArrayList<Category> categoriesOfInterest = null;
 
-    public User()
+    public User(String displayName)
     {
-
+        this.displayName = name;
     }
 
     public String getName() {
