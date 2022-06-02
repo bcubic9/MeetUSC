@@ -1,36 +1,42 @@
-
 import java.util.ArrayList;
 
-public class Event{
-    public boolean inPerson;
-    public ArrayList<Category> categories;
-    public ArrayList <User> attendees;
-    public String name;
-    public String location; 
-    public int eventSize;
-    public ArrayList<User> rsvpedUsers;
-    public String shortDescription;
-    public String longDescription;
-    public ArrayList<Message> messages;
+public class Event {
+    private boolean inPerson = true; //default is true
+    private ArrayList<Category> categories;
+    private ArrayList <User> attendees;
+    private String name;
+    private String location; 
+    private int eventSize;
+    private ArrayList<User> rsvpedUsers;
+    private String shortDescription;
+    private String longDescription = "";
+    private ArrayList<Message> messages;
+    private UUID id;
 
-public Event event(String name, String shortDescription, ArrayList<Category> categories){
+public Event event(UUID id, String name, String shortDescription, ArrayList<Category> categories){
+    this.id = id;
     this.name = name;
     this.shortDescription = shortDescription;
-    ArrayList<Category> categories = new ArrayList<>();
+    this.categories = categories;
+    this.attendees = new ArrayList<>();
+    this.messages = new ArrayList<>();
+    this.rsvpedUsers = new ArrayList<>();
 }
-//can get rid of uuidmaker as a class and call the uuid method .run to store the variable returned.
-public Event event(UUIDMaker id, String name, String shortDescription, String longDescription, 
+
+
+public Event event(UUID id, String name, String shortDescription, String longDescription, 
 ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> messages){
-    this.id = id; //id isn't declared
+    this.id = id;
     this.name = name;
     this.shortDescription = shortDescription;
     this.longDescription = longDescription;
-    ArrayList<Category> categories = new ArrayList<>(); //try making the variables class variables instead of method variabels
-    ArrayList<User> attendees = new ArrayList<>();      //so you dont get an error message for them.
-    ArrayList<Message> messages = new ArrayList<>();
-
+    this.categories = categories;
+    this.attendees = attendees;
+    this.messages = messages;
+    this.rsvpedUsers = new ArrayList<>();
 }
     public String toString(){
-        return "";
+      // double check this
+        return name;
     }
 }
