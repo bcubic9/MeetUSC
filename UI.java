@@ -9,34 +9,67 @@ public class UI
    {
 
    }
-
+   
    public void run()
-   {
-     
-     System.out.println("Welcome to MeetUSC."); 
-     System.out.println("\n Enter your login information below:");
-     System.out.println("\n Username:");
-     String username = input.nextLine().trim();
-     System.out.println("\n Password:");
-     String password = input.nextLine().trim();
-     /** 
-      * need to check and see if the boolean is true/false. if true, then allow them to edit items, etc. if false, don't allow them
-      * to do certain activities.
-      * 
-      * User won't be give the return of the login.
-      */
-     User user = MeetUSCFacade.login(username, password);  
-    
-     if(user != null)
-     {
-        displayUserPage(user);
-     }
-     else 
-     {
-         System.out.println("Oops! The user "+ username + " does not exist.");
-     }
-
+   { 
+        System.out.println("Welcome to MeetUSC.");
+        User user = login();
+        if(user == null)
+        {
+            System.out.println("Have a nice day!");
+            return;
+        }
+        else
+        {
+            while(true)
+            {
+                displayUserPage(user);
+            }
+        }
    }
+
+   public User login()
+   {
+    while(true)
+    {
+        System.out.println("Enter your login information below:");
+        System.out.print("Username: ");
+        String username = input.nextLine().trim();
+        System.out.print("Password: ");
+        String password = input.nextLine().trim();
+        /** 
+         * need to check and see if the boolean is true/false. if true, then allow them to edit items, etc. if false, don't allow them
+         * to do certain activities.
+         * 
+         * User won't be give the return of the login.
+         */
+        User user = facade.login(username, password); 
+        if(user == null)
+        {
+            System.out.println("Oops! The user "+ username + " does not exist.");
+            System.out.println("Do you want to continue?  (Y)es (N)o");
+            String cont = input.nextLine().trim().toLowerCase();
+            if(cont.equals("y"))
+            {
+                continue;
+            }
+            else if(cont.equals("n"))
+            {
+                return null;
+            }
+            else 
+            {
+                System.out.println("Invalid input.");
+                continue;
+            }
+        }
+        else
+        {
+        return user;
+        }
+    }
+   }
+
    public ArrayList<Group> displayFavoriteGroups()
    {
         ArrayList<Group> favorites = new ArrayList<Group>();
@@ -65,5 +98,10 @@ public class UI
    {
        ArrayList<String> userPage = new ArrayList<String>();
        return userPage;
+   }
+   public static void main(String[] args)
+   {
+       UI myUI = new UI();
+       myUI.run();
    }
 }
