@@ -3,34 +3,38 @@ import java.util.ArrayList;
 
 public class EventList{
 
+    private static EventList eventList = null;
+
     public ArrayList<Event> events;
-    public ArrayList<EventList> eventList;
 
+    private EventList(){
+      this.events = new ArrayList<Event>();
+      
+    }
 
-    public Event getInstance(){
-        return events.get(0);
+    public EventList getInstance(){
+        if (eventList == null) {
+          eventList = new EventList();
+        }
+        return eventList;
     }
     public ArrayList<Event> getEvents(){
         return events;
     }
     public void addEvent(Event event){
-
+      events.add(event);
     }
-    public Event editEvent(Event event) {
-        return events.get(0);
-        
+    public ArrayList<Event> removeEvent(Event event) {
+      events.remove(event);
+      return events;
     }
-    public Event removeEvent(Event event){
-   
-        return events.get(0);
+    public ArrayList<Event> searchForEvent(Category category){
+        ArrayList<Event> relevantEvents = new ArrayList<>();
+        for (Event e : events) {
+          if(e.categories().contains(category)){
+            relevantEvents.add(e);
+        }
+        return relevantEvents;
     }
-    public Event searchForEvent(Event Event){
-        return events.get(0);
-    }
-    public ArrayList<Event> getFavoriteEvent(){
-        return events;
-    }
-    public void addFavoriteEvent(Event event){
-        
-    }
+}
 }
