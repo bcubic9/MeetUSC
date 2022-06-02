@@ -3,20 +3,20 @@ import java.util.ArrayList;
 
 public class User {
 
-    private String userId;
-    private String password;
-    private String displayName;
-    private String name;
-    private String gender;
-    private Integer age;
-    private Integer date;
-    private ArrayList<Group> groupsCreated;
-    private Integer NumberOfGroup;
-    private ArrayList<String> hobby;
-    private String emailAddress;
-    private Boolean hasAgreedToTerms;
-    private Boolean profilesPublic;
-    private ArrayList<Group> favoriteGroups;
+    protected String userId;
+    protected String password;
+    protected String displayName;
+    protected String name;
+    protected String gender;
+    protected Integer age;
+    protected Integer date;
+    protected ArrayList<Group> groupsCreated;
+    protected Integer NumberOfGroup;
+    protected ArrayList<String> hobby;
+    protected String emailAddress;
+    protected Boolean hasAgreedToTerms;
+    protected Boolean profilesPublic;
+    protected ArrayList<Group> favoriteGroups;
     protected ArrayList<Category> categoriesOfInterest = null;
 
     public User(String displayName)
@@ -56,15 +56,15 @@ public class User {
         this.userId = userId;
     }
 
-    public List<String> getHobby() {
+    public ArrayList<String> getHobby() {
         return hobby;
     }
 
-    public void setHobby(List<String> hobby) {
+    public void setHobby(ArrayList<String> hobby) {
         this.hobby = hobby;
     }
 
-    public List<Group> getFavoriteGroups() {
+    public ArrayList<Group> getFavoriteGroups() {
         return favoriteGroups;
     }
 }
