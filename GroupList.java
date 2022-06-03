@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class GroupList{
 
-    private ArrayList<Group> groups;
+    private ArrayList<Group> groups; //this is the group list.
     private static GroupList groupList = null;
 
     
@@ -11,11 +11,11 @@ public class GroupList{
       this.groups = new ArrayList<Group>();
     }
     
-    public Group getInstance(){
+    public ArrayList<Group> getInstance(){
         if (groupList == null) {
           groupList = new GroupList();
         }
-        return groupList;
+        return groups;
     }
 
 
@@ -35,7 +35,7 @@ public class GroupList{
 
     public Group removeGroup(Group group){
       groups.remove(group);
-      return groups;
+      return group;
 
     }
 

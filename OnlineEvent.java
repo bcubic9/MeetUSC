@@ -1,6 +1,6 @@
 import java.util.Date;
 import java.util.ArrayList;
-public class OnlineEvent extends User {
+public class OnlineEvent {
 private Location location;
 private Date eDate;
 private int numOfAttendees;

@@ -15,7 +15,7 @@ public class Event {
     private ArrayList<Message> messages;
     private UUID id;
 
-public Event event(String name, String shortDescription, ArrayList<Category> categories){
+public Event(String name, String shortDescription, ArrayList<Category> categories){
     this.id = UUID.randomUUID();
     this.name = name;
     this.shortDescription = shortDescription;
@@ -27,7 +27,7 @@ public Event event(String name, String shortDescription, ArrayList<Category> cat
 }
 
 
-public Event event(UUID id, String name, String shortDescription, String longDescription, 
+public Event(UUID id, String name, String shortDescription, String longDescription, 
 ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> messages, ArrayList<User> rsvpedUsers){
     //constructor we call from the database
 
@@ -41,11 +41,11 @@ ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> me
     this.rsvpedUsers = rsvpedUsers;
 }
     public void joinGroup(User attendee){
-        attendee.acceptAttendees(attendee);
+        //attendee.acceptAttendees(attendee); //acceptattendees() hasn't been made in User.java yet
     }
 
     public void leaveGroup(User attendee){
-        attendee.removeAttendees(attendee, true);
+        //attendee.removeAttendees(attendee, true); //removeattendees() hasn't been made in User.java yet
          
 
     }
@@ -95,11 +95,11 @@ ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> me
 
     public void addToAllGroups(Group group){
 
-        group.addToAllGroups(group);
+        //group.addToAllGroups(group); //addtoallgroups() hasn't been made in Group.java yet.
     }   
 
 
-}
+
 
     public String toString(){
       // double check this

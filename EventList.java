@@ -36,17 +36,22 @@ public class EventList{
         for (Event e : events) {
           if(e.hasCategory(category)){
             relevantEvents.add(e);
+          }
         }
         return relevantEvents;
     }
-    public ArrayList<Event> searchByName(String name){
+    
+
+    public ArrayList<Event> searchByName(String name) {
       return null;
     }
-    public Event getEventByUUID(UUID ID){
+
+    public Event getEventByUUID(UUIDMaker ID){
       return null;
     } 
-}
-public void logout(){
-  DataWriter.saveEvents();
-}
+  
+  public void logout(){
+    //commented out for now until datawriter has been written.
+    //DataWriter.saveEvents();
+  }
 }
