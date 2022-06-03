@@ -6,9 +6,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class DataReader extends JsonConstants {
-    
+    public static ArrayList<User> users = new ArrayList<User>();
+
     public ArrayList<User> getUsers() {
-        ArrayList<User> users = new ArrayList<User>();
+        //ArrayList<User> users = new ArrayList<User>();
 
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
@@ -56,12 +57,12 @@ public class DataReader extends JsonConstants {
      * Method to be deleted at a later time.
      */
     public static void main(String[] args) throws FileNotFoundException {
-        DataReader dr = new DataReader();
+       // DataReader dr = new DataReader();
         ArrayList<User> allusers = new ArrayList<User>();
         
         System.out.println("Hello, this is a test of the json filereader class");
-        allusers = dr.getUsers();
+      //  allusers = dr.getUsers();
 
-        System.out.println(allusers);
+        System.out.println(users);
     }
 }
