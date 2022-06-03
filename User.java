@@ -8,20 +8,41 @@ public class User {
     protected String displayName;
     protected String name;
     protected String gender;
-    protected Integer age;
-    protected Integer date;
-    protected ArrayList<Group> groupsCreated;
-    protected Integer NumberOfGroup;
-    protected ArrayList<String> hobby;
+    protected int age;
+    protected String date;
+    protected int numGroupsCreated;
+    //protected ArrayList<Group> groupsCreated; //need to fix this one. need to add into the data or take this out
+    protected String hobby; //need to change it to String[] or arraylist<String> later
     protected String emailAddress;
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
-    protected ArrayList<Group> favoriteGroups;
-    protected ArrayList<Category> categoriesOfInterest = null;
+    protected String favoriteGroups; //needs to be changed back to ArrayList<Group> data type later.
+    protected String categoriesOfInterest; //needs to be changed back to ArrayList<Group> data type later.
+    protected boolean adminPrivileges;
+    protected boolean authorPrivileges;
 
-    public User(String userName)
+    public User(String userID, String userPass, String userDisplayName, String userName, String userGender, String userAge, 
+            String userCreationDate, String userNumOfGroups, String userHobbies, String userEmail, String userAgreedToTerms, 
+            String userProfileIsPublic, String userFavGroups, String userCategoriesOfInterest, String userAdminPrivileges,
+            String userAuthorPrivileges)
     {
+        this.userId = userID;
+        this.password = userPass;
+        this.displayName = userDisplayName;
         this.name = userName;
+        this.gender = userGender;
+        this.age = Integer.parseInt(userAge);
+        this.date = userCreationDate;
+        //need to fix this one. will alter from ArrayList<Group> to integer for now
+        this.numGroupsCreated = Integer.parseInt(userNumOfGroups);
+        this.hobby = userHobbies;
+        this.emailAddress = userEmail;
+        this.hasAgreedToTerms = Boolean.parseBoolean(userAgreedToTerms);
+        this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
+        this.favoriteGroups = userCategoriesOfInterest;
+        this.categoriesOfInterest = userCategoriesOfInterest;
+        this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
+        this.authorPrivileges = Boolean.parseBoolean(userAuthorPrivileges);
     }
 
     public String getName() {
@@ -57,14 +78,14 @@ public class User {
     }
 
     public ArrayList<String> getHobby() {
-        return hobby;
+        return null;
     }
 
     public void setHobby(ArrayList<String> hobby) {
-        this.hobby = hobby;
+        //this.hobby = hobby;
     }
 
     public ArrayList<Group> getFavoriteGroups() {
-        return favoriteGroups;
+        return null;
     }
 }

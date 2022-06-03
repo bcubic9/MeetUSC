@@ -35,7 +35,10 @@ public class DataReader extends JsonConstants {
                 String  userAdminPrivileges = (String)userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 String  userAuthorPrivileges = (String)userJsonObject.get(USER_AUTHOR_PRIVILEGES);
                 
-                users.add(new User(userName));
+                users.add(new User(userID, userPass, userDisplayName, userName, userGender, userAge, 
+                        userCreationDate, userNumOfGroups, userHobbies, userEmail, userAgreedToTerms, 
+                        userProfileIsPublic, userFavGroups, userCategoriesOfInterest, userAdminPrivileges,
+                        userAuthorPrivileges));
             }
 
             return users;
@@ -62,7 +65,7 @@ public class DataReader extends JsonConstants {
         
         System.out.println("Hello, this is a test of the json filereader class");
       //  allusers = dr.getUsers();
-
-        System.out.println(users);
+        System.out.println(users.toString());
+        //System.out.println(users);
     }
 }
