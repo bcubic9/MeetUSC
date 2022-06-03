@@ -34,8 +34,8 @@ public class GroupList{
     }
 
     public Group removeGroup(Group group){
-      groups.remove(event);
-      return events;
+      groups.remove(group);
+      return groups;
 
     }
 

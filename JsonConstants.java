@@ -1,9 +1,9 @@
 public abstract class JsonConstants {
 
     // File Names
-    public static final String EVENT_FILE_NAME = "../json/events.json";
-    public static final String USER_FILE_NAME = "../json/users.json";
-    public static final String GROUP_FILE_NAME = "groups.json";
+    public static final String EVENT_FILE_NAME = "json/events.json";
+    public static final String USER_FILE_NAME = "json/users.json";
+    public static final String GROUP_FILE_NAME = "json/groups.json";
     // Event constants
     public static final String  EVENT_ID = "a102b596-b30e-4de6-993a-e82afc7d8a1c";
     public static final String  EVENT_NAME = "Congaree River Rafting on June 4th, 2022";
@@ -15,6 +15,7 @@ public abstract class JsonConstants {
     public static final String     USER_ID = "fd2a1d6d-3419-401c-a021-cbd2b444d86c";
     public static final String     USER_PASSWORD = "qwertyPASS";
     public static final String     USER_DISPLAY_NAME = "JohnS00";
+    public static final String     USER_NAME = "John Smith";
     public static final String     USER_GENDER = "Male";
     public static final int        USER_AGE = 22;
     public static final String     USER_CREATION_DATE = "05-26-22";

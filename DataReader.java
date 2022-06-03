@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -19,6 +20,7 @@ public class DataReader extends JsonConstants {
                 String  userID = (String)userJsonObject.get(USER_ID);
                 String  userPass = (String)userJsonObject.get(USER_PASSWORD);
                 String  userDisplayName = (String)userJsonObject.get(USER_DISPLAY_NAME);
+                String  userName = (String)userJsonObject.get(USER_NAME);
                 String  userGender = (String)userJsonObject.get(USER_GENDER);
                 String  userAge = (String)userJsonObject.get(USER_AGE);
                 String  userCreationDate = (String)userJsonObject.get(USER_CREATION_DATE);
@@ -32,7 +34,7 @@ public class DataReader extends JsonConstants {
                 String  userAdminPrivileges = (String)userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 String  userAuthorPrivileges = (String)userJsonObject.get(USER_AUTHOR_PRIVILEGES);
                 
-                users.add(new User(userDisplayName));
+                users.add(new User(userName));
             }
 
             return users;
@@ -53,9 +55,13 @@ public class DataReader extends JsonConstants {
     /**
      * Method to be deleted at a later time.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         DataReader dr = new DataReader();
+        ArrayList<User> allusers = new ArrayList<User>();
+        
         System.out.println("Hello, this is a test of the json filereader class");
-        dr.getUsers().toString();
+        allusers = dr.getUsers();
+
+        System.out.println(allusers);
     }
 }

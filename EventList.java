@@ -7,8 +7,9 @@ public class EventList{
 
     public ArrayList<Event> events;
 
-    private EventList{
-      this.events = DataReader.getEvents();
+    private EventList() {
+      DataReader dr = new DataReader();
+      this.events = dr.getEvent();
       
     }
 
@@ -22,7 +23,7 @@ public class EventList{
         return events;
     }
     public void addEvent(String name, String shortDescription, ArrayList<Category> categories){//Change in lucid Chart
-      Event event = new Event(name, shortDesciption, categories);
+      Event event = new Event(name, shortDescription, categories);
       events.add(event);
     }
     public ArrayList<Event> removeEvent(Event event) {

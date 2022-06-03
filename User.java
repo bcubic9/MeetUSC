@@ -19,9 +19,9 @@ public class User {
     protected ArrayList<Group> favoriteGroups;
     protected ArrayList<Category> categoriesOfInterest = null;
 
-    public User(String displayName)
+    public User(String userName)
     {
-        this.displayName = name;
+        this.name = userName;
     }
 
     public String getName() {

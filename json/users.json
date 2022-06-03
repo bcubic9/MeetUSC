@@ -1,6 +1,7 @@
 [
     {
-        "userId" : "fd2a1d6d-3419-401c-a021-cbd2b444d86c", "password" : "qwertyPASS",
+        "userId" : "fd2a1d6d-3419-401c-a021-cbd2b444d86c", 
+        "password" : "qwertyPASS",
         "displayName" : "JohnS00",
         "name" : "John Smith",
         "gender" : "Male",
@@ -17,7 +18,8 @@
         "authorPrileges" : true
     }, 
     {
-        "userId" : "8258b3b4-bbb6-45a5-9bf2-267d3af21191", "password" : "qwerty2",
+        "userId" : "8258b3b4-bbb6-45a5-9bf2-267d3af21191", 
+        "password" : "qwerty2",
         "displayName" : "Bob0123",
         "name" : "Robert Builder",
         "gender" : "Male",
@@ -34,7 +36,8 @@
         "authorPrileges" : true
     },
     {
-        "userId" : "3cdec68b-0b06-4a8a-8bf3-76390bce6ae9", "password" : "poiuy123",
+        "userId" : "3cdec68b-0b06-4a8a-8bf3-76390bce6ae9", 
+        "password" : "poiuy123",
         "displayName" : "SamIAm",
         "name" : "Samantha King",
         "gender" : "Female",

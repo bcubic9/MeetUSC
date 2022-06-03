@@ -15,7 +15,7 @@ public class Event {
     private ArrayList<Message> messages;
     private UUID id;
 
-public Event event(String name, String shortDescription, ArrayList<Category> categories, ){
+public Event event(String name, String shortDescription, ArrayList<Category> categories){
     this.id = UUID.randomUUID();
     this.name = name;
     this.shortDescription = shortDescription;
