@@ -13,8 +13,8 @@ public class DataReader extends JsonConstants {
 
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
-            JSONParser parse = new JSONParser();
-            JSONArray userJSON = (JSONArray)new JSONParser().parse(reader);
+            JSONParser parser = new JSONParser();
+            JSONArray userJSON = (JSONArray)parser.parse(reader);
 
             for(int i = 0; i < userJSON.size(); i++) {
                 JSONObject userJsonObject = (JSONObject)userJSON.get(i);

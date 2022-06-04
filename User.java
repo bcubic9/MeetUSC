@@ -11,7 +11,7 @@ public class User {
     protected int age;
     protected String date;
     protected int numGroupsCreated;
-    //protected ArrayList<Group> groupsCreated; //need to fix this one. need to add into the data or take this out
+    //protected ArrayList<Group> groupsCreated; //need to fix this one. need to add it into the json data or take this out
     protected String hobby; //need to change it to String[] or arraylist<String> later
     protected String emailAddress;
     protected Boolean hasAgreedToTerms;
@@ -21,6 +21,7 @@ public class User {
     protected boolean adminPrivileges;
     protected boolean authorPrivileges;
 
+    //May need to change the userID to UUIDMaker.
     public User(String userID, String userPass, String userDisplayName, String userName, String userGender, String userAge, 
             String userCreationDate, String userNumOfGroups, String userHobbies, String userEmail, String userAgreedToTerms, 
             String userProfileIsPublic, String userFavGroups, String userCategoriesOfInterest, String userAdminPrivileges,
