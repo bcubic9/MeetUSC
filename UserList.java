@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class UserList {
-    private UserList userList = null;
+    private static UserList userList = null;
     private ArrayList<User> users;
     private ArrayList<User> tempBannedUsers;
     private ArrayList<User> bannedUsers;
