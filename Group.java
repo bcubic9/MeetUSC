@@ -41,7 +41,7 @@ public class Group{
 
 
     public void joinGroup(User member){
-        member.acceptMember(member);
+        //member.acceptMember(member); // talk to the professor about author vs user privileges
 
         
         
@@ -49,7 +49,7 @@ public class Group{
     }
 
     public void leaveGroup(User member){
-        member.removeMember(member, true);
+        //member.removeMember(member, true); // talk to the professor about author vs user privileges
          
 
     }
