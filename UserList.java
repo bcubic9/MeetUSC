@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
 public class UserList {
     private UserList userList = null;
-    private List<User> users;
-    private List<User> tempBannedUsers;
-    private List<User> bannedUsers;
+    private ArrayList<User> users;
+    private ArrayList<User> tempBannedUsers;
+    private ArrayList<User> bannedUsers;
 
-    private UserList userList(){
+    private UserList(){
 
-      this.users = new List<>();
-      this.tempBannedUsers = new List<>();
-      this.bannedUsers = new List<>();
+      this.users = new ArrayList<>();
+      this.tempBannedUsers = new ArrayList<>();
+      this.bannedUsers = new ArrayList<>();
 
     }
     public UserList getInstance(){
@@ -19,7 +19,7 @@ public class UserList {
       }
       return userList;
     }
-    public List<User> getAllUsers(){
+    public ArrayList<User> getAllUsers(){
         return users;
     }
     public void addUser(User user){
