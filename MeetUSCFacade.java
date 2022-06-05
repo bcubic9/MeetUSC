@@ -29,8 +29,7 @@ class MeetUSCFacade
 
     public User login(String username, String password)
     {
-        //return new User(username);
-        return null;
+        return new User(username);
     }
 
     public Event searchForEvent(Event event)
@@ -78,9 +77,10 @@ class MeetUSCFacade
         return false;
     }
 
-    public boolean createNewUser()
+    public User createNewUser()
     {
-        return false;
+        System.out.println();
+        return null;
     }
 
     public boolean createNewGroup()
