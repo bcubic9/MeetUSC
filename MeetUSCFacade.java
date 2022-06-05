@@ -12,7 +12,7 @@ class MeetUSCFacade
 
    }
 
-    private boolean addUser (User user)
+    private Boolean addUser (User user)
     {
         return false;
     }

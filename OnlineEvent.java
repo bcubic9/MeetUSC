@@ -1,10 +1,9 @@
 import java.util.Date;
 import java.util.ArrayList;
 public class OnlineEvent {
-private String location;
+private Location location;
 private Date eDate;
 private int numOfAttendees;
-
 private ArrayList<User> eventAttendees = new ArrayList<User>();
     private ArrayList<User> getAttendees(){
         return eventAttendees;

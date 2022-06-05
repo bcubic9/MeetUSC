@@ -14,7 +14,6 @@ public class UI
    { 
         boolean end = false;
         launchScreen();
-        
         while(end == false) {
             String choice = input.nextLine().trim().toLowerCase();
             switch (choice)
