@@ -46,6 +46,16 @@ public class User {
         this.authorPrivileges = Boolean.parseBoolean(userAuthorPrivileges);
     }
 
+    public User()
+    {
+
+    }
+
+    public User(String username, String password)
+    {
+    
+    }
+
     public String getName() {
         return name;
     }
