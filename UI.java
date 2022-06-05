@@ -13,6 +13,7 @@ public class UI
    public void run()
    { 
         System.out.println("Welcome to MeetUSC.");
+        System.out.println("Choose one of the following options: ");
         User user = login();
         if(user == null)
         {
@@ -23,7 +24,7 @@ public class UI
         {
             while(true)
             {
-                displayUserPage(user);
+                
             }
         }
    }
