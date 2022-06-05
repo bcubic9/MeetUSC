@@ -8,7 +8,7 @@ public class DataWriter extends JsonConstants {
 
     
 
-    public static void saveUsers() {
+    public void saveUsers() {
         UserList users = UserList.getInstance(); //may need to switch form UserList to User
         ArrayList<User> userList = users.getUsers();
         JSONArray jsonUsers = new JSONArray();
@@ -30,7 +30,7 @@ public class DataWriter extends JsonConstants {
         }
     }
 
-    public static JSONObject getUserJSON(User user) {
+    public JSONObject getUserJSON(User user) {
         JSONObject userDetails = new JSONObject();
         userDetails.put(USER_ID, user.getUserId().toString());
         userDetails.put(USER_PASSWORD, user.getUserId().toString());

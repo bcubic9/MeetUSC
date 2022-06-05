@@ -3,17 +3,15 @@ import java.util.ArrayList;
 public class GroupList{
 
     private ArrayList<Group> groups; //this is the group list.
-    private static GroupList groupList = null;
-
-    
+  
 
     private GroupList(){
       this.groups = new ArrayList<Group>();
     }
     
     public ArrayList<Group> getInstance(){
-        if (groupList == null) {
-          groupList = new GroupList();
+        if (groups == null) {
+          groups = new GroupList();
         }
         return groups;
     }

@@ -13,7 +13,7 @@ public class UserList {
       this.bannedUsers = new ArrayList<>();
 
     }
-    public UserList getInstance(){
+    public static UserList getInstance(){
       if (userList == null){
         userList = new UserList();
       }
