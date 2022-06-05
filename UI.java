@@ -1,7 +1,7 @@
 import java.util.*;
 public class UI 
 {
-
+   
     Scanner input = new Scanner(System.in);
     MeetUSCFacade facade = new MeetUSCFacade();
 
@@ -12,21 +12,14 @@ public class UI
    
    public void run()
    { 
-        System.out.println("Welcome to MeetUSC.");
-        System.out.println("Choose one of the following options: ");
-        User user = login();
-        if(user == null)
+        User user;
+        launchScreen();
+        String choice = input.nextLine().trim().toLowerCase();
+        switch (choice)
         {
-            
-            System.out.println("Have a nice day!");
-            return;
-        }
-        else
-        {
-            while(true)
-            {
-                
-            }
+            case "l":
+                user.login()
+            break;
         }
    }
 
@@ -72,34 +65,51 @@ public class UI
     }
    }
 
+   public void launchScreen()
+   {
+        System.out.println("Welcome to MeetUSC.");
+        System.out.println("Choose one of the following options: ");
+        System.out.println("Login (l)");
+        System.out.println("Guest Login (g)");
+        System.out.println("Exit (e)");
+   }
+
    public ArrayList<Group> displayFavoriteGroups()
    {
-        ArrayList<Group> favorites = new ArrayList<Group>();
-        return favorites;
+        return null;
+        /**
+         * This logic should return the list of favorite groups specific to the user.
+         * I believe it will be something like:
+         * return user.getFavoriteGroups();
+         * 
+         * This may be a redundant method. Marked for review.
+         */
    }
 
    public ArrayList<Event> displayFavoriteEvents()
    {
-       ArrayList<Event> favorites = new ArrayList<Event>();
-       return favorites;
+       return null;
+       /**
+        * This will act the same as the above method.
+        */
    }
 
    public ArrayList<String> displayEventPage(Event event)
    {
-       ArrayList<String> eventPage = new ArrayList<String>();
-       return eventPage;
+       return null;
+       /**
+        * This will act the same as the two prior methods.
+        */
    }
 
    public ArrayList<String> displayGroupPage(Group group)
    {
-       ArrayList<String> groupPage = new ArrayList<String>();
-       return groupPage;
+       return null;
    }
 
    public ArrayList<String> displayUserPage(User user)
    {
-       ArrayList<String> userPage = new ArrayList<String>();
-       return userPage;
+       return null;
    }
    public static void main(String[] args)
    {
