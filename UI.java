@@ -17,6 +17,7 @@ public class UI
         User user = login();
         if(user == null)
         {
+            
             System.out.println("Have a nice day!");
             return;
         }
