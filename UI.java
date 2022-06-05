@@ -12,13 +12,25 @@ public class UI
    
    public void run()
    { 
-        User user;
         launchScreen();
         String choice = input.nextLine().trim().toLowerCase();
         switch (choice)
         {
             case "l":
-                user.login()
+                login();
+            break;
+            
+            case "g":
+                System.out.println("Stub");
+            break;
+
+            case "e":
+                System.out.println("Have a nice day!");
+                System.exit(0);
+            break;
+
+            default:
+                System.out.println("Oops! Try again.");
             break;
         }
    }
