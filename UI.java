@@ -12,26 +12,33 @@ public class UI
    
    public void run()
    { 
+        boolean end = false;
         launchScreen();
-        String choice = input.nextLine().trim().toLowerCase();
-        switch (choice)
-        {
-            case "l":
-                login();
-            break;
-            
-            case "g":
-                System.out.println("Stub");
-            break;
+        
+        while(end == false) {
+            String choice = input.nextLine().trim().toLowerCase();
+            switch (choice)
+            {
+                case "l":
+                    login();
+                    end = true;
+                break;
+                
+                case "g":
+                    System.out.println("Stub");
+                    end = true;
+                break;
 
-            case "e":
-                System.out.println("Have a nice day!");
-                System.exit(0);
-            break;
+                case "e":
+                    System.out.println("Have a nice day!");
+                    System.exit(0);
+                break;
 
-            default:
-                System.out.println("Oops! Try again.");
-            break;
+                default:
+                    System.out.println("Oops! Try again.");
+                    end = false;
+                break;
+            }
         }
    }
 
