@@ -9,7 +9,7 @@ public class User {
     protected String name;
     protected String gender;
     protected int age;
-    protected String date;
+    protected String dateCreated;
     protected int numGroupsCreated;
     //protected ArrayList<Group> groupsCreated; //need to fix this one. need to add it into the json data or take this out
     protected String hobby; //need to change it to String[] or arraylist<String> later
@@ -33,7 +33,7 @@ public class User {
         this.name = userName;
         this.gender = userGender;
         this.age = Integer.parseInt(userAge);
-        this.date = userCreationDate;
+        this.dateCreated = userCreationDate;
         //need to fix this one. will alter from ArrayList<Group> to integer for now
         this.numGroupsCreated = Integer.parseInt(userNumOfGroups);
         this.hobby = userHobbies;
@@ -98,5 +98,43 @@ public class User {
 
     public ArrayList<Group> getFavoriteGroups() {
         return null;
+    }
+
+    public String getUserPassword() {
+        return this.password;
+    }
+    
+    public String getUserGender() {
+        return this.gender;
+    }
+
+    public int getUserAge() {
+        return this.age;
+    }
+
+    public String getUserCreationDate() {
+        return dateCreated;
+    }
+
+    public int getNumberOfGroups() {
+        return numGroupsCreated;
+    }
+
+    public boolean getHasAgreedToTerms() {
+        return false;
+    }
+
+    public boolean getProfileIsPublic() {
+        return false;
+    }
+    public boolean getAdminPrivileges() {
+        return false;
+    }
+    public boolean getAuthorPrivileges() {
+        return false;
+    }
+
+    public String getCategoriesOfInterest() {
+        return this.categoriesOfInterest;
     }
 }
