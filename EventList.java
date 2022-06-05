@@ -1,14 +1,15 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 
-public class EventList{
+public class EventList {
 
     private static EventList eventList = null;
 
     public ArrayList<Event> events;
 
-    private EventList{
-      this.events = DataReader.getEvents();
+    private EventList() {
+     // this.events = DataReader.getEvents();
       
     }
 
@@ -18,13 +19,16 @@ public class EventList{
         }
         return eventList;
     }
+
     public ArrayList<Event> getEvents(){
         return events;
     }
+
     public void addEvent(String name, String shortDescription, ArrayList<Category> categories){//Change in lucid Chart
-      Event event = new Event(name, shortDesciption, categories);
+      Event event = new Event(name, shortDescription, categories);
       events.add(event);
     }
+
     public ArrayList<Event> removeEvent(Event event) {
       events.remove(event);
       return events;
@@ -35,27 +39,31 @@ public class EventList{
         for (Event e : events) {
           if(e.hasCategory(category)){
             relevantEvents.add(e);
+          }
         }
         return relevantEvents;
     }
-  public ArrayList<Event> searchByName(String name){
-    ArrayList<Event> relevantEventsName = new ArrayList<>();
-      for (Event e : events) {
-        if(e.name.equals(name); {
-            relevantEventsName.add(e);
-        }
-      return relevantEvents
-    }
-    public Event getEventByUUID(UUID ID){
-     for (Event e : events) {
-          if(e.id.equals(id))){
-            return e;
-        } 
-        else null;
-    }
-}
-public void logout(){
-  DataWriter.saveEvents();
-  }
-}
 
+    public ArrayList<Event> searchByName(String name){
+      
+      ArrayList<Event> relevantEventsName = new ArrayList<>();
+        for (Event e : events) {
+          if(e.getEventName().equals(name)); {
+              relevantEventsName.add(e);
+          }
+        }
+        return relevantEventsName;
+      }
+      public Event getEventByUUID(UUID ID){
+      for (Event e : events) {
+          if(e.getEventId().equals(ID)){
+            return e;
+          } 
+        }
+        return null;
+      }
+
+    public void logout(){
+    // DataWriter.saveEvents();
+    }
+}

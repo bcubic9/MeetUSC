@@ -59,12 +59,10 @@ ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> me
     }
     public void displayShortDescription(String shortDescription){
 
-        
-        
-        
-
     }
-
+    public String getEventName() {
+        return this.name;
+    }
     public void displayLongDescription(String longDescription){
 
 
@@ -82,6 +80,10 @@ ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> me
         System.out.println(typesOfCategories);
         
 
+    }
+
+    public UUID getEventId() {
+        return id;
     }
 
     public void displayInPerson(Boolean inPerson){

@@ -17,6 +17,7 @@ public class DataReader extends JsonConstants {
             JSONArray userJSON = (JSONArray)parser.parse(reader);
 
             for(int i = 0; i < userJSON.size(); i++) {
+                //Need to make sure that these are not all strings when done.
                 JSONObject userJsonObject = (JSONObject)userJSON.get(i);
                 String  userID = (String)userJsonObject.get(USER_ID);
                 String  userPass = (String)userJsonObject.get(USER_PASSWORD);
