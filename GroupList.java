@@ -2,16 +2,16 @@ import java.util.ArrayList;
 
 public class GroupList{
 
-    private ArrayList<Group> groups; //this is the group list.
+    private static ArrayList<Group> groups; //this is the group list.
   
 
     private GroupList(){
       this.groups = new ArrayList<Group>();
     }
     
-    public ArrayList<Group> getInstance(){
+    public static ArrayList<Group> getInstance(){
         if (groups == null) {
-          groups = new GroupList();
+          return groups;
         }
         return groups;
     }
