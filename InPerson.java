@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class InPerson {
-    private Location location;
+    private String location;
     private Date eDate;
     private int numOfAttendees;
     private ArrayList<User> eventAttendees = new ArrayList<User>();
