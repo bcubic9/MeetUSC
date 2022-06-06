@@ -2,8 +2,8 @@ import java.util.*;
 public class UI 
 {
    
-    Scanner input = new Scanner(System.in);
-    MeetUSCFacade facade = new MeetUSCFacade();
+    private Scanner input = new Scanner(System.in);
+    private MeetUSCFacade facade = new MeetUSCFacade();
 
    public UI()
    {
@@ -12,30 +12,26 @@ public class UI
    
    public void run()
    { 
-        boolean end = false;
         launchScreen();
-        while(end == false) {
+        while(true) {
             String choice = input.nextLine().trim().toLowerCase();
             switch (choice)
             {
                 case "l":
                     login();
-                    end = true;
-                break;
+                    break;
                 
                 case "g":
                     System.out.println("Stub");
-                    end = true;
-                break;
+                    break;
 
                 case "e":
                     System.out.println("Have a nice day!");
                     System.exit(0);
-                break;
+                    break;
 
                 default:
                     System.out.println("Oops! Try again.");
-                    end = false;
                 break;
             }
         }
@@ -62,18 +58,14 @@ public class UI
             System.out.println("Oops! The user "+ username + " does not exist.");
             System.out.println("Do you want to continue?  (Y)es (N)o");
             String cont = input.nextLine().trim().toLowerCase();
-            if(cont.equals("y"))
-            {
-                continue;
-            }
-            else if(cont.equals("n"))
+
+            if(cont.equals("n"))
             {
                 return null;
             }
-            else 
+            else if(!cont.equals("y"))
             {
                 System.out.println("Invalid input.");
-                continue;
             }
         }
         else
