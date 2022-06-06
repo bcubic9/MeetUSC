@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import org.json.simple.JSONArray;
@@ -19,27 +20,28 @@ public class DataReader extends JsonConstants {
             for(int i = 0; i < userJSON.size(); i++) {
                 //Need to make sure that these are not all strings when done.
                 JSONObject userJsonObject = (JSONObject)userJSON.get(i);
-                String  userID = (String)userJsonObject.get(USER_ID);
+                UUID  userID = UUID.fromString((String)userJsonObject.get(USER_ID));
                 String  userPass = (String)userJsonObject.get(USER_PASSWORD);
                 String  userDisplayName = (String)userJsonObject.get(USER_DISPLAY_NAME);
                 String  userName = (String)userJsonObject.get(USER_NAME);
                 String  userGender = (String)userJsonObject.get(USER_GENDER);
-                String  userAge = (String)userJsonObject.get(USER_AGE);
+                int  userAge = ((Long)userJsonObject.get(USER_AGE)).intValue();
                 String  userCreationDate = (String)userJsonObject.get(USER_CREATION_DATE);
-                String  userNumOfGroups = (String)userJsonObject.get(USER_NUMBER_OF_GROUPS);
-                String  userHobbies = (String)userJsonObject.get(USER_HOBBIES);
+                int  userNumOfGroups = ((Long)userJsonObject.get(USER_NUMBER_OF_GROUPS)).intValue();
+                JSONArray  userHobbies = (JSONArray)userJsonObject.get(USER_HOBBIES);
                 String  userEmail = (String)userJsonObject.get(USER_EMAIL_ADDRESS);
-                String  userAgreedToTerms = (String)userJsonObject.get(USER_HAS_AGREED_TO_TERMS);
-                String  userProfileIsPublic = (String)userJsonObject.get(USER_PROFILE_IS_PUBLIC);
-                String  userFavGroups = (String)userJsonObject.get(USER_FAVORITE_GROUPS);
-                String  userCategoriesOfInterest = (String)userJsonObject.get(USER_CATEGORIES_OF_INTEREST);
-                String  userAdminPrivileges = (String)userJsonObject.get(USER_ADMIN_PRIVILEGES);
-                String  userAuthorPrivileges = (String)userJsonObject.get(USER_AUTHOR_PRIVILEGES);
-                
+                Boolean  userAgreedToTerms = (Boolean)userJsonObject.get(USER_HAS_AGREED_TO_TERMS);
+                Boolean  userProfileIsPublic = (Boolean)userJsonObject.get(USER_PROFILE_IS_PUBLIC);
+                JSONArray  userFavGroups = (JSONArray)userJsonObject.get(USER_FAVORITE_GROUPS);
+                JSONArray  userCategoriesOfInterest = (JSONArray)userJsonObject.get(USER_CATEGORIES_OF_INTEREST);
+                Boolean  userAdminPrivileges = (Boolean)userJsonObject.get(USER_ADMIN_PRIVILEGES);
+                Boolean  userAuthorPrivileges = (Boolean)userJsonObject.get(USER_AUTHOR_PRIVILEGES);
+                /* 
                 users.add(new User(userID, userPass, userDisplayName, userName, userGender, userAge, 
                         userCreationDate, userNumOfGroups, userHobbies, userEmail, userAgreedToTerms, 
                         userProfileIsPublic, userFavGroups, userCategoriesOfInterest, userAdminPrivileges,
                         userAuthorPrivileges));
+                        */
             }
 
             return users;
@@ -61,11 +63,11 @@ public class DataReader extends JsonConstants {
      * Method to be deleted at a later time.
      */
     public static void main(String[] args) throws FileNotFoundException {
-       // DataReader dr = new DataReader();
+        DataReader dr = new DataReader();
         ArrayList<User> allusers = new ArrayList<User>();
         
         System.out.println("Hello, this is a test of the json filereader class");
-      //  allusers = dr.getUsers();
+        allusers = dr.getUsers();
         System.out.println(users.toString());
         //System.out.println(users);
     }
