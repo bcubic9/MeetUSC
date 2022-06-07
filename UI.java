@@ -71,11 +71,15 @@ public class UI
 
             if(cont.equals("n"))
             {
-                return null;
+                System.out.println("Have a nice day!");
+                System.exit(0);
             }
             else if(!cont.equals("y"))
             {
-                System.out.println("Invalid input.");
+                System.out.println("Continuing as guest...");
+                /**
+                 * Here the method will use the guest user to continue into the application.
+                 */
             }
         }
         else
@@ -93,6 +97,11 @@ public class UI
         System.out.println("Guest Login (g)");
         System.out.println("Create User (c)");
         System.out.println("Exit (e)");
+   }
+
+   public void guestLogin()
+   {
+
    }
 
    public ArrayList<Group> displayFavoriteGroups()
