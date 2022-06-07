@@ -9,7 +9,7 @@
         "GROUP_RATING" : 5,
         "GROUP_AUTHOR" : "John Smith",
         "GROUP_MESSAGES" : ["Hello, everyone reading this. I hope you would like to come and join me having fun rafting this weekend."],
-        "AUTHOR_CONTACT" : "jsmith00@gmail.com"
+        "GROUP_AUTHOR_CONTACT" : "jsmith00@gmail.com"
     },
     {
         "GROUP_ID":"bc0113f6-c984-4bc4-8d14-b352fbee92ff",
@@ -21,7 +21,7 @@
         "GROUP_RATING" : 5,
         "GROUP_AUTHOR" : "Robert Builder",
         "GROUP_MESSAGES" : ["Hello, everyone reading this. I hope you would like to come and help us help others"],
-        "AUTHOR_CONTACT" : "bobbyboy@gmail.com"
+        "GROUP_AUTHOR_CONTACT" : "bobbyboy@gmail.com"
     },
     {
         "GROUP_ID":"2550890a-a64b-4ef8-9d0e-10501ae2e08f",
@@ -33,7 +33,7 @@
         "GROUP_RATING" : 3,
         "GROUP_AUTHOR" : "Samantha King",
         "GROUP_MESSAGES" : ["Hello! Come join us at the baseball park!!"],
-        "AUTHOR_CONTACT" : "samami@gmail.com"
+        "GROUP_AUTHOR_CONTACT" : "samami@gmail.com"
     },
     {
         "GROUP_ID":"3bcfa771-6433-4c61-bd72-a66d628c7b20",
@@ -45,6 +45,6 @@
         "GROUP_RATING" : 3,
         "GROUP_AUTHOR" : "Samantha King",
         "GROUP_MESSAGES" : ["Hello, everyone reading this. Join us at the park sometime.", "Had a great time with John Smith at the park this past weekend."],
-        "AUTHOR_CONTACT" : "samami@gmail.com"
+        "GROUP_GROUP_AUTHOR_CONTACT" : "samami@gmail.com"
     }
 ]

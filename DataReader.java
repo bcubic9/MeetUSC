@@ -63,32 +63,14 @@ public class DataReader extends JsonConstants {
             JSONArray eventJSON = (JSONArray) parser.parse(reader);
 
             for (int i = 0; i < eventJSON.size(); i++) {
-                // Need to make sure that these are not all strings when done.
                 JSONObject eventJsonObject = (JSONObject) eventJSON.get(i);
-                UUID eventID = UUID.fromString((String) eventJsonObject.get(USER_ID));
-                String userPass = (String) eventJsonObject.get(USER_PASSWORD);
-                String userDisplayName = (String) eventJsonObject.get(USER_DISPLAY_NAME);
-                String userName = (String) eventJsonObject.get(USER_NAME);
-                String userGender = (String) eventJsonObject.get(USER_GENDER);
-                int userAge = ((Long) eventJsonObject.get(USER_AGE)).intValue();
-                String userCreationDate = (String) eventJsonObject.get(USER_CREATION_DATE);
-                int userNumOfGroups = ((Long) eventJsonObject.get(USER_NUMBER_OF_GROUPS)).intValue();
-                JSONArray userHobbies = (JSONArray) eventJsonObject.get(USER_HOBBIES);
-                String userEmail = (String) eventJsonObject.get(USER_EMAIL_ADDRESS);
-                Boolean userAgreedToTerms = (Boolean) eventJsonObject.get(USER_HAS_AGREED_TO_TERMS);
-                Boolean userProfileIsPublic = (Boolean) eventJsonObject.get(USER_PROFILE_IS_PUBLIC);
-                JSONArray userFavGroups = (JSONArray) eventJsonObject.get(USER_FAVORITE_GROUPS);
-                JSONArray userCategoriesOfInterest = (JSONArray) eventJsonObject.get(USER_CATEGORIES_OF_INTEREST);
-                Boolean userAdminPrivileges = (Boolean) eventJsonObject.get(USER_ADMIN_PRIVILEGES);
-                JSONArray userAuthorOf = (JSONArray) eventJsonObject.get(USER_AUTHOR_OF);
-                /*
-                 * users.add(new User(userID, userPass, userDisplayName, userName, userGender,
-                 * userAge,
-                 * userCreationDate, userNumOfGroups, userHobbies, userEmail, userAgreedToTerms,
-                 * userProfileIsPublic, userFavGroups, userCategoriesOfInterest,
-                 * userAdminPrivileges,
-                 * userAuthorPrivileges));
-                 */
+                UUID eventID = UUID.fromString((String) eventJsonObject.get(EVENT_ID));
+                String eventName = (String) eventJsonObject.get(EVENT_NAME);
+                String eventAddress = (String) eventJsonObject.get(EVENT_ADDRESS);
+                int eventSize = ((Long) eventJsonObject.get(EVENT_SIZE)).intValue();
+                boolean eventInPerson = (Boolean) eventJsonObject.get(EVENT_IN_PERSON);
+                String eventDescription = (String) eventJsonObject.get(EVENT_DESCRIPTION);
+                JSONArray eventComments = (JSONArray) eventJsonObject.get(EVENT_COMMENTS);
             }
 
             return events;
@@ -100,6 +82,30 @@ public class DataReader extends JsonConstants {
     }
 
     public ArrayList<Group> getGroup() {
+        try {
+            FileReader reader = new FileReader(USER_FILE_NAME);
+            JSONParser parser = new JSONParser();
+            JSONArray groupJSON = (JSONArray) parser.parse(reader);
+
+            for (int i = 0; i < groupJSON.size(); i++) {
+                // Need to make sure that these are not all strings when done.
+                JSONObject groupJsonObject = (JSONObject) groupJSON.get(i);
+                UUID eventID = UUID.fromString((String) groupJsonObject.get(GROUP_ID));
+                String eventName = (String) groupJsonObject.get(GROUP_NAME);
+                JSONArray groupUpcomingEvents = (JSONArray) groupJsonObject.get(GROUP_UPCOMING_EVENTS);
+                JSONArray groupCategoryTypes = (JSONArray) groupJsonObject.get(GROUP_CATEGORY_TYPES);
+                JSONArray groupMembers = (JSONArray) groupJsonObject.get(GROUP_MEMBERS);
+                String groupDescription = (String) groupJsonObject.get(GROUP_DESCRIPTION);
+                int groupRating = ((Long) groupJsonObject.get(GROUP_RATING)).intValue();
+                JSONArray groupMessages = (JSONArray) groupJsonObject.get(GROUP_MESSAGES);
+                String groupAuthorContact = (String) groupJsonObject.get(GROUP_AUTHOR_CONTACT);
+            }
+
+            return groups;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 

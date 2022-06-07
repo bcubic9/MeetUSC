@@ -39,5 +39,5 @@ public abstract class JsonConstants {
     public static final String  GROUP_RATING = "GROUP_RATING";
     public static final String  GROUP_AUTHOR = "GROUP_AUTHOR";
     public static final String  GROUP_MESSAGES = "GROUP_MESSAGES";
-    public static final String  GROUP_CONTACT = "GROUP_CONTACT";
+    public static final String  GROUP_AUTHOR_CONTACT = "GROUP_AUTHOR_CONTACT";
 }
