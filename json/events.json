@@ -1,20 +1,21 @@
 [
   {
-    "id":"48c1bbee-dd16-11ec-9d64-0242ac120002",
-    "name":"Habitat for Humanity",
-    "address":"209 S Sumter St Columbia, SC 29201 United States",
-    "size": 20,
-    "inPerson": true,
-    "description": "Help us build houses!"
+    "EVENT_ID":"48c1bbee-dd16-11ec-9d64-0242ac120002",
+    "EVENT_NAME":"Habitat for Humanity",
+    "EVENT_ADDRESS":"209 S Sumter St Columbia, SC 29201 United States",
+    "EVENT_SIZE": 20,
+    "EVENT_INPERSON": true,
+    "EVENT_DESCRIPTION": "Help us build houses!",
+    "EVENT_COMMENTS" : [""]
   },
   {
-    "id":"840b1734-dd18-11ec-9d64-0242ac120002",
-    "name":"Axe Throwing ",
-    "address":"700 Gervais St b2, Columbia, SC 29201",
-    "size": 10,
+    "EVENT_ID":"840b1734-dd18-11ec-9d64-0242ac120002",
+    "EVENT_NAME":"Axe Throwing ",
+    "EVENT_ADDRESS":"700 Gervais St b2, Columbia, SC 29201",
+    "": 10,
     "inPerson": true,
-    "description": "Aim for the head!"
-
+    "description": "Aim for the head!",
+    "EVENT_COMMENTS" : [""]
   },
   {
     "id":"c7c1448a-dd18-11ec-9d64-0242ac120002",
@@ -22,7 +23,8 @@
     "address":"Not Applicable",
     "size": 5,
     "inPerson": false,
-    "description": "Must be good to join"
+    "description": "Must be good to join",
+    "EVENT_COMMENTS" : [""]
 
   },
   {
@@ -31,7 +33,7 @@
     "address":"Somewhere on the Congaree river, as of yet, undetermined",
     "size": 1,
     "inPerson": true,
-    "description": "Let's explore the Congaree river!!"
-
+    "description": "Let's explore the Congaree river!!",
+    "EVENT_COMMENTS" : [""]
   }
 ]
