@@ -64,22 +64,22 @@ public class DataWriter extends JsonConstants {
     public JSONObject getEventJSON(Event event) {
         JSONObject eventDetails = new JSONObject();
 
-        eventDetails.put(EVENT_ID, event.getEventId().toString());
-        eventDetails.put(EVENT_NAME, event.getEventNametoString());
-        eventDetails.put(USER_DISPLAY_NAME, user.getDisplayName().toString());
-        eventDetails.put(USER_NAME, user.getName().toString());
-        eventDetails.put(USER_GENDER, user.getUserGender().toString());
-        eventDetails.put(USER_AGE, user.getUserAge());
-        eventDetails.put(USER_CREATION_DATE, user.getUserCreationDate().toString());
-        eventDetails.put(USER_NUMBER_OF_GROUPS, user.getNumberOfGroups());
-        eventDetails.put(USER_HOBBIES, user.getHobby().toString());
-        eventDetails.put(USER_EMAIL_ADDRESS, user.getEmailAddress().toString());
-        eventDetails.put(USER_HAS_AGREED_TO_TERMS, user.getHasAgreedToTerms());
-        eventDetails.put(USER_PROFILE_IS_PUBLIC, user.getProfileIsPublic());
-        eventDetails.put(USER_FAVORITE_GROUPS, user.getFavoriteGroups().toString());
-        eventDetails.put(USER_CATEGORIES_OF_INTEREST, user.getCategoriesOfInterest().toString());
-        eventDetails.put(USER_ADMIN_PRIVILEGES, user.getAdminPrivileges());
-        eventDetails.put(USER_AUTHOR_OF, user.getAuthorPrivileges());
+        eventDetails.put(EVENT_ID, event.getEventId());
+        eventDetails.put(EVENT_NAME, event.getEventName());
+        eventDetails.put(EVENT_ADDRESS, event.getEventAddress());
+        eventDetails.put(EVENT_SIZE, event.getEventSize());
+        eventDetails.put(EVENT_IN_PERSON, event.getInPerson());
+        eventDetails.put(EVENT_DESCRIPTION, event.getDescription());
+        eventDetails.put(EVENT_COMMENTS, event.getComments());
+        /*
+         * "EVENT_ID":"840b1734-dd18-11ec-9d64-0242ac120002",
+            "EVENT_NAME":"Axe Throwing ",
+            "EVENT_ADDRESS":"700 Gervais St b2, Columbia, SC 29201",
+            "EVENT_SIZE": 10,
+            "EVENT_IN_PERSON": true,
+            "EVENT_DESCRIPTION": "Aim for the head!",
+            "EVENT_COMMENTS" : ["Dude you should have seen the target from our last axe throwing event", "Yeah, man. I wish I was able to go."]                 
+         */
     }
 
     public boolean saveGroups() {
