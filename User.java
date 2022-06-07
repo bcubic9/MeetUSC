@@ -21,6 +21,16 @@ public class User {
     protected ArrayList<Group> authorOf;
     private String emailAddress;
 
+    public User(String userName, String password, String firstName, String lastName)
+    {
+        this.userId = UUID.randomUUID();
+        this.userName = userName;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+
+    }
   
     public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age, 
             Date dateCreated, String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
@@ -40,11 +50,6 @@ public class User {
         this.favoriteGroups = favoriteGroups;
         this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
        
-    }
-
-    public User(String userName)
-    {
-
     }
 
     public User(String username, String password)
