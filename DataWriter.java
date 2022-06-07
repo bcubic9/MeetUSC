@@ -83,6 +83,30 @@ public class DataWriter extends JsonConstants {
     }
 
     public boolean saveGroups() {
-        return false;
+        GroupList groups = GroupList.getInstance();
+        ArrayList<Group> groupList = groups.getGroups();
+        JSONArray jsonGroups = new JSONArray();
+        for(int i = 0; i < groupList.size(); i++)
+        {
+            jsonGroups.add(getGroupJSON(groupList.get(i)));
+        }
+
+        try (FileWriter file = new FileWriter(GROUP_FILE_NAME)) {
+
+            file.write(jsonGroups.toJSONString());
+            file.flush();
+
+        } catch (IOException e) { // could get rid of IOException
+            e.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        } 
+    }
+
+    public JSONObject getGroupJSON(Group group)
+    {
+        JSONObject groupDetails = new JSONObject();
+        groupDetails.put(GROUP_ID, group.getGroupId().toString());
+        groupDetails.put(GROUP_NAME, group.getGroupName().toString());
     }
 }
