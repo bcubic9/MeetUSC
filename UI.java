@@ -22,17 +22,11 @@ public class UI
                     break;
                 
                 case "g":
-                    System.out.println("Stub");
-                    /**
-                     * This will pass in the required parameters of a predetermined guest user.
-                     */
+                    guestLogin();
                     break;
 
                 case "c":
                     System.out.println("Stub");
-                    /**
-                     * This is going to call the addUser() method and go through proper creation procedure.
-                     */
                     break;
 
                 case "e":
@@ -74,17 +68,15 @@ public class UI
                 System.out.println("Have a nice day!");
                 System.exit(0);
             }
-            else if(!cont.equals("y"))
+            else if(cont.equals("y"))
             {
                 System.out.println("Continuing as guest...");
-                /**
-                 * Here the method will use the guest user to continue into the application.
-                 */
+                guestLogin();
             }
         }
         else
         {
-        return user;
+            return user;
         }
     }
    }
@@ -99,9 +91,10 @@ public class UI
         System.out.println("Exit (e)");
    }
 
-   public void guestLogin()
+   public User guestLogin()
    {
-
+        User guest = new User();
+        return guest;
    }
 
    public ArrayList<Group> displayFavoriteGroups()
