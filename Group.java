@@ -1,10 +1,6 @@
+import java.util.*;
 
-
-
-import java.util.ArrayList;
-import java.util.UUID;
-
-public class Group{
+public class Group {
 
     private ArrayList<Category> category;
     private ArrayList<User> members;
@@ -19,19 +15,17 @@ public class Group{
     private ArrayList<Message> messages;
     private UUID id;
 
-    
-    private Group(String name, String shortDesciption, ArrayList<Category> categories){
+    private Group(String name, String shortDesciption, ArrayList<Category> categories) {
 
         id = UUID.randomUUID();
         this.name = name;
         this.shortDescription = shortDescription;
         this.category = category;
-   
 
     }
 
-
-    private Group(UUID id, String name, String shortDescription, ArrayList<Category> categories, ArrayList<User> members, ArrayList<Event> events){
+    private Group(UUID id, String name, String shortDescription, ArrayList<Category> categories,
+            ArrayList<User> members, ArrayList<Event> events) {
         this.id = id;
         this.name = name;
         this.shortDescription = shortDescription;
@@ -42,66 +36,68 @@ public class Group{
 
     }
 
+    public String getLongDescription() {
+        return this.longDescription;
+    }
 
-    public void joinGroup(User member){
-        member.acceptMember(member);
+    public String getShortDescription() {
+        return this.shortDescription;
+    }
 
-        
-        
+    public String getGroupName() {
+        return this.name;
+    }
+
+    public UUID getGroupId() {
+        return this.id;
+    }
+
+    public void joinGroup(User member) {
+        // member.acceptMember(member); // talk to the professor about author vs user
+        // privileges
 
     }
 
-    public void leaveGroup(User member){
-        member.removeMember(member, true);
-         
+    public void leaveGroup(User member) {
+        // member.removeMember(member, true); // talk to the professor about author vs
+        // user privileges
 
     }
 
-    public void displayMessage(User member){
-
-
-    }
-
-    public void displayShortDescription(String shortDescription){
-
-        
-        
-        
+    public void displayMessage(User member) {
 
     }
 
-    public void displayLongDescription(String longDescription){
-
-
+    public void displayShortDescription(String shortDescription) {
 
     }
 
-    public void displayGroupMember(ArrayList<User> members){
+    public void displayLongDescription(String longDescription) {
+
+    }
+
+    public void displayGroupMember(ArrayList<User> members) {
 
         System.out.println(members);
 
     }
 
-    public void displayTypesOfCategories(ArrayList<Category> typesOfCategories){
+    public void displayTypesOfCategories(ArrayList<Category> typesOfCategories) {
 
         System.out.println(typesOfCategories);
-        
 
     }
 
-    public void displayInPerson(Boolean inPerson){
-        if(inPerson == true){
-        
+    public void displayInPerson(Boolean inPerson) {
+        if (inPerson == true) {
+
         }
 
-        
-
     }
 
-    public void addToAllGroups(Group group){
+    public void addToAllGroups(Group group) {
 
         group.addToAllGroups(group);
-    }   
-
+    }
 
 }

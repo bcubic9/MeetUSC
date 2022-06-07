@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 class MeetUSCFacade 
 {
@@ -7,7 +7,12 @@ class MeetUSCFacade
    private Character guestLogin; 
    private boolean exitApp;
 
-    private boolean addUser (User user)
+   public MeetUSCFacade()
+   {
+
+   }
+
+    private Boolean addUser (User user)
     {
         return false;
     }
@@ -22,9 +27,9 @@ class MeetUSCFacade
         return null;
     }
 
-    public boolean login(String username, String password)
+    public User login(String username, String password)
     {
-        return false;
+        return new User(username, password);
     }
 
     public Event searchForEvent(Event event)
@@ -72,9 +77,10 @@ class MeetUSCFacade
         return false;
     }
 
-    public boolean createNewUser()
+    public User createNewUser()
     {
-        return false;
+        System.out.println();
+        return null;
     }
 
     public boolean createNewGroup()

@@ -1,142 +1,140 @@
+
 import java.util.ArrayList;
 
 public class User {
-protected UUIDMaker userId;
-protected String password;
-protected String displayName; 
-protected String name;
-protected String gender;
-protected int age;
-protected int date;
-protected ArrayList<Group> groupsCreated;
-protected int NumberOfGroup;
-protected ArrayList<String> hobby;
-protected String emailAddress;
-protected boolean hasAgreedToTerms;
-protected boolean profileIsPublic;
-protected ArrayList<Group> favoriteGroups; 
-protected ArrayList<Category> categoriesOfInterest = null;
-/**
- * May need to get rid of or alter this method.
- */
-//public boolean adminPrivileges(User user) {
 
-//}
-/**
- * May need to get rid of or alter this method.
- */
-//public boolean authorPrivileges(User user) {
+    protected String userId;
+    protected String password;
+    protected String displayName;
+    protected String name;
+    protected String gender;
+    protected int age;
+    protected String dateCreated;
+    protected int numGroupsCreated;
+    //protected ArrayList<Group> groupsCreated; //need to fix this one. need to add it into the json data or take this out
+    protected String hobby; //need to change it to String[] or arraylist<String> later
+    protected String emailAddress;
+    protected Boolean hasAgreedToTerms;
+    protected Boolean profilesPublic;
+    protected String favoriteGroups; //needs to be changed back to ArrayList<Group> data type later.
+    protected String categoriesOfInterest; //needs to be changed back to ArrayList<Group> data type later.
+    protected boolean adminPrivileges;
+    protected boolean authorPrivileges;
 
-//}
-public User(String displayName){
-    this.displayName = name;
-}
+    //May need to change the userID to UUIDMaker.
+    public User(String userID, String userPass, String userDisplayName, String userName, String userGender, String userAge, 
+            String userCreationDate, String userNumOfGroups, String userHobbies, String userEmail, String userAgreedToTerms, 
+            String userProfileIsPublic, String userFavGroups, String userCategoriesOfInterest, String userAdminPrivileges,
+            String userAuthorPrivileges)
+    {
+        this.userId = userID;
+        this.password = userPass;
+        this.displayName = userDisplayName;
+        this.name = userName;
+        this.gender = userGender;
+        this.age = Integer.parseInt(userAge);
+        this.dateCreated = userCreationDate;
+        //need to fix this one. will alter from ArrayList<Group> to integer for now
+        this.numGroupsCreated = Integer.parseInt(userNumOfGroups);
+        this.hobby = userHobbies;
+        this.emailAddress = userEmail;
+        this.hasAgreedToTerms = Boolean.parseBoolean(userAgreedToTerms);
+        this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
+        this.favoriteGroups = userCategoriesOfInterest;
+        this.categoriesOfInterest = userCategoriesOfInterest;
+        this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
+        this.authorPrivileges = Boolean.parseBoolean(userAuthorPrivileges);
+    }
 
-/**
- * Let's decrease the number of parameters given here. consider prompting 
- * the user for them with System.out.println("Some prompt here");
- * get rid of the string infront of arraylist. red line will appear. you need appropriate parameters.
- */ 
-//public User(UUIDMaker id, String name, String shortDescription, 
-//                   String longDescription, ArrayList<Category> categories, 
-//                   ArrayList<User> attendees, ArrayList<Message> messages){
-//                   }
-public String toString(){
-  return "";
-}
+    public User()
+    {
+
+    }
+
+    public User(String username, String password)
+    {
     
-
-
-
-private String getName(){
-  return "";
-}
-private void setName(String newName){
-  
-}
-private String getDisplayName(){
-  return displayName;
-}
-private void setDisplayName(String newDisplayname){
-  this.displayName = newDisplayname;
-}
-private String etEmailAddress(){
-  return "";
-}
-private void setEmailAddress(String email){
-
-}
-private String getUserId(){
-  return "";
-}
-private void setUserId(String userID){
-
-}
-private ArrayList<String> getHobbies(){
-  return hobby;
-
-}
-private void setHobby(String hobby){
-
-}
-private ArrayList<Group> getFavoriteGroups(){
-  return favoriteGroups;
-}
-//may need to change this to addfavoritegroup instead of set.
-private void setFavoriteGroup(Group group){
-
-}
-    public void notifyOfMessage(String message) {
-
     }
 
-    public void addInterestCategories(ArrayList<Category> Category) {
-        
+    public String getName() {
+        return name;
     }
 
-    public boolean determinePrivileges(User user) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public ArrayList<String> getHobby() {
+        return null;
+    }
+
+    public void setHobby(ArrayList<String> hobby) {
+        //this.hobby = hobby;
+    }
+
+    public ArrayList<Group> getFavoriteGroups() {
+        return null;
+    }
+
+    public String getUserPassword() {
+        return this.password;
+    }
+    
+    public String getUserGender() {
+        return this.gender;
+    }
+
+    public int getUserAge() {
+        return this.age;
+    }
+
+    public String getUserCreationDate() {
+        return dateCreated;
+    }
+
+    public int getNumberOfGroups() {
+        return numGroupsCreated;
+    }
+
+    public boolean getHasAgreedToTerms() {
         return false;
     }
 
-    public void acceptMember(User member) {
-            
+    public boolean getProfileIsPublic() {
+        return false;
+    }
+    public boolean getAdminPrivileges() {
+        return false;
+    }
+    public boolean getAuthorPrivileges() {
+        return false;
     }
 
-    public void rejectMember(User member) {
-            
+    public String getCategoriesOfInterest() {
+        return this.categoriesOfInterest;
     }
-
-    public void removeMember(User member, boolean adminPrivileges) {
-            
-    }
-    private void removeMemberFromGroup(User member, boolean adminPrivileges){
-
-    } 
-    private void tempUserBan(User user, boolean adminPrivileges){
-
-    }
-    private void tempGroupBan(Group group, boolean adminPrivileges){
-
-    }
-    private void userBan(User member, boolean adminPrivileges){
-
-    }
-    private void groupBan(Group group, boolean adminPrivileges){
-
-    }
-    private void removeGroup(Group group, boolean adminPrivileges){
-
-    }
-    private void removeEvent(Event event, boolean adminPrivileges){
-
-    }
-    private String warnUserOfViolation(User user, boolean adminPrivileges){
-      return "";
-    }
-    private String warnGroupOfViolation(Group group, boolean adminPrivileges){
-      return "";
-    }
-
-
-    
 }

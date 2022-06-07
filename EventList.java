@@ -1,40 +1,71 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
+public class EventList {
 
-public class EventList{
+  private static EventList eventList = null;
 
-    private static EventList eventList = null;
+  public ArrayList<Event> events;
 
-    public ArrayList<Event> events;
+  private EventList() {
+    // this.events = DataReader.getEvents();
 
-    private EventList(){
-      this.events = new ArrayList<Event>();
-      
-    }
+  }
 
-    public EventList getInstance(){
-        if (eventList == null) {
-          eventList = new EventList();
-        }
-        return eventList;
+  public EventList getInstance() {
+    if (eventList == null) {
+      eventList = new EventList();
     }
-    public ArrayList<Event> getEvents(){
-        return events;
+    return eventList;
+  }
+
+  public ArrayList<Event> getEvents() {
+    return events;
+  }
+
+  public void addEvent(String name, String shortDescription, ArrayList<Category> categories) {// Change in lucid Chart
+    Event event = new Event(name, shortDescription, categories);
+    events.add(event);
+  }
+
+  public ArrayList<Event> removeEvent(Event event) {
+    events.remove(event);
+    return events;
+  }
+
+  public ArrayList<Event> searchByCategory(Category category) {
+    ArrayList<Event> relevantEvents = new ArrayList<>();
+    for (Event e : events) {
+      if (e.hasCategory(category)) {
+        relevantEvents.add(e);
+      }
     }
-    public void addEvent(Event event){
-      events.add(event);
+    return relevantEvents;
+  }
+
+  public ArrayList<Event> searchByName(String name) {
+
+    ArrayList<Event> relevantEventsName = new ArrayList<>();
+    for (Event e : events) {
+      if (e.getEventName().equals(name))
+        ;
+      {
+        relevantEventsName.add(e);
+      }
     }
-    public ArrayList<Event> removeEvent(Event event) {
-      events.remove(event);
-      return events;
+    return relevantEventsName;
+  }
+
+  public Event getEventByUUID(UUID ID) {
+    for (Event e : events) {
+      if (e.getEventId().equals(ID)) {
+        return e;
+      }
     }
-    public ArrayList<Event> searchForEvent(Category category){
-        ArrayList<Event> relevantEvents = new ArrayList<>();
-        for (Event e : events) {
-          if(e.categories().contains(category)){
-            relevantEvents.add(e);
-        }
-        return relevantEvents;
-    }
-}
+    return null;
+  }
+
+  public void logout() {
+    // DataWriter.saveEvents();
+  }
 }
