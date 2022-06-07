@@ -1,50 +1,47 @@
 import java.util.ArrayList;
 
 public class GroupList{
+    private static GroupList groupList = null;
 
-    private static ArrayList<Group> groups; //this is the group list.
+
+    private ArrayList<Group> groups; //this is the group list.
+    //private static ArrayList<User> favoriteGroup;
   
-
     private GroupList(){
       this.groups = new ArrayList<Group>();
     }
     
-    public static ArrayList<Group> getInstance(){
-        if (groups == null) {
-          return groups;
+    public static GroupList getInstance(){
+        if (groupList == null) {
+          groupList = new GroupList();
         }
-        return groups;
+        return groupList;
     }
-
 
     public ArrayList<Group> getGroups(){
         return groups;
-
-    }
-
-    private boolean addGroup(Group group){
-        return false;
-    }
-
-    private Group editGroup(Group group){
-        return groups.get(0);
-
     }
 
     public Group removeGroup(Group group){
       groups.remove(group);
       return group;
-
     }
-
-    public Group searchForGroup(Group group){
-        return groups.get(0);
-
+    public ArrayList<Group> searchForGroupByName(String name){
+      ArrayList<Group> relevantGroupName = new ArrayList<>();
+        for (Group e : groups) {
+          if(e.getGroupName().contains(name)); {
+              relevantGroupName.add(e);
+          }
+        }
+        return relevantGroupName;
     }
-    
-
-
-
-
-
+    public Group getGroupByUUID(UUID ID){
+      for (Group e : groups) {
+          if(e.getGroupId().equals(ID)){
+            return e;
+          } 
+        }
+        return null;
+      }
 }
+
