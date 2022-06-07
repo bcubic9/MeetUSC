@@ -6,24 +6,22 @@ import org.json.simple.JSONObject;
 
 public class DataWriter extends JsonConstants {
 
-    
-
     public void saveUsers() {
-        UserList users = UserList.getInstance(); //may need to switch form UserList to User
+        UserList users = UserList.getInstance(); // may need to switch form UserList to User
         ArrayList<User> userList = users.getUsers();
         JSONArray jsonUsers = new JSONArray();
 
-        //creating all the json objects
-        for(int i = 0; i < userList.size(); i++) {
+        // creating all the json objects
+        for (int i = 0; i < userList.size(); i++) {
             jsonUsers.add(getUserJSON(userList.get(i)));
         }
 
         try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
-            
+
             file.write(jsonUsers.toJSONString());
             file.flush();
 
-        } catch (IOException e) { //could get rid of IOException
+        } catch (IOException e) { // could get rid of IOException
             e.printStackTrace();
         } catch (Exception exception) {
             exception.printStackTrace();
@@ -51,11 +49,10 @@ public class DataWriter extends JsonConstants {
 
         return userDetails;
     }
-    
 
     public boolean saveEvents() {
         return false;
-        
+
     }
 
     public boolean saveGroups() {
