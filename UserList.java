@@ -29,4 +29,20 @@ public class UserList {
     public ArrayList<User> getUsers() {
         return users;
     }
+
+    public void addUser()//params
+    {
+
+    }
+
+    public void getUserByID()
+    {
+
+    }
+
+    public void getUser(String userName)
+    {
+      
+    }
 }
+
