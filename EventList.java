@@ -12,7 +12,7 @@ public class EventList {
 
   }
 
-  public EventList getInstance() {
+  public static EventList getInstance() {
     if (eventList == null) {
       eventList = new EventList();
     }

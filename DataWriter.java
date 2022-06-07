@@ -50,7 +50,7 @@ public class DataWriter extends JsonConstants {
         return userDetails;
     }
 
-    public boolean saveEvents() {
+    public void saveEvents() {
         EventList events = EventList.getInstance();
         ArrayList<Event> eventList = events.getEvents();
         JSONArray jsonEvents = new JSONArray();
@@ -64,6 +64,22 @@ public class DataWriter extends JsonConstants {
     public JSONObject getEventJSON(Event event) {
         JSONObject eventDetails = new JSONObject();
 
+        eventDetails.put(USER_ID, user.getUserId().toString());
+        eventDetails.put(USER_PASSWORD, user.getUserPassword().toString());
+        eventDetails.put(USER_DISPLAY_NAME, user.getDisplayName().toString());
+        eventDetails.put(USER_NAME, user.getName().toString());
+        eventDetails.put(USER_GENDER, user.getUserGender().toString());
+        eventDetails.put(USER_AGE, user.getUserAge());
+        eventDetails.put(USER_CREATION_DATE, user.getUserCreationDate().toString());
+        eventDetails.put(USER_NUMBER_OF_GROUPS, user.getNumberOfGroups());
+        eventDetails.put(USER_HOBBIES, user.getHobby().toString());
+        eventDetails.put(USER_EMAIL_ADDRESS, user.getEmailAddress().toString());
+        eventDetails.put(USER_HAS_AGREED_TO_TERMS, user.getHasAgreedToTerms());
+        eventDetails.put(USER_PROFILE_IS_PUBLIC, user.getProfileIsPublic());
+        eventDetails.put(USER_FAVORITE_GROUPS, user.getFavoriteGroups().toString());
+        eventDetails.put(USER_CATEGORIES_OF_INTEREST, user.getCategoriesOfInterest().toString());
+        eventDetails.put(USER_ADMIN_PRIVILEGES, user.getAdminPrivileges());
+        eventDetails.put(USER_AUTHOR_OF, user.getAuthorPrivileges());
     }
 
     public boolean saveGroups() {
