@@ -2,8 +2,9 @@
     {
         "USER_ID" : "fd2a1d6d-3419-401c-a021-cbd2b444d86c", 
         "USER_PASSWORD" : "qwertyPASS",
-        "USER_DISPLAY_NAME" : "JohnS00",
-        "USER_NAME" : "John Smith",
+        "USER_NAME" : "JohnS00",
+        "USER_FIRSTNAME" : "John",
+        "USER_LASTNAME" : "Smith",
         "USER_GENDER" : "Male",
         "USER_AGE" : 22,
         "USER_CREATION_DATE" : "05-26-22",
@@ -15,13 +16,14 @@
         "USER_FAVORITE_GROUPS" : ["ColumbiaFireFliesWatchers", "River-Rafters of Columbia"],
         "USER_CATEGORIES_OF_INTEREST" : ["sports", "outdoors"],
         "USER_ADMIN_PRIVILEGES" : false,
-        "USER_AUTHOR_PRIVILEGES" : true
+        "USER_AUTHOR_OF" : ["UUID of groups that they're an author of"]
     }, 
     {
         "USER_ID" : "8258b3b4-bbb6-45a5-9bf2-267d3af21191", 
         "USER_PASSWORD" : "qwerty2",
-        "USER_DISPLAY_NAME" : "Bob0123",
-        "USER_NAME" : "Robert Builder",
+        "USER_USERNAME" : "Bob0123",
+        "USER_FIRSTNAME" : "Robert",
+        "USER_LASTNAME" : "Builder",
         "USER_GENDER" : "Male",
         "USER_AGE" : 30,
         "USER_CREATION_DATE" : "05-28-22",
@@ -33,13 +35,14 @@
         "USER_FAVORITE_GROUPS" : ["Builders of America", "Home Building for the Homeless"],
         "USER_CATEGORIES_OF_INTEREST" : ["Construction", "outdoors"],
         "USER_ADMIN_PRIVILEGES" : false,
-        "USER_AUTHOR_PRIVILEGES" : true
+        "USER_AUTHOR_OF" : ["UUID"]
     },
     {
         "USER_ID" : "3cdec68b-0b06-4a8a-8bf3-76390bce6ae9", 
         "USER_PASSWORD" : "poiuy123",
-        "USER_DISPLAY_NAME" : "SamIAm",
-        "USER_NAME" : "Samantha King",
+        "USER_USERNAME" : "SamIAm",
+        "USER_FIRSTNAME" : "Samantha",
+        "USER_LASTNAME" : "King",
         "USER_GENDER" : "Female",
         "USER_AGE" : 25,
         "USER_CREATION_DATE" : "05-28-22",
@@ -51,7 +54,7 @@
         "USER_FAVORITE_GROUPS" : ["Park Frisbee Group"],
         "USER_CATEGORIES_OF_INTEREST" : ["Frisbee", "make-up"],
         "USER_ADMIN_PRIVILEGES" : false,
-        "USER_AUTHOR_PRIVILEGES" : true
+        "USER_AUTHOR_OF" : ["UUID"]
     }
     
 ]
