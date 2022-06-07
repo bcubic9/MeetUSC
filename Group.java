@@ -36,6 +36,14 @@ public class Group {
 
     }
 
+    public String getLongDescription() {
+        return this.longDescription;
+    }
+
+    public String getShortDescription() {
+        return this.shortDescription;
+    }
+
     public String getGroupName() {
         return this.name;
     }
