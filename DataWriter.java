@@ -45,7 +45,7 @@ public class DataWriter extends JsonConstants {
         userDetails.put(USER_FAVORITE_GROUPS, user.getFavoriteGroups().toString());
         userDetails.put(USER_CATEGORIES_OF_INTEREST, user.getCategoriesOfInterest().toString());
         userDetails.put(USER_ADMIN_PRIVILEGES, user.getAdminPrivileges());
-        userDetails.put(USER_AUTHOR_PRIVILEGES, user.getAuthorPrivileges());
+        userDetails.put(USER_AUTHOR_OF, user.getAuthorPrivileges());
 
         return userDetails;
     }
@@ -59,6 +59,11 @@ public class DataWriter extends JsonConstants {
         {
             jsonEvents.add(getEventJSON(eventList.get(i)));
         }
+    }
+
+    public JSONObject getEventJSON(Event event) {
+        JSONObject eventDetails = new JSONObject();
+
     }
 
     public boolean saveGroups() {

@@ -4,36 +4,35 @@
     "EVENT_NAME":"Habitat for Humanity",
     "EVENT_ADDRESS":"209 S Sumter St Columbia, SC 29201 United States",
     "EVENT_SIZE": 20,
-    "EVENT_INPERSON": true,
+    "EVENT_IN_PERSON": true,
     "EVENT_DESCRIPTION": "Help us build houses!",
-    "EVENT_COMMENTS" : [""]
+    "EVENT_COMMENTS" : ["Hey, guys. I'm going to work on this client's house.", "Join me and help me help them!"]
   },
   {
     "EVENT_ID":"840b1734-dd18-11ec-9d64-0242ac120002",
     "EVENT_NAME":"Axe Throwing ",
     "EVENT_ADDRESS":"700 Gervais St b2, Columbia, SC 29201",
-    "": 10,
-    "inPerson": true,
-    "description": "Aim for the head!",
-    "EVENT_COMMENTS" : [""]
+    "EVENT_SIZE": 10,
+    "EVENT_IN_PERSON": true,
+    "EVENT_DESCRIPTION": "Aim for the head!",
+    "EVENT_COMMENTS" : ["Dude you should have seen the target from our last axe throwing event", "Yeah, man. I wish I was able to go."]
   },
   {
-    "id":"c7c1448a-dd18-11ec-9d64-0242ac120002",
-    "name":"Counter-Strike: Global Offensive",
-    "address":"Not Applicable",
-    "size": 5,
-    "inPerson": false,
-    "description": "Must be good to join",
-    "EVENT_COMMENTS" : [""]
-
+    "EVENT_ID":"c7c1448a-dd18-11ec-9d64-0242ac120002",
+    "EVENT_NAME":"Counter-Strike: Global Offensive",
+    "EVENT_ADDRESS":"Not Applicable",
+    "EVENT_SIZE": 5,
+    "EVENT_IN_PERSON": false,
+    "EVENT_DESCRIPTION": "Must be good to join",
+    "EVENT_COMMENTS" : ["Man we got stuck with a bunch of noobs last time.", "We'll get them next time, dude."]
   },
   {
-    "id":"a102b596-b30e-4de6-993a-e82afc7d8a1c",
-    "name":"Congaree River Rafting on June 4th, 2022",
-    "address":"Somewhere on the Congaree river, as of yet, undetermined",
-    "size": 1,
-    "inPerson": true,
-    "description": "Let's explore the Congaree river!!",
-    "EVENT_COMMENTS" : [""]
+    "EVENT_ID":"a102b596-b30e-4de6-993a-e82afc7d8a1c",
+    "EVENT_NAME":"Congaree River Rafting on June 4th, 2022",
+    "EVENT_ADDRESS":"Somewhere on the Congaree river, as of yet, undetermined",
+    "EVENT_SIZE": 1,
+    "EVENT_IN_PERSON": true,
+    "EVENT_DESCRIPTION": "Let's explore the Congaree river!!",
+    "EVENT_COMMENTS" : ["The rapids were so awesome, bro!", "Yeah, man. I can't wait to see them again next time!"]
   }
 ]
