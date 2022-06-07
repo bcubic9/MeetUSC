@@ -6,17 +6,17 @@ public class Message
     private String text;
     private Date date;
 
-    private void registerObserver(Observer observer)
+    private void registerUser(User user)
     {
 
     }
 
-    private void removeObserver(Observer observer)
+    private void removeUser(User user)
     {
 
     }
 
-    private void notifyObserver()
+    private void notifyUser()
     {
 
     }
