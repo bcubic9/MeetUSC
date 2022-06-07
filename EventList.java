@@ -9,7 +9,7 @@ public class EventList {
     public ArrayList<Event> events;
 
     private EventList() {
-     // this.events = DataReader.getEvents();
+      this.events = DataReader.getEvents();
       
     }
 
