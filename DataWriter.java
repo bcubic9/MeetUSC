@@ -51,8 +51,14 @@ public class DataWriter extends JsonConstants {
     }
 
     public boolean saveEvents() {
-        return false;
+        EventList events = EventList.getInstance();
+        ArrayList<Event> eventList = events.getEvents();
+        JSONArray jsonEvents = new JSONArray();
 
+        for(int i = 0; i < eventList.size(); i++)
+        {
+            jsonEvents.add(getEventJSON(eventList.get(i)));
+        }
     }
 
     public boolean saveGroups() {
