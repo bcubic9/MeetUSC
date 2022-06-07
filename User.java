@@ -1,5 +1,7 @@
 
+import java.sql.Date;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class User {
 
@@ -10,17 +12,13 @@ public class User {
     protected String lastName;
     protected String gender;
     protected int age;
-    protected String dateCreated;
-    protected int numGroupsCreated;
-    //protected ArrayList<Group> groupsCreated; //need to fix this one. need to add it into the json data or take this out
-    protected String hobby; //need to change it to String[] or arraylist<String> later
-    protected String emailAddress;
+    protected Date date;
+    protected ArrayList<String> hobby; 
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
-    protected String favoriteGroups; //needs to be changed back to ArrayList<Group> data type later.
-    protected String categoriesOfInterest; //needs to be changed back to ArrayList<Group> data type later.
+    protected ArrayList<Group> favoriteGroups; 
     protected boolean adminPrivileges;
-    protected boolean authorPrivileges;
+    protected ArrayList<Group> authorOf;
 
     //May need to change the userID to UUIDMaker.
     public User(UUID userID, String userPass, String userDisplayName, String userName, String userGender, String userAge, 
