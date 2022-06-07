@@ -2,6 +2,7 @@ public enum Gender {
 
     MALE,
     FEMALE,
-    OTHER
+    OTHER,
+    PREFER_NOT_TO_SPECIFY
     
 }
