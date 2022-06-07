@@ -54,7 +54,20 @@ public class User {
 
     public User()
     {
-
+        this.userId = UUID.randomUUID();
+        this.userName = "Guest";
+        this.password = "Guest1";
+        this.firstName = "John";
+        this.lastName = "Smith";
+        this.gender = "Other";
+        this.age = 18;
+        this.dateCreated = new Date(2022, 6, 7);
+        this.hobby = null;
+        this.emailAddress = "guest@email.com";
+        this.hasAgreedToTerms = true;
+        this.profilesPublic = true;
+        this.favoriteGroups = null;
+        this.adminPrivileges = false;
     }
 
     public String getName() {
