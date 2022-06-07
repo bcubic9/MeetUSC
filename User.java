@@ -13,12 +13,10 @@ public class User {
     protected String gender;
     protected int age;
     protected Date date;
-    protected String hobby; //need to change it to String[] or arraylist<String> later
-    protected String emailAddress;
+    protected ArrayList<String> hobby; 
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
-    protected String favoriteGroups; //needs to be changed back to ArrayList<Group> data type later.
-    protected String categoriesOfInterest; //needs to be changed back to ArrayList<Group> data type later.
+    protected ArrayList<Group> favoriteGroups; 
     protected boolean adminPrivileges;
     protected ArrayList<Group> authorOf;
 
