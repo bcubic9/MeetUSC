@@ -57,6 +57,16 @@ public class User {
         
     }
 
+    public User(String userName, String password, String id)
+    {
+        /**
+         * Ignore parameters, to be modified by Denise.
+         * This is the guest constructor for User.
+         * It should be a default setting that does not change.
+         * I will call this in the UI under the .guestlogin() method which will automatically pass these credentials in.
+         */
+    }
+
     public String getName() {
         return name;
     }

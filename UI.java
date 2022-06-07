@@ -23,12 +23,18 @@ public class UI
                 
                 case "g":
                     System.out.println("Stub");
+                    /**
+                     * This will pass in the required parameters of a predetermined guest user.
+                     */
                     break;
 
                 case "c":
                     System.out.println("Stub");
+                    /**
+                     * This is going to call the addUser() method and go through proper creation procedure.
+                     */
                     break;
-                    
+
                 case "e":
                     System.out.println("Have a nice day!");
                     System.exit(0);

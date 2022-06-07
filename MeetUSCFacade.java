@@ -12,9 +12,9 @@ class MeetUSCFacade
 
    }
 
-    private Boolean addUser (User user)
+    private User addUser (User user)
     {
-        return false;
+        return null;
     }
 
     public ArrayList<Group> getFavGroups()
@@ -75,12 +75,6 @@ class MeetUSCFacade
     public boolean setUserInfo(User user)
     {
         return false;
-    }
-
-    public User createNewUser()
-    {
-        System.out.println();
-        return null;
     }
 
     public boolean createNewGroup()
