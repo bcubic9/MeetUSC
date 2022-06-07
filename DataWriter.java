@@ -64,8 +64,8 @@ public class DataWriter extends JsonConstants {
     public JSONObject getEventJSON(Event event) {
         JSONObject eventDetails = new JSONObject();
 
-        eventDetails.put(USER_ID, user.getUserId().toString());
-        eventDetails.put(USER_PASSWORD, user.getUserPassword().toString());
+        eventDetails.put(EVENT_ID, event.getEventId().toString());
+        eventDetails.put(EVENT_NAME, event.getEventNametoString());
         eventDetails.put(USER_DISPLAY_NAME, user.getDisplayName().toString());
         eventDetails.put(USER_NAME, user.getName().toString());
         eventDetails.put(USER_GENDER, user.getUserGender().toString());
