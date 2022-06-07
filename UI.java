@@ -25,6 +25,10 @@ public class UI
                     System.out.println("Stub");
                     break;
 
+                case "c":
+                    System.out.println("Stub");
+                    break;
+                    
                 case "e":
                     System.out.println("Have a nice day!");
                     System.exit(0);
@@ -81,6 +85,7 @@ public class UI
         System.out.println("Choose one of the following options: ");
         System.out.println("Login (l)");
         System.out.println("Guest Login (g)");
+        System.out.println("Create User (c)");
         System.out.println("Exit (e)");
    }
 
