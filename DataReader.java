@@ -65,7 +65,7 @@ public class DataReader extends JsonConstants {
             for (int i = 0; i < eventJSON.size(); i++) {
                 // Need to make sure that these are not all strings when done.
                 JSONObject eventJsonObject = (JSONObject) eventJSON.get(i);
-                UUID userID = UUID.fromString((String) eventJsonObject.get(USER_ID));
+                UUID eventID = UUID.fromString((String) eventJsonObject.get(USER_ID));
                 String userPass = (String) eventJsonObject.get(USER_PASSWORD);
                 String userDisplayName = (String) eventJsonObject.get(USER_DISPLAY_NAME);
                 String userName = (String) eventJsonObject.get(USER_NAME);
