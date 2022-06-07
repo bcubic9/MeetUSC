@@ -111,5 +111,10 @@ public class DataWriter extends JsonConstants {
         groupDetails.put(GROUP_UPCOMING_EVENTS, group.getUpcomingEvents().toString());
         groupDetails.put(GROUP_CATEGORY_TYPES, group.getCategoryTypes().toString());
         groupDetails.put(GROUP_MEMBERS, group.getGroupMembers().toString());
+        groupDetails.put(GROUP_DESCRIPTION, group.getDescription().toString());
+        groupDetails.put(GROUP_RATING, group.getGroupRating().toString());
+        groupDetails.put(GROUP_AUTHOR, group.getAuthor().toString());
+        groupDetails.put(GROUP_MESSAGES, group.getMessages().toString());
+        groupDetails.put(GROUP_CONTACT, group.getContact().toString());
     }
 }
