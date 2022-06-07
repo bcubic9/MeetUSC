@@ -7,6 +7,7 @@ public class GroupList{
     
 
     private GroupList(){
+        
        
 
 
@@ -48,6 +49,7 @@ public class GroupList{
     }
 
     public void addFavoriteGroup(Group group){
+        
 
     }
 
