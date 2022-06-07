@@ -3,10 +3,11 @@ import java.util.ArrayList;
 
 public class User {
 
-    protected String userId;
+    protected UUID userId;
     protected String password;
-    protected String displayName;
-    protected String name;
+    protected String userName;
+    protected String firstName;
+    protected String lastName;
     protected String gender;
     protected int age;
     protected String dateCreated;
@@ -22,7 +23,7 @@ public class User {
     protected boolean authorPrivileges;
 
     //May need to change the userID to UUIDMaker.
-    public User(String userID, String userPass, String userDisplayName, String userName, String userGender, String userAge, 
+    public User(UUID userID, String userPass, String userDisplayName, String userName, String userGender, String userAge, 
             String userCreationDate, String userNumOfGroups, String userHobbies, String userEmail, String userAgreedToTerms, 
             String userProfileIsPublic, String userFavGroups, String userCategoriesOfInterest, String userAdminPrivileges,
             String userAuthorPrivileges)
@@ -46,14 +47,14 @@ public class User {
         this.authorPrivileges = Boolean.parseBoolean(userAuthorPrivileges);
     }
 
-    public User()
+    public User(String userName)
     {
 
     }
 
     public User(String username, String password)
     {
-    
+        
     }
 
     public String getName() {
