@@ -12,37 +12,34 @@ public class User {
     protected String lastName;
     protected String gender;
     protected int age;
-    protected Date date;
+    protected Date dateCreated;
     protected ArrayList<String> hobby; 
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
     protected ArrayList<Group> favoriteGroups; 
     protected boolean adminPrivileges;
     protected ArrayList<Group> authorOf;
+    private String emailAddress;
 
-    //May need to change the userID to UUIDMaker.
-    public User(UUID userID, String userPass, String userDisplayName, String userName, String userGender, String userAge, 
-            String userCreationDate, String userNumOfGroups, String userHobbies, String userEmail, String userAgreedToTerms, 
-            String userProfileIsPublic, String userFavGroups, String userCategoriesOfInterest, String userAdminPrivileges,
-            String userAuthorPrivileges)
+  
+    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age, 
+            Date dateCreated, String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
+            String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges)
     {
         this.userId = userID;
-        this.password = userPass;
-        this.displayName = userDisplayName;
-        this.name = userName;
-        this.gender = userGender;
-        this.age = Integer.parseInt(userAge);
-        this.dateCreated = userCreationDate;
-        //need to fix this one. will alter from ArrayList<Group> to integer for now
-        this.numGroupsCreated = Integer.parseInt(userNumOfGroups);
-        this.hobby = userHobbies;
-        this.emailAddress = userEmail;
+        this.password = password;
+        this.userName =userName;
+        this.firstName = firstName;
+        this.gender = gender;
+        this.age = age;
+        this.dateCreated = dateCreated;
+        this.hobby = hobby;
+        this.emailAddress = emailAddress;
         this.hasAgreedToTerms = Boolean.parseBoolean(userAgreedToTerms);
         this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
-        this.favoriteGroups = userCategoriesOfInterest;
-        this.categoriesOfInterest = userCategoriesOfInterest;
+        this.favoriteGroups = favoriteGroups;
         this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
-        this.authorPrivileges = Boolean.parseBoolean(userAuthorPrivileges);
+       
     }
 
     public User(String userName)
