@@ -2,7 +2,7 @@
     {
         "USER_ID" : "fd2a1d6d-3419-401c-a021-cbd2b444d86c", 
         "USER_PASSWORD" : "qwertyPASS",
-        "USER_NAME" : "JohnS00",
+        "USER_USERNAME" : "JohnS00",
         "USER_FIRSTNAME" : "John",
         "USER_LASTNAME" : "Smith",
         "USER_GENDER" : "Male",
@@ -14,6 +14,7 @@
         "USER_HAS_AGREED_TO_TERMS" : true,
         "USER_PROFILE_IS_PUBLIC" : false,
         "USER_FAVORITE_GROUPS" : ["ColumbiaFireFliesWatchers", "River-Rafters of Columbia"],
+        "USER_GROUPS_JOINED" : [""],
         "USER_CATEGORIES_OF_INTEREST" : ["sports", "outdoors"],
         "USER_ADMIN_PRIVILEGES" : false,
         "USER_AUTHOR_OF" : ["UUID of groups that they're an author of"]
@@ -33,6 +34,7 @@
         "USER_HAS_AGREED_TO_TERMS" : true,
         "USER_PROFILE_ISPUBLIC" : true,
         "USER_FAVORITE_GROUPS" : ["Builders of America", "Home Building for the Homeless"],
+        "USER_GROUPS_JOINED" : [""],
         "USER_CATEGORIES_OF_INTEREST" : ["Construction", "outdoors"],
         "USER_ADMIN_PRIVILEGES" : false,
         "USER_AUTHOR_OF" : ["UUID"]
@@ -52,6 +54,7 @@
         "USER_HAS_AGREED_TO_TERMS" : true,
         "USER_PROFILE_IS_PUBLIC" : true,
         "USER_FAVORITE_GROUPS" : ["Park Frisbee Group"],
+        "USER_GROUPS_JOINED" : [""],
         "USER_CATEGORIES_OF_INTEREST" : ["Frisbee", "make-up"],
         "USER_ADMIN_PRIVILEGES" : false,
         "USER_AUTHOR_OF" : ["UUID"]
