@@ -10,6 +10,7 @@ public class Event {
     private String eventAddress; 
     private int eventSize;
     private String description = "";
+    private ArrayList<String> eventComments = new ArrayList<String>();
     private UUID id;
 
 public Event(String name, String description, ArrayList<Category> categories){
@@ -70,5 +71,9 @@ private Event(UUID id, String name, String description,
     public String toString(){
       // double check this
         return name;
+    }
+
+    public ArrayList<String> getComments() {
+        return eventComments;
     }
 }
