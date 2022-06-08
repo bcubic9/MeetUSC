@@ -41,49 +41,14 @@ class MeetUSCFacade
         return currentUser;
     }
 
-    public Event searchForEvent(Event event)
+    public ArrayList<Event> searchEventByCategory(Category category)
     {
-        return event;
+        return EventList.getInstance().searchByCategory(category);
     }
 
     public Group searchForGroup(Group group)
     {
         return group;
-    }
-
-    public ArrayList<String> getHomeScreenInfo()
-    {
-        return null;
-    }
-
-    public ArrayList<String> getEventPageInfo(Event event)
-    {
-        return null;
-    }
-
-    public ArrayList<String> getGroupPageInfo(Group group)
-    {
-        return null;
-    }
-
-    public User getUserProfileInfo(User user)
-    {
-        return user;
-    }
-
-    public boolean setEventPageInfo(Event event)
-    {
-        return false;
-    }
-
-    public boolean setGroupPageInfo(Group group)
-    {
-        return false;
-    }
-
-    public boolean setUserInfo(User user)
-    {
-        return false;
     }
 
     public boolean createNewGroup()
