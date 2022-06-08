@@ -5,7 +5,7 @@ public class UI
     private Scanner input = new Scanner(System.in);
     private MeetUSCFacade facade = new MeetUSCFacade();
 
-   public UI()
+    public UI()
    {
 
    }
