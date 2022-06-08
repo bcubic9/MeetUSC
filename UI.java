@@ -13,6 +13,8 @@ public class UI
    public void run()
    { 
         launchScreen();
+        User user = login();
+        
         while(true) {
             String choice = input.nextLine().trim().toLowerCase();
             switch (choice)
@@ -44,7 +46,49 @@ public class UI
 
    public User login()
    {
-    while(true)
+        boolean isLoggedIn = false;
+
+        while(!isLoggedIn)
+        {
+            System.out.println("Enter your login information below:");
+            System.out.print("Username: ");
+            String username = input.nextLine().trim();
+            System.out.print("Password: ");
+            String password = input.nextLine().trim();
+
+            User user = facade.login(username, password);
+    
+            if(user == null)
+            {
+                    System.out.println("Oops! The user "+ username + " does not exist.");
+                    System.out.println("Do you want to continue?  (Y)es (N)o");
+                    String cont = input.nextLine().trim().toLowerCase();
+
+                if(cont.equals("n"))
+                {
+                    System.out.println("Have a nice day!");
+                    System.exit(0);
+                }
+                else if(cont.equals("y"))
+                {
+                    System.out.println("Continuing as guest...");
+                    guestLogin();
+                }
+            }
+            else
+            {
+                if(user.getUserName() == username && user.getUserPassword() == password)
+                {
+                    isLoggedIn = true;
+                }
+                User loggedUser = facade.getUserProfileInfo(user);
+                System.out.println("Hello, "+ username);
+                return loggedUser;
+            }
+        }
+        return null;
+    }
+    /**while(true)
     {
         System.out.println("Enter your login information below:");
         System.out.print("Username: ");
@@ -56,7 +100,7 @@ public class UI
          * to do certain activities.
          * 
          * User won't be give the return of the login.
-         */
+         
         User user = facade.login(username, password); 
         if(user == null)
         {
@@ -80,7 +124,7 @@ public class UI
             return user;
         }
     }
-   }
+    */
 
    public void launchScreen()
    {

@@ -57,9 +57,9 @@ class MeetUSCFacade
         return null;
     }
 
-    public ArrayList<String> getUserProfileInfo(User user)
+    public User getUserProfileInfo(User user)
     {
-        return null;
+        return user;
     }
 
     public boolean setEventPageInfo(Event event)
