@@ -15,7 +15,6 @@ public class User {
     protected String gender;
     protected int age;
     protected String email;
-    protected
     protected ArrayList<String> hobby;
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
@@ -148,7 +147,7 @@ public class User {
         return authorOf;
     }
 
-    public ArrayList<Group> getJoinedGroups() {
+    public ArrayList<UUID> getJoinedGroups() {
         return groupsJoined;
     }
 
