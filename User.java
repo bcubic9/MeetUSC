@@ -14,13 +14,14 @@ public class User {
     protected String lastName;
     protected String gender;
     protected int age;
-    protected Date dateCreated;
+    protected String email;
+    protected
     protected ArrayList<String> hobby;
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
     protected boolean adminPrivileges;
     protected ArrayList<Category> categoriesOfInterest = new ArrayList<Category>();
-    protected ArrayList<Group> groupsJoined = new ArrayList<Group>();
+    protected ArrayList<UUID> groupsJoined = new ArrayList<UUID>();
     protected ArrayList<UUID> authorOf; // groups created. professor wants arraylist of uuid so we can then access those
                                         // groups later.
     private String emailAddress;
@@ -33,10 +34,29 @@ public class User {
         this.lastName = lastName;
 
     }
+    //connected to the datareader class
+    public User (UUID userID, String userPass, String userUserName, String userFirstName, String userLastName, String userGender, int userAge, 
+                 ArrayList<String> userHobbies, String userEmail, boolean userAgreedToTerms, boolean userProfileIsPublic,
+                 ArrayList<Category> userCategoriesOfInterest, ArrayList<UUID> groupsJoined, boolean userAdminPrivileges, ArrayList<UUID> userAuthorOf) {
+        this.userId = userID;
+        this.password = userPass;
+        this.userName = userUserName;
+        this.firstName = userFirstName;
+        this.lastName = userLastName;
+        this.gender = userGender;
+        this.age = userAge;
+        this.hobby = userHobbies;
+        this.email = userEmail;
+        this.hasAgreedToTerms = userAgreedToTerms;
+        this.profilesPublic = userProfileIsPublic;
+        this.categoriesOfInterest = userCategoriesOfInterest;
+        this.groupsJoined = groupsJoined;
+        this.adminPrivileges = userAdminPrivileges;
+        this.authorOf = userAuthorOf;
+    }
 
     public User(UUID userID, String password, String userName, String firstName, String lastName, String gender,
-            int age,
-            String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms,
+            int age, String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms,
             String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges, UUID authorOf) {
         this.userId = userID;
         this.password = password;

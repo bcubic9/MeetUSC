@@ -20,6 +20,7 @@ public class DataReader extends JsonConstants {
             JSONArray userJSON = (JSONArray) parser.parse(reader);
             ArrayList<String> hobbies = new ArrayList<String>();
             ArrayList<Category> interestCat = new ArrayList<Category>();
+            ArrayList<UUID> groupsJoined = new ArrayList<UUID>();
             ArrayList<UUID> groupsAuthored = new ArrayList<UUID>();
             for (int i = 0; i < userJSON.size(); i++) {
                 // Need to make sure that these are not all strings when done.
@@ -31,7 +32,6 @@ public class DataReader extends JsonConstants {
                 String userLastName = (String) userJsonObject.get(USER_LAST_NAME);
                 String userGender = (String) userJsonObject.get(USER_GENDER);
                 int userAge = ((Long) userJsonObject.get(USER_AGE)).intValue();
-                int userNumOfGroups = ((Long) userJsonObject.get(USER_NUMBER_OF_GROUPS)).intValue();
                 /*
                  * 
                  */
@@ -50,6 +50,12 @@ public class DataReader extends JsonConstants {
                         interestCat.add((Category)userCategoriesOfInterest.get(k));// loop through category enum.
                     }
                 }
+                JSONArray userGroupsJoined = (JSONArray) userJsonObject.get(USER_GROUPS_JOINED);
+                if (userGroupsJoined != null) {
+                    for (int m = 0; m < userGroupsJoined.size(); m++) {
+                        groupsJoined.add((UUID) userGroupsJoined.get(m));
+                    }
+                }
                 Boolean userAdminPrivileges = (Boolean) userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 JSONArray userAuthorOf = (JSONArray) userJsonObject.get(USER_AUTHOR_OF);
                 if (userAuthorOf != null) {
@@ -58,8 +64,8 @@ public class DataReader extends JsonConstants {
                     }
                 }
                 users.add(new User(userID,userPass, userUserName, userFirstName, userLastName, userGender, userAge, 
-                                   userNumOfGroups, userHobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
-                                   userCategoriesOfInterest, userAdminPrivileges, userAuthorOf);
+                                   userHobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
+                                   userCategoriesOfInterest, groupsJoined, userAdminPrivileges, userAuthorOf);
             }
 
             return users;
