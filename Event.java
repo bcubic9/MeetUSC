@@ -10,7 +10,7 @@ public class Event {
     private String eventAddress; 
     private int eventSize;
     private String description = "";
-    private ArrayList<String> eventComments = new ArrayList<String>();
+    private ArrayList<String> eventComments;
     private UUID id;
 
 public Event(String name, String description, ArrayList<Category> categories){
@@ -19,6 +19,18 @@ public Event(String name, String description, ArrayList<Category> categories){
     this.description = description;
     this.categories = categories;
     this.attendees = new ArrayList<>();
+}
+//Connected to datareader
+public Event(UUID eventID, String eventName, String eventAddress, int eventSize, 
+             boolean eventInPerson, String eventDescription, ArrayList<String> eComment) {
+    this.id = eventID;
+    this.name = eventName;
+    this.eventAddress = eventAddress;
+    this.eventSize = eventSize;
+    this.inPerson = eventInPerson;
+    this.description = eventDescription;
+    this.eventComments = eComment;
+    //attendees to be added later on, after other problems are fixed
 }
 
 
