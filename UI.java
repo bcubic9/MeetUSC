@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class UI 
 {
    
@@ -70,6 +71,9 @@ public class UI
        }
    }
 
+   public void displayUserMenu(User currentUser)
+   {
+   }
    public void showChoices()
    {
        for(int i = 0; i < choices.length; i++)
