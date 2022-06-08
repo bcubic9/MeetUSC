@@ -54,5 +54,16 @@ public class GroupList {
     }
     return null;
   }
-
+  public ArrayList<Group> searchGroupByCategory(Category category)
+  {
+    ArrayList<Group> groupCategories = new ArrayList<Group>();
+    for(Group e : getGroups())
+    {
+        if(e.hasCategory(category))
+        {
+          groupCategories.add(e);
+        }
+    }
+    return null;
+  }
 }

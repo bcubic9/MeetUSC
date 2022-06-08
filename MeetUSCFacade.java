@@ -48,22 +48,12 @@ class MeetUSCFacade
 
     public ArrayList<Group> searchGroupByCategory(Category category)
     {
-        return GroupList.getInstance().search(name);
+        return GroupList.getInstance().searchGroupByCategory(category);
     }
 
-    public ArrayList<Group> searchGroupByName()
+    public ArrayList<Group> searchGroupByName(String name)
     {
-
-    }
-
-    public boolean createNewGroup()
-    {
-        return false;
-    }
-
-    public boolean createNewEvent()
-    {
-        return false;
+        return GroupList.getInstance().searchForGroupByName(name);
     }
 
 }
