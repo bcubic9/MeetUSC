@@ -9,7 +9,6 @@ public class Event {
     private String name;
     private String eventAddress; 
     private int eventSize;
-    private ArrayList<User> rsvpedUsers;
     private String description = "";
     private ArrayList<Message> messages;
     private UUID id;
@@ -21,8 +20,6 @@ public Event(String name, String description, ArrayList<Category> categories){
     this.categories = categories;
     this.attendees = new ArrayList<>();
     this.messages = new ArrayList<>();
-    this.rsvpedUsers = new ArrayList<>();
-
 }
 
 
@@ -37,7 +34,6 @@ private Event(UUID id, String name, String description,
     this.categories = categories;
     this.attendees = attendees;
     this.messages = messages;
-    this.rsvpedUsers = rsvpedUsers;
 }
     public void joinGroup(User attendee){
         //attendee.acceptAttendees(attendee); //acceptattendees() hasn't been made in User.java yet
