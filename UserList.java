@@ -30,14 +30,22 @@ public class UserList {
         return users;
     }
 
-    public void getUserByID()
-    {
-
+    public User getUserByID(UUID userid) {
+      for (User user : users) {
+        if (user.getUserId().equals(userid)) {
+          return user;
+        }
+      }
+      return null;
     }
 
-    public void getUser(String userName)
-    {
-      
+    public User getUserByUserName(String userName){
+      for (User user : users) {
+        if (user.getUserName().equals(userName)) {
+          return user;
+        }
+      }
+      return null;
     }
 }
 
