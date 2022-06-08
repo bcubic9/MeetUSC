@@ -47,6 +47,15 @@ public class Group {
 
     }
 */
+    public ArrayList<String> getMessageList()
+    {
+        return messageList;
+    }
+
+    public void addMessage(String message)
+    {
+        messageList.add(message);
+    }
     public String getDescription() {
         return description;
     }
@@ -69,17 +78,15 @@ public class Group {
         return null;
     }
 
-    public ArrayList<User> getGroupMembers()
+    public ArrayList<UUID> getGroupMembers()
     {
-        return null;
+        return members;
     }
 
     public int getGroupRating()
     {
         return rating; 
     }
-
-
 
     public ArrayList<String> getMessages()
     {
