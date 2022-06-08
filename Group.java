@@ -3,14 +3,15 @@ import java.util.*;
 public class Group {
 
     private ArrayList<Category> categories;
-    private ArrayList<User> members;
-    private ArrayList<Event> events;
+    private ArrayList<UUID> members;
+    private ArrayList<UUID> events;
     private String name;
     private String description;
     private int rating;
     private ArrayList<String> chat;
     private String authorContact;
     private UUID id;
+    private ArrayList<String> messageList;
 
     public Group(String name, String description, ArrayList<Category> categories) {
 
@@ -21,7 +22,21 @@ public class Group {
 
     }
 
-    public Group(UUID id, String name, String description, ArrayList<Category> categories,
+    public Group(UUID groupID, String groupName, ArrayList<UUID> groupUpcomingEvent, ArrayList<Category> groupCategories,
+                 ArrayList<UUID> groupMemberList, String groupDescription, int groupRating, ArrayList<String> groupMessageList,
+                 String groupAuthorContact) {
+        this.id = groupID;
+        this.name = groupName;
+        this.events = groupUpcomingEvent;
+        this.categories = groupCategories;
+        this.members = groupMemberList;
+        this.description = groupDescription;
+        this.rating = groupRating;
+        this.messageList = groupMessageList;
+        this.authorContact = groupAuthorContact;
+    }
+
+/*    public Group(UUID id, String name, String description, ArrayList<Category> categories,
             ArrayList<User> members, ArrayList<Event> events) {
         this.id = id;
         this.name = name;
@@ -31,7 +46,7 @@ public class Group {
         this.events = events;
 
     }
-
+*/
     public String getDescription() {
         return description;
     }
@@ -91,7 +106,7 @@ public class Group {
         this.id = id;
     }
 
-    public void setUpcomingEvents(ArrayList<Event> events)
+    public void setUpcomingEvents(ArrayList<UUID> events)
     {
         this.events = events;
     }
