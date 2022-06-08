@@ -29,7 +29,7 @@ class MeetUSCFacade
 
     public User login(String username, String password)
     {
-        
+        return null;
     }
 
     public Event searchForEvent(Event event)
