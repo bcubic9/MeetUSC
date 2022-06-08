@@ -23,7 +23,7 @@ public class EventList {
     return events;
   }
 
-  public void addEvent(String name, String shortDescription, ArrayList<Category> categories) {// Change in lucid Chart
+  public Event addEvent(String name, String shortDescription, ArrayList<Category> categories) {// Change in lucid Chart
     Event event = new Event(name, shortDescription, categories);
     events.add(event);
   }

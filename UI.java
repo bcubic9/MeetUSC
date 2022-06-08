@@ -13,7 +13,6 @@ public class UI
    public void run()
    { 
         launchScreen();
-        User user = login();
         
         while(true) {
             String choice = input.nextLine().trim().toLowerCase();
@@ -28,7 +27,9 @@ public class UI
                     break;
 
                 case "c":
-                    System.out.println("Stub");
+                    System.out.println("Please enter the following information:");
+                    System.out.println("UserName:");
+                    String newUserName = input.nextLine().trim().toLowerCase();
                     break;
 
                 case "e":

@@ -18,7 +18,6 @@ public class User {
     protected ArrayList<String> hobby;
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
-    protected ArrayList<Group> favoriteGroups;
     protected boolean adminPrivileges;
     protected ArrayList<Category> categoriesOfInterest = new ArrayList<Category>();
     protected ArrayList<Group> groupsJoined = new ArrayList<Group>();
@@ -119,14 +118,6 @@ public class User {
         this.hobby = hobby;
     }
 
-    public ArrayList<Group> getFavoriteGroups() {
-        return favoriteGroups;
-    }
-
-    public void setFavoriteGroups(ArrayList<Group> favoriteGroups) {
-        this.favoriteGroups = favoriteGroups;
-    }
-
     public String getUserPassword() {
         return this.password;
     }
@@ -155,32 +146,30 @@ public class User {
         return authorOf;
     }
 
-    public ArrayList<Group> getGroupsJoined() {
+    public ArrayList<Group> getJoinedGroups() {
         return groupsJoined;
     }
 
     public ArrayList<Category> getCategoriesOfInterest() {
         return categoriesOfInterest;
     }
+<<<<<<< HEAD
+    
+    public ArrayList<Group> getFavoriteGroups(){
+        return favoriteGroups;
+    }
+    public void addFavoriteGroup(Group group){
+        favoriteGroup.add(group);
+    }
+    public ArrayList<Event> getFavoriteEvents(){
+      return favoriteEvent;
+    }
+    public void addFavoriteEvent(Event event){
+        favoriteEvent.add(event);
+=======
 
     public void addFavoriteGroup(Group group) {
         favoriteGroups.add(group);
+>>>>>>> 9f48b1faa1257137f2b36aa6341c1b00399b124d
     }
-
-    public void acceptAttendees(){
-
-    
-
-        
-
-    }
-
-    public void removeAttendees(User member, boolean adminPrivileges){
-
-
-    }
-
-    
-
-
 }

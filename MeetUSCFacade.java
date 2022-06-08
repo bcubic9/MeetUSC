@@ -2,24 +2,32 @@ import java.util.*;
 
 class MeetUSCFacade 
 {
-   private String username;
-   private String password;
-   private Character guestLogin; 
-   private boolean exitApp;
+   private User currentUser;
 
    public MeetUSCFacade()
    {
 
    }
 
-    private User addUser (User user)
+    public User addUser (String userName, String password, String firstName, String lastName)
     {
-        return null;
+        currentUser = UserList.getInstance().addUser(userName, password, firstName, lastName);
+        return currentUser;
     }
 
-    public ArrayList<Group> getFavGroups()
+    public Group addGroup(String name, String description, ArrayList<Category> category)
     {
-        return null;
+        return GroupList.getInstance().addGroup(name, description, category);
+    }
+
+    public Event addEvent(String name, String description, ArrayList<Category> categories)
+    {
+        return EventList.getInstance().addEvent(name, description, categories);
+    }
+
+    public ArrayList<Group> getJoinedGroups()
+    {
+        return currentUser.getJoinedGroups();
     }
 
     public ArrayList<Event> getFavEvents()

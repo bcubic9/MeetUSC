@@ -26,6 +26,7 @@ public class GroupList {
   {
     Group newGroup = new Group(name, description, category);
     groups.add(newGroup);
+    return newGroup;
   }
 
   public Group removeGroup(Group group) {
