@@ -126,4 +126,17 @@ public class Group {
     {
         return categories.contains(category);
     }
+
+    public UUID getAuthor() {
+        UUID author;
+        UserList ul = UserList.getInstance();
+        for (User user : ul.getAllUsers()) {
+            if(user.getEmailAddress().equals(authorContact)) {
+                author = user.userId;
+                return author;
+            }
+        }
+
+        return null;
+    }
 }
