@@ -20,7 +20,9 @@ public class User {
     protected Boolean profilesPublic;
     protected ArrayList<Group> favoriteGroups; 
     protected boolean adminPrivileges;
-    protected ArrayList<UUID> authorOf; //professor wants arraylist of uuid so we can then access those groups later.
+    protected ArrayList<Category> categoriesOfInterest = new ArrayList<Category>();
+    protected ArrayList<Group> groupsJoined = new ArrayList<Group>();
+    protected ArrayList<UUID> authorOf; //groups created. professor wants arraylist of uuid so we can then access those groups later. 
     private String emailAddress;
 
     public User(String userName, String password, String firstName, String lastName)
@@ -34,14 +36,9 @@ public class User {
 
     }
   
-<<<<<<< HEAD
-    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age, 
-            Date dateCreated, String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
+    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age,
+            String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
             String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges)
-=======
-    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
-            String userProfileIsPublic, ArrayList<Group> favoriteGroups, JSONArray authorOf, String userAdminPrivileges)
->>>>>>> b4d8977289eabf2cc290910b60d779a6b2ac55bd
     {
         this.userId = userID;
         this.password = password;
@@ -49,7 +46,6 @@ public class User {
         this.firstName = firstName;
         this.gender = gender;
         this.age = age;
-        this.dateCreated = dateCreated;
         this.hobby = hobby;
         this.emailAddress = emailAddress;
         this.hasAgreedToTerms = Boolean.parseBoolean(userAgreedToTerms);
@@ -68,7 +64,6 @@ public class User {
         this.lastName = "Smith";
         this.gender = "Other";
         this.age = 18;
-        this.dateCreated = new Date(2022, 6, 7);
         this.hobby = null;
         this.emailAddress = "guest@email.com";
         this.hasAgreedToTerms = true;
@@ -146,10 +141,6 @@ public class User {
         return this.age;
     }
 
-    public Date getDateCreated() {
-        return this.dateCreated;
-    }
-
     public boolean getHasAgreedToTerms() {
         return false;
     }
@@ -159,5 +150,17 @@ public class User {
     }
     public boolean getAdminPrivileges() {
         return false;
+    }
+
+    public ArrayList<UUID> getGroupsCreated() {
+        return authorOf;
+    }
+
+    public ArrayList<Group> getGroupsJoined() {
+        return groupsJoined;
+    }
+
+    public ArrayList<Category> getCategoriesOfInterest() {
+        return categoriesOfInterest;
     }
 }

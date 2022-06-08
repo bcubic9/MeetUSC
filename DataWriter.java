@@ -45,7 +45,7 @@ public class DataWriter extends JsonConstants {
         userDetails.put(USER_FAVORITE_GROUPS, user.getFavoriteGroups().toString());
         userDetails.put(USER_CATEGORIES_OF_INTEREST, user.getCategoriesOfInterest().toString());
         userDetails.put(USER_ADMIN_PRIVILEGES, user.getAdminPrivileges());
-        userDetails.put(USER_AUTHOR_OF, user.getAuthorPrivileges());
+        userDetails.put(USER_AUTHOR_OF, user.getGroupsCreated());
 
         return userDetails;
     }
@@ -80,9 +80,10 @@ public class DataWriter extends JsonConstants {
             "EVENT_DESCRIPTION": "Aim for the head!",
             "EVENT_COMMENTS" : ["Dude you should have seen the target from our last axe throwing event", "Yeah, man. I wish I was able to go."]                 
          */
+        return eventDetails;
     }
 
-    public boolean saveGroups() {
+    public void saveGroups() {
         GroupList groups = GroupList.getInstance();
         ArrayList<Group> groupList = groups.getGroups();
         JSONArray jsonGroups = new JSONArray();
@@ -112,10 +113,10 @@ public class DataWriter extends JsonConstants {
         groupDetails.put(GROUP_CATEGORY_TYPES, group.getCategoryTypes().toString());
         groupDetails.put(GROUP_MEMBERS, group.getGroupMembers().toString());
         groupDetails.put(GROUP_DESCRIPTION, group.getDescription().toString());
-        groupDetails.put(GROUP_RATING, group.getGroupRating().toString());
+        groupDetails.put(GROUP_RATING, group.getGroupRating());
         groupDetails.put(GROUP_AUTHOR, group.getAuthor().toString());
         groupDetails.put(GROUP_MESSAGES, group.getMessages().toString());
-        groupDetails.put(GROUP_CONTACT, group.getContact().toString());
+        groupDetails.put(GROUP_AUTHOR_CONTACT, group.getContact().toString());
 
         return groupDetails;
     }
