@@ -47,6 +47,15 @@ public class Group {
 
     }
 */
+    public ArrayList<UUID> getEventID()
+    {
+        return events;
+    }
+
+    public void addEventID(UUID eventID)
+    {
+        events.add(eventID);
+    }
     public ArrayList<String> getMessageList()
     {
         return messageList;
@@ -56,6 +65,7 @@ public class Group {
     {
         messageList.add(message);
     }
+
     public String getDescription() {
         return description;
     }
@@ -81,6 +91,11 @@ public class Group {
     public ArrayList<UUID> getGroupMembers()
     {
         return members;
+    }
+
+    public void addMembers(UUID memberID)
+    {
+        members.add(memberID);
     }
 
     public int getGroupRating()
