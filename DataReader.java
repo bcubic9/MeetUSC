@@ -47,13 +47,18 @@ public class DataReader extends JsonConstants {
                 JSONArray userCategoriesOfInterest = (JSONArray) userJsonObject.get(USER_CATEGORIES_OF_INTEREST);
                 if (userCategoriesOfInterest != null) {
                     for (int k = 0; k < userCategoriesOfInterest.size(); k++) {
-                        interestCat.add((Category)userCategoriesOfInterest.get(k));// loop through category enum.
+                        for(Category cat : Category.values()) {
+                            if(cat.toString().equals(userCategoriesOfInterest.toString())) {
+                                interestCat.add(cat);// loop through category enum.
+                            }
+                        }
+                        //interestCat.add((Category)userCategoriesOfInterest.get(k));// loop through category enum.
                     }
                 }
                 JSONArray userGroupsJoined = (JSONArray) userJsonObject.get(USER_GROUPS_JOINED);
                 if (userGroupsJoined != null) {
                     for (int m = 0; m < userGroupsJoined.size(); m++) {
-                        groupsJoined.add((UUID) userGroupsJoined.get(m));
+                        groupsJoined.add(UUID.fromString(userGroupsJoined.get(m).toString()));
                     }
                 }
                 Boolean userAdminPrivileges = (Boolean) userJsonObject.get(USER_ADMIN_PRIVILEGES);

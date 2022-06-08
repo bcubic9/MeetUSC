@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import java.util.UUID;
 
 public class DataWriter extends JsonConstants {
 
@@ -105,14 +106,25 @@ public class DataWriter extends JsonConstants {
 
     public JSONObject getGroupJSON(Group group) {
         JSONObject groupDetails = new JSONObject();
+        JSONArray groupMembers = new JSONArray(); //RELATED TO TESTING CODE
         groupDetails.put(GROUP_ID, group.getGroupId().toString());
         groupDetails.put(GROUP_NAME, group.getGroupName().toString());
         groupDetails.put(GROUP_UPCOMING_EVENTS, group.getUpcomingEvents().toString());
         groupDetails.put(GROUP_CATEGORY_TYPES, group.getCategoryTypes().toString());
+        /* CODE MADE JUST IN CASE IT DOESN'T WORK DURING TESTING.
+        if(group.getGroupMembers() != null) {
+            for(UUID member : group.getGroupMembers()) {
+                groupMembers.put(GROUP_MEMBERS, member.toString()); //need to change the parameters.
+            }
+            for(int i = 0; i < group.getGroupMembers().size(); i++) {
+                groupMembers.put(i);
+            }
+        }
+        */
         groupDetails.put(GROUP_MEMBERS, group.getGroupMembers().toString());
         groupDetails.put(GROUP_DESCRIPTION, group.getDescription().toString());
         groupDetails.put(GROUP_RATING, group.getGroupRating());
-        groupDetails.put(GROUP_AUTHOR, group.getAuthor().toString()); // needs to be made and be a user, not an author
+        groupDetails.put(GROUP_AUTHOR, group.getAuthor().toString()); // may need a review
         groupDetails.put(GROUP_MESSAGES, group.getMessages().toString());
         groupDetails.put(GROUP_AUTHOR_CONTACT, group.getContact().toString());
 
