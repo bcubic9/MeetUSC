@@ -26,8 +26,10 @@ public class UserList {
     return users;
   }
 
-  public void addUser(User user) {
-    users.add(user);
+  public void addUser(String userName, String password, String firstName, String lastName) 
+  {
+    User newUser = new User(userName, password, firstName, lastName);
+    users.add(newUser);
   }
 
   public ArrayList<User> getUsers() {
