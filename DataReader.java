@@ -20,7 +20,7 @@ public class DataReader extends JsonConstants {
             JSONArray userJSON = (JSONArray) parser.parse(reader);
             ArrayList<String> hobbies = new ArrayList<String>();
             ArrayList<Category> interestCat = new ArrayList<Category>();
-            ArrayList<Group> groupsAuthored = new ArrayList<Group>();
+            ArrayList<UUID> groupsAuthored = new ArrayList<UUID>();
             for (int i = 0; i < userJSON.size(); i++) {
                 // Need to make sure that these are not all strings when done.
                 JSONObject userJsonObject = (JSONObject) userJSON.get(i);
@@ -47,14 +47,14 @@ public class DataReader extends JsonConstants {
                 JSONArray userCategoriesOfInterest = (JSONArray) userJsonObject.get(USER_CATEGORIES_OF_INTEREST);
                 if (userCategoriesOfInterest != null) {
                     for (int k = 0; k < userCategoriesOfInterest.size(); k++) {
-                        interestCat.add(userCategoriesOfInterest.get(k));// loop through category enum.
+                        interestCat.add((Category)userCategoriesOfInterest.get(k));// loop through category enum.
                     }
                 }
                 Boolean userAdminPrivileges = (Boolean) userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 JSONArray userAuthorOf = (JSONArray) userJsonObject.get(USER_AUTHOR_OF);
                 if (userAuthorOf != null) {
                     for (int m = 0; m < userAuthorOf.size(); m++) {
-                        groupsAuthored.add(userAuthorOf.get(m)); // convert to group uuid and change json
+                        groupsAuthored.add((UUID)userAuthorOf.get(m)); // convert to group uuid and change json
                     }
                 }
                 /*
@@ -80,6 +80,8 @@ public class DataReader extends JsonConstants {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray eventJSON = (JSONArray) parser.parse(reader);
+            ArrayList<String> eComment = new ArrayList<String>();
+
 
             for (int i = 0; i < eventJSON.size(); i++) {
                 JSONObject eventJsonObject = (JSONObject) eventJSON.get(i);
@@ -90,6 +92,11 @@ public class DataReader extends JsonConstants {
                 boolean eventInPerson = (Boolean) eventJsonObject.get(EVENT_IN_PERSON);
                 String eventDescription = (String) eventJsonObject.get(EVENT_DESCRIPTION);
                 JSONArray eventComments = (JSONArray) eventJsonObject.get(EVENT_COMMENTS);
+                if (eventComments != null) {
+                    for(int n = 0; n < eventComments.size(); n++) {
+                        eComment.add((String)eventComments.get(n));
+                    }
+                }
             }
 
             return events;
@@ -105,18 +112,42 @@ public class DataReader extends JsonConstants {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray groupJSON = (JSONArray) parser.parse(reader);
+            ArrayList<UUID> groupUpcomingEvent = new ArrayList<UUID>();
+            ArrayList<Category> groupCategories = new ArrayList<Category>();
+            ArrayList<UUID> groupMemberList = new ArrayList<UUID>();
+            ArrayList<String> groupMessageList = new ArrayList<String>();
 
             for (int i = 0; i < groupJSON.size(); i++) {
                 // Need to make sure that these are not all strings when done.
                 JSONObject groupJsonObject = (JSONObject) groupJSON.get(i);
-                UUID eventID = UUID.fromString((String) groupJsonObject.get(GROUP_ID));
-                String eventName = (String) groupJsonObject.get(GROUP_NAME);
+                UUID groupID = UUID.fromString((String) groupJsonObject.get(GROUP_ID));
+                String groupName = (String) groupJsonObject.get(GROUP_NAME);
                 JSONArray groupUpcomingEvents = (JSONArray) groupJsonObject.get(GROUP_UPCOMING_EVENTS);
+                if(groupUpcomingEvents != null) {
+                    for(int j = 0; j < groupUpcomingEvents.size(); j++) {
+                        groupUpcomingEvent.add((UUID)groupUpcomingEvents.get(j));
+                    }
+                }
                 JSONArray groupCategoryTypes = (JSONArray) groupJsonObject.get(GROUP_CATEGORY_TYPES);
+                if(groupCategoryTypes != null) {
+                    for(int j = 0; j < groupCategoryTypes.size(); j++) {
+                        groupCategories.add((Category)groupCategoryTypes.get(j));
+                    }
+                }
                 JSONArray groupMembers = (JSONArray) groupJsonObject.get(GROUP_MEMBERS);
+                if(groupMembers != null) {
+                    for(int j = 0; j < groupMembers.size(); j++) {
+                        groupMemberList.add((UUID)groupMembers.get(j));
+                    }
+                }
                 String groupDescription = (String) groupJsonObject.get(GROUP_DESCRIPTION);
                 int groupRating = ((Long) groupJsonObject.get(GROUP_RATING)).intValue();
                 JSONArray groupMessages = (JSONArray) groupJsonObject.get(GROUP_MESSAGES);
+                if(groupMessages != null) {
+                    for(int j = 0; j < groupMessages.size(); j++) {
+                        groupMessageList.add((String)groupMessages.get(j));
+                    }
+                }
                 String groupAuthorContact = (String) groupJsonObject.get(GROUP_AUTHOR_CONTACT);
             }
 
