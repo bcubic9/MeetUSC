@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Author {
+public class Author extends User {
     public ArrayList<Event> myEvents;
     private void addEvents(){
     

@@ -6,98 +6,123 @@ public class Group {
     private ArrayList<User> members;
     private ArrayList<Event> events;
     private String name;
-    private String shortDescription;
-    private String longDescription;
-    private int groupSize;
+    private String description;
+    private int rating;
     private Author author;
     private ArrayList<String> chat;
-    private User authorContact;
-    private ArrayList<Message> messages;
+    private String authorContact;
     private UUID id;
 
-    private Group(String name, String shortDesciption, ArrayList<Category> categories) {
+    private Group(String name, String desciption, ArrayList<Category> category) {
 
         id = UUID.randomUUID();
         this.name = name;
-        this.shortDescription = shortDescription;
+        this.description = description;
         this.category = category;
 
     }
 
-    private Group(UUID id, String name, String shortDescription, ArrayList<Category> categories,
+    private Group(UUID id, String name, String description, ArrayList<Category> category,
             ArrayList<User> members, ArrayList<Event> events) {
         this.id = id;
         this.name = name;
-        this.shortDescription = shortDescription;
-        this.longDescription = longDescription;
+        this.description = description;
+        this.description = description;
         this.category = category;
         this.members = members;
         this.events = events;
 
     }
 
-    public String getLongDescription() {
-        return this.longDescription;
-    }
-
-    public String getShortDescription() {
-        return this.shortDescription;
+    public String getDescription() {
+        return description;
     }
 
     public String getGroupName() {
-        return this.name;
+        return name;
     }
 
     public UUID getGroupId() {
-        return this.id;
+        return id;
     }
 
-    public void joinGroup(User member) {
-        // member.acceptMember(member); // talk to the professor about author vs user
-        // privileges
-
+    public ArrayList<Event> getUpcomingEvents()
+    {
+        return null;
     }
 
-    public void leaveGroup(User member) {
-        // member.removeMember(member, true); // talk to the professor about author vs
-        // user privileges
-
+    public ArrayList<String> getCategoryTypes()
+    {
+        return null;
     }
 
-    public void displayMessage(User member) {
-
+    public ArrayList<User> getGroupMembers()
+    {
+        return null;
     }
 
-    public void displayShortDescription(String shortDescription) {
-
+    public int getGroupRating()
+    {
+        return rating; 
     }
 
-    public void displayLongDescription(String longDescription) {
-
+    public Author getAuthor()
+    {
+        return null;
     }
 
-    public void displayGroupMember(ArrayList<User> members) {
-
-        System.out.println(members);
-
+    public ArrayList<String> getMessages()
+    {
+        return chat; 
     }
 
-    public void displayTypesOfCategories(ArrayList<Category> typesOfCategories) {
-
-        System.out.println(typesOfCategories);
-
+    public String getContact()
+    {
+        return authorContact;
     }
 
-    public void displayInPerson(Boolean inPerson) {
-        if (inPerson == true) {
-
-        }
-
+    public void setDescription(String description)
+    {
+        this.description = description;
     }
 
-    public void addToAllGroups(Group group) {
-
-        group.addToAllGroups(group);
+    public void setGroupName(String name)
+    {
+        this.name = name;
     }
 
+    public void setGroupId(UUID id)
+    {
+        this.id = id;
+    }
+
+    public void setUpcomingEvents(ArrayList<Event> events)
+    {
+        this.events = events;
+    }
+
+    public void setCategoryTypes(ArrayList<Category> category)
+    {
+        this.category = category;
+    }
+
+    public void setGroupRating(int rating)
+    {
+        this.rating = rating;
+    }
+
+    public void setAuthor(Author author)
+    {
+        this.author = author;
+    }
+
+    public void addMessages(String message)
+    {
+        chat.add(message);
+    }
+
+    public void setAuthorContact(String authorContact)//Author's email
+    {
+        this.authorContact = authorContact;
+    }
 }
