@@ -65,7 +65,7 @@ public class DataReader extends JsonConstants {
                 }
                 users.add(new User(userID,userPass, userUserName, userFirstName, userLastName, userGender, userAge, 
                                    userHobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
-                                   userCategoriesOfInterest, groupsJoined, userAdminPrivileges, userAuthorOf);
+                                   userCategoriesOfInterest, groupsJoined, userAdminPrivileges, userAuthorOf));
             }
 
             return users;
