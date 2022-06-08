@@ -57,6 +57,9 @@ public class DataReader extends JsonConstants {
                         groupsAuthored.add((UUID)userAuthorOf.get(m)); // convert to group uuid and change json
                     }
                 }
+                users.add(new User(userID,userPass, userUserName, userFirstName, userLastName, userGender, userAge, 
+                                   userNumOfGroups, userHobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
+                                   userCategoriesOfInterest, userAdminPrivileges, userAuthorOf);
                 /*
                  * users.add(new User(userID, userPass, userDisplayName, userName, userGender,
                  * userAge,
@@ -97,6 +100,8 @@ public class DataReader extends JsonConstants {
                         eComment.add((String)eventComments.get(n));
                     }
                 }
+                events.add(new Event(eventID, eventName, eventAddress, eventSize, 
+                                  eventInPerson, eventDescription, eComment));
             }
 
             return events;
@@ -149,6 +154,10 @@ public class DataReader extends JsonConstants {
                     }
                 }
                 String groupAuthorContact = (String) groupJsonObject.get(GROUP_AUTHOR_CONTACT);
+
+                groups.add(new Group(groupID, groupName, groupUpcomingEvent, groupCategories,
+                                    groupMemberList, groupDescription, groupRating, groupMessageList,
+                                    groupAuthorContact));
             }
 
             return groups;
