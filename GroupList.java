@@ -7,7 +7,7 @@ public class GroupList {
   private ArrayList<Group> groups; // this is the group list.
   // private static ArrayList<User> favoriteGroup;
 
-  private GroupList() {
+  public GroupList() {
     this.groups = new ArrayList<Group>();
   }
 
@@ -22,9 +22,10 @@ public class GroupList {
     return groups;
   }
 
-  public boolean addGroup(Group group){
-    return false;
-
+  public void addGroup(String name, String description, ArrayList<Category> category)
+  {
+    Group newGroup = new Group(name, description, category);
+    groups.add(newGroup);
   }
 
   public Group removeGroup(Group group) {
