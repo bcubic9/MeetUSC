@@ -10,7 +10,6 @@ public class Event {
     private String eventAddress; 
     private int eventSize;
     private String description = "";
-    private ArrayList<Message> messages;
     private UUID id;
 
 public Event(String name, String description, ArrayList<Category> categories){
@@ -19,13 +18,11 @@ public Event(String name, String description, ArrayList<Category> categories){
     this.description = description;
     this.categories = categories;
     this.attendees = new ArrayList<>();
-    this.messages = new ArrayList<>();
 }
 
 
 private Event(UUID id, String name, String description, 
-        ArrayList<Category> categories, ArrayList<User> attendees,
-        ArrayList<Message> messages, ArrayList<User> rsvpedUsers){
+        ArrayList<Category> categories, ArrayList<User> attendees){
     //constructor we call from the database
 
     this.id = id;
@@ -33,7 +30,6 @@ private Event(UUID id, String name, String description,
     this.description = description;
     this.categories = categories;
     this.attendees = attendees;
-    this.messages = messages;
 }
     public void joinGroup(User attendee){
         //attendee.acceptAttendees(attendee); //acceptattendees() hasn't been made in User.java yet
@@ -41,8 +37,6 @@ private Event(UUID id, String name, String description,
 
     public void leaveGroup(User attendee){
         //attendee.removeAttendees(attendee, true); //removeattendees() hasn't been made in User.java yet
-         
-
     }
 
     public String getEventAddress() {
@@ -61,63 +55,18 @@ private Event(UUID id, String name, String description,
         return description;
     }
 
-    public ArrayList<Message> getComments() {
-        return messages;
-    }
-
-    public void displayMessage(User attendee){
-
-
-    }
     public boolean hasCategory(Category category){
         return categories.contains(category);
-    }
-    public void displayShortDescription(String shortDescription){
-
     }
     public String getEventName() {
         return this.name;
     }
-    public void displayLongDescription(String longDescription){
 
-
-
-    }
-
-    public void displayGroupMember(ArrayList<User> attendees){
-
-        System.out.println(attendees);
-
-    }
-
-    public void displayTypesOfCategories(ArrayList<Category> typesOfCategories){
-
-        System.out.println(typesOfCategories);
-        
-
-    }
 
     public UUID getEventId() {
         return id;
     }
-
-    public void displayInPerson(Boolean inPerson){
-        if(inPerson == true){
-        
-        }
-
-        
-
-    }
-
-    public void addToAllGroups(Group group){
-
-        //group.addToAllGroups(group); //addtoallgroups() hasn't been made in Group.java yet.
-    }   
-
-
-
-
+     
     public String toString(){
       // double check this
         return name;
