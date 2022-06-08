@@ -57,20 +57,29 @@ public class User {
 
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getDisplayName() {
-        return displayName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName;
+    public void setName(String lastName) {
+        this.lastName = lastName;
+    }
+
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getEmailAddress() {
@@ -81,24 +90,28 @@ public class User {
         this.emailAddress = emailAddress;
     }
 
-    public String getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(UUID userId) {
         this.userId = userId;
     }
 
     public ArrayList<String> getHobby() {
-        return null;
+        return hobby;
     }
 
     public void setHobby(ArrayList<String> hobby) {
-        //this.hobby = hobby;
+        this.hobby = hobby;
     }
 
     public ArrayList<Group> getFavoriteGroups() {
-        return null;
+        return favoriteGroups;
+    }
+
+    public void setFavoriteGroups(ArrayList<Group> favoriteGroups){
+        this.favoriteGroups = favoriteGroups;
     }
 
     public String getUserPassword() {
@@ -113,12 +126,8 @@ public class User {
         return this.age;
     }
 
-    public String getUserCreationDate() {
-        return dateCreated;
-    }
-
-    public int getNumberOfGroups() {
-        return numGroupsCreated;
+    public Date getDateCreated() {
+        return this.dateCreated;
     }
 
     public boolean getHasAgreedToTerms() {
@@ -130,12 +139,5 @@ public class User {
     }
     public boolean getAdminPrivileges() {
         return false;
-    }
-    public boolean getAuthorPrivileges() {
-        return false;
-    }
-
-    public String getCategoriesOfInterest() {
-        return this.categoriesOfInterest;
     }
 }
