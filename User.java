@@ -163,4 +163,20 @@ public class User {
     public ArrayList<Category> getCategoriesOfInterest() {
         return categoriesOfInterest;
     }
+    
+    public ArrayList<Group> getFavoriteGroups(){
+        return favoriteGroup;
+    }
+    public void addFavoriteGroup(Group group){
+        favoriteGroup.add(group);
+    }
+    public ArrayList<Event> getFavoriteEvents(){
+      return favoriteEvent;
+    }
+    public void addFavoriteEvent(Event event){
+        favoriteEvent.add(event);
+    }
+    
+    
+    
 }
