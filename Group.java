@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Group {
 
-    private ArrayList<Category> category;
+    private ArrayList<Category> categories;
     private ArrayList<User> members;
     private ArrayList<Event> events;
     private String name;
@@ -12,21 +12,21 @@ public class Group {
     private String authorContact;
     private UUID id;
 
-    public Group(String name, String description, ArrayList<Category> category) {
+    public Group(String name, String description, ArrayList<Category> categories) {
 
         id = UUID.randomUUID();
         this.name = name;
         this.description = description;
-        this.category = category;
+        this.categories = categories;
 
     }
 
-    public Group(UUID id, String name, String description, ArrayList<Category> category,
+    public Group(UUID id, String name, String description, ArrayList<Category> categories,
             ArrayList<User> members, ArrayList<Event> events) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.category = category;
+        this.categories = categories;
         this.members = members;
         this.events = events;
 
@@ -98,7 +98,7 @@ public class Group {
 
     public void setCategoryTypes(ArrayList<Category> category)
     {
-        this.category = category;
+        this.categories = category;
     }
 
     public void setGroupRating(int rating)
@@ -120,5 +120,10 @@ public class Group {
 
     public void addToAllGroups(Group group){
 
+    }
+
+    public boolean hasCategory(Category category)
+    {
+        return categories.contains(category);
     }
 }

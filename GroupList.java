@@ -22,9 +22,9 @@ public class GroupList {
     return groups;
   }
 
-  public Group addGroup(String name, String description, ArrayList<Category> category)
+  public Group addGroup(String name, String description, ArrayList<Category> categories)
   {
-    Group newGroup = new Group(name, description, category);
+    Group newGroup = new Group(name, description, categories);
     groups.add(newGroup);
     return newGroup;
   }
@@ -54,4 +54,5 @@ public class GroupList {
     }
     return null;
   }
+
 }

@@ -30,11 +30,6 @@ class MeetUSCFacade
         return currentUser.getJoinedGroups();
     }
 
-    public ArrayList<Event> getFavEvents()
-    {
-        return null;
-    }
-
     public User login(String userName, String password)
     {
         currentUser = UserList.getInstance().login(userName, password);
@@ -46,9 +41,19 @@ class MeetUSCFacade
         return EventList.getInstance().searchByCategory(category);
     }
 
-    public Group searchForGroup(Group group)
+    public ArrayList<Event> searchEventsByName(String name)
     {
-        return group;
+        return EventList.getInstance().searchByName(name);
+    }
+
+    public ArrayList<Group> searchGroupByCategory(Category category)
+    {
+        return GroupList.getInstance().search(name);
+    }
+
+    public ArrayList<Group> searchGroupByName()
+    {
+
     }
 
     public boolean createNewGroup()

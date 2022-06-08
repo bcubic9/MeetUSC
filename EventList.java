@@ -26,6 +26,7 @@ public class EventList {
   public Event addEvent(String name, String shortDescription, ArrayList<Category> categories) {// Change in lucid Chart
     Event event = new Event(name, shortDescription, categories);
     events.add(event);
+    return event;
   }
 
   public ArrayList<Event> removeEvent(Event event) {
@@ -33,10 +34,10 @@ public class EventList {
     return events;
   }
 
-  public ArrayList<Event> searchByCategory(Category category) {
+  public ArrayList<Event> searchByCategory(Category categories) {
     ArrayList<Event> relevantEvents = new ArrayList<>();
     for (Event e : events) {
-      if (e.hasCategory(category)) {
+      if (e.hasCategory(categories)) {
         relevantEvents.add(e);
       }
     }
@@ -47,7 +48,7 @@ public class EventList {
 
     ArrayList<Event> relevantEventsName = new ArrayList<>();
     for (Event e : events) {
-      if (e.getEventName().equals(name))
+      if (e.getEventName().toLowerCase().contains(name.toLowerCase()))
         ;
       {
         relevantEventsName.add(e);
