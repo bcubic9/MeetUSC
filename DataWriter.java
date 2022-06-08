@@ -45,12 +45,12 @@ public class DataWriter extends JsonConstants {
         userDetails.put(USER_FAVORITE_GROUPS, user.getFavoriteGroups().toString());
         userDetails.put(USER_CATEGORIES_OF_INTEREST, user.getCategoriesOfInterest().toString());
         userDetails.put(USER_ADMIN_PRIVILEGES, user.getAdminPrivileges());
-        userDetails.put(USER_AUTHOR_PRIVILEGES, user.getAuthorPrivileges());
+        userDetails.put(USER_AUTHOR_OF, user.getAuthorPrivileges());
 
         return userDetails;
     }
 
-    public boolean saveEvents() {
+    public void saveEvents() {
         EventList events = EventList.getInstance();
         ArrayList<Event> eventList = events.getEvents();
         JSONArray jsonEvents = new JSONArray();
@@ -61,7 +61,62 @@ public class DataWriter extends JsonConstants {
         }
     }
 
+    public JSONObject getEventJSON(Event event) {
+        JSONObject eventDetails = new JSONObject();
+
+        eventDetails.put(EVENT_ID, event.getEventId());
+        eventDetails.put(EVENT_NAME, event.getEventName());
+        eventDetails.put(EVENT_ADDRESS, event.getEventAddress());
+        eventDetails.put(EVENT_SIZE, event.getEventSize());
+        eventDetails.put(EVENT_IN_PERSON, event.getInPerson());
+        eventDetails.put(EVENT_DESCRIPTION, event.getDescription());
+        eventDetails.put(EVENT_COMMENTS, event.getComments());
+        /*
+         * "EVENT_ID":"840b1734-dd18-11ec-9d64-0242ac120002",
+            "EVENT_NAME":"Axe Throwing ",
+            "EVENT_ADDRESS":"700 Gervais St b2, Columbia, SC 29201",
+            "EVENT_SIZE": 10,
+            "EVENT_IN_PERSON": true,
+            "EVENT_DESCRIPTION": "Aim for the head!",
+            "EVENT_COMMENTS" : ["Dude you should have seen the target from our last axe throwing event", "Yeah, man. I wish I was able to go."]                 
+         */
+    }
+
     public boolean saveGroups() {
-        return false;
+        GroupList groups = GroupList.getInstance();
+        ArrayList<Group> groupList = groups.getGroups();
+        JSONArray jsonGroups = new JSONArray();
+        for(int i = 0; i < groupList.size(); i++)
+        {
+            jsonGroups.add(getGroupJSON(groupList.get(i)));
+        }
+
+        try (FileWriter file = new FileWriter(GROUP_FILE_NAME)) {
+
+            file.write(jsonGroups.toJSONString());
+            file.flush();
+
+        } catch (IOException e) { // could get rid of IOException
+            e.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        } 
+    }
+
+    public JSONObject getGroupJSON(Group group)
+    {
+        JSONObject groupDetails = new JSONObject();
+        groupDetails.put(GROUP_ID, group.getGroupId().toString());
+        groupDetails.put(GROUP_NAME, group.getGroupName().toString());
+        groupDetails.put(GROUP_UPCOMING_EVENTS, group.getUpcomingEvents().toString());
+        groupDetails.put(GROUP_CATEGORY_TYPES, group.getCategoryTypes().toString());
+        groupDetails.put(GROUP_MEMBERS, group.getGroupMembers().toString());
+        groupDetails.put(GROUP_DESCRIPTION, group.getDescription().toString());
+        groupDetails.put(GROUP_RATING, group.getGroupRating().toString());
+        groupDetails.put(GROUP_AUTHOR, group.getAuthor().toString());
+        groupDetails.put(GROUP_MESSAGES, group.getMessages().toString());
+        groupDetails.put(GROUP_CONTACT, group.getContact().toString());
+
+        return groupDetails;
     }
 }

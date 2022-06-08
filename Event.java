@@ -7,18 +7,17 @@ public class Event {
     private ArrayList<Category> categories;
     private ArrayList <User> attendees;
     private String name;
-    private String location; 
+    private String eventAddress; 
     private int eventSize;
     private ArrayList<User> rsvpedUsers;
-    private String shortDescription;
-    private String longDescription = "";
+    private String description = "";
     private ArrayList<Message> messages;
     private UUID id;
 
-public Event(String name, String shortDescription, ArrayList<Category> categories){
+public Event(String name, String description, ArrayList<Category> categories){
     this.id = UUID.randomUUID();
     this.name = name;
-    this.shortDescription = shortDescription;
+    this.description = description;
     this.categories = categories;
     this.attendees = new ArrayList<>();
     this.messages = new ArrayList<>();
@@ -27,14 +26,14 @@ public Event(String name, String shortDescription, ArrayList<Category> categorie
 }
 
 
-public Event(UUID id, String name, String shortDescription, String longDescription, 
-ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> messages, ArrayList<User> rsvpedUsers){
+public Event(UUID id, String name, String description, 
+        ArrayList<Category> categories, ArrayList<User> attendees,
+        ArrayList<Message> messages, ArrayList<User> rsvpedUsers){
     //constructor we call from the database
 
     this.id = id;
     this.name = name;
-    this.shortDescription = shortDescription;
-    this.longDescription = longDescription;
+    this.description = description;
     this.categories = categories;
     this.attendees = attendees;
     this.messages = messages;
@@ -48,6 +47,26 @@ ArrayList<Category> categories, ArrayList<User> attendees, ArrayList<Message> me
         //attendee.removeAttendees(attendee, true); //removeattendees() hasn't been made in User.java yet
          
 
+    }
+
+    public String getEventAddress() {
+        return eventAddress;
+    }
+
+    public int getEventSize() {
+        return eventSize;
+    }
+
+    public boolean getInPerson() {
+        return inPerson;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public ArrayList<Message> getComments() {
+        return messages;
     }
 
     public void displayMessage(User attendee){

@@ -30,11 +30,6 @@ public class UserList {
         return users;
     }
 
-    public void addUser()//params
-    {
-
-    }
-
     public void getUserByID()
     {
 
