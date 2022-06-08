@@ -55,8 +55,7 @@ public class DataWriter extends JsonConstants {
         ArrayList<Event> eventList = events.getEvents();
         JSONArray jsonEvents = new JSONArray();
 
-        for(int i = 0; i < eventList.size(); i++)
-        {
+        for (int i = 0; i < eventList.size(); i++) {
             jsonEvents.add(getEventJSON(eventList.get(i)));
         }
     }
@@ -73,12 +72,14 @@ public class DataWriter extends JsonConstants {
         eventDetails.put(EVENT_COMMENTS, event.getComments());
         /*
          * "EVENT_ID":"840b1734-dd18-11ec-9d64-0242ac120002",
-            "EVENT_NAME":"Axe Throwing ",
-            "EVENT_ADDRESS":"700 Gervais St b2, Columbia, SC 29201",
-            "EVENT_SIZE": 10,
-            "EVENT_IN_PERSON": true,
-            "EVENT_DESCRIPTION": "Aim for the head!",
-            "EVENT_COMMENTS" : ["Dude you should have seen the target from our last axe throwing event", "Yeah, man. I wish I was able to go."]                 
+         * "EVENT_NAME":"Axe Throwing ",
+         * "EVENT_ADDRESS":"700 Gervais St b2, Columbia, SC 29201",
+         * "EVENT_SIZE": 10,
+         * "EVENT_IN_PERSON": true,
+         * "EVENT_DESCRIPTION": "Aim for the head!",
+         * "EVENT_COMMENTS" :
+         * ["Dude you should have seen the target from our last axe throwing event",
+         * "Yeah, man. I wish I was able to go."]
          */
         return eventDetails;
     }
@@ -87,8 +88,7 @@ public class DataWriter extends JsonConstants {
         GroupList groups = GroupList.getInstance();
         ArrayList<Group> groupList = groups.getGroups();
         JSONArray jsonGroups = new JSONArray();
-        for(int i = 0; i < groupList.size(); i++)
-        {
+        for (int i = 0; i < groupList.size(); i++) {
             jsonGroups.add(getGroupJSON(groupList.get(i)));
         }
 
@@ -101,11 +101,10 @@ public class DataWriter extends JsonConstants {
             e.printStackTrace();
         } catch (Exception exception) {
             exception.printStackTrace();
-        } 
+        }
     }
 
-    public JSONObject getGroupJSON(Group group)
-    {
+    public JSONObject getGroupJSON(Group group) {
         JSONObject groupDetails = new JSONObject();
         groupDetails.put(GROUP_ID, group.getGroupId().toString());
         groupDetails.put(GROUP_NAME, group.getGroupName().toString());
@@ -114,7 +113,7 @@ public class DataWriter extends JsonConstants {
         groupDetails.put(GROUP_MEMBERS, group.getGroupMembers().toString());
         groupDetails.put(GROUP_DESCRIPTION, group.getDescription().toString());
         groupDetails.put(GROUP_RATING, group.getGroupRating());
-        groupDetails.put(GROUP_AUTHOR, group.getAuthor().toString());
+        groupDetails.put(GROUP_AUTHOR, group.getAuthor().toString()); // needs to be made and be a user, not an author
         groupDetails.put(GROUP_MESSAGES, group.getMessages().toString());
         groupDetails.put(GROUP_AUTHOR_CONTACT, group.getContact().toString());
 

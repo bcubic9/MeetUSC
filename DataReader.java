@@ -18,23 +18,30 @@ public class DataReader extends JsonConstants {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray userJSON = (JSONArray) parser.parse(reader);
-
+            ArrayList<String> hobbies = new ArrayList<String>();
             for (int i = 0; i < userJSON.size(); i++) {
                 // Need to make sure that these are not all strings when done.
                 JSONObject userJsonObject = (JSONObject) userJSON.get(i);
                 UUID userID = UUID.fromString((String) userJsonObject.get(USER_ID));
                 String userPass = (String) userJsonObject.get(USER_PASSWORD);
-                String userUserName= (String) userJsonObject.get(USER_USERNAME);
+                String userUserName = (String) userJsonObject.get(USER_USERNAME);
                 String userFirstName = (String) userJsonObject.get(USER_FIRST_NAME);
                 String userLastName = (String) userJsonObject.get(USER_LAST_NAME);
                 String userGender = (String) userJsonObject.get(USER_GENDER);
                 int userAge = ((Long) userJsonObject.get(USER_AGE)).intValue();
                 int userNumOfGroups = ((Long) userJsonObject.get(USER_NUMBER_OF_GROUPS)).intValue();
+                /*
+                 * 
+                 */
                 JSONArray userHobbies = (JSONArray) userJsonObject.get(USER_HOBBIES);
+                if (userHobbies != null) {
+                    for (int j = 0; j < userHobbies.size(); j++) {
+                        hobbies.add((String) userHobbies.get(i));
+                    }
+                }
                 String userEmail = (String) userJsonObject.get(USER_EMAIL_ADDRESS);
                 Boolean userAgreedToTerms = (Boolean) userJsonObject.get(USER_HAS_AGREED_TO_TERMS);
                 Boolean userProfileIsPublic = (Boolean) userJsonObject.get(USER_PROFILE_IS_PUBLIC);
-                JSONArray userFavGroups = (JSONArray) userJsonObject.get(USER_FAVORITE_GROUPS);
                 JSONArray userCategoriesOfInterest = (JSONArray) userJsonObject.get(USER_CATEGORIES_OF_INTEREST);
                 Boolean userAdminPrivileges = (Boolean) userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 JSONArray userAuthorOf = (JSONArray) userJsonObject.get(USER_AUTHOR_OF);
