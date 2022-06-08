@@ -33,7 +33,7 @@ public class DataWriter extends JsonConstants {
         userDetails.put(USER_ID, user.getUserId().toString());
         userDetails.put(USER_PASSWORD, user.getUserPassword().toString());
         userDetails.put(USER_DISPLAY_NAME, user.getDisplayName().toString());
-        userDetails.put(USER_NAME, user.getName().toString());
+        userDetails.put(USER_NAME, user.USER_USERNAME().toString());
         userDetails.put(USER_GENDER, user.getUserGender().toString());
         userDetails.put(USER_AGE, user.getUserAge());
         userDetails.put(USER_CREATION_DATE, user.getUserCreationDate().toString());

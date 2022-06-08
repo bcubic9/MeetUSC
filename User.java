@@ -3,6 +3,8 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import org.json.simple.JSONArray;
+
 public class User {
 
     protected UUID userId;
@@ -18,7 +20,7 @@ public class User {
     protected ArrayList<Group> favoriteGroups; 
     protected ArrayList<Group> groupsJoined = new ArrayList<Group>();
     protected boolean adminPrivileges;
-    protected ArrayList<Group> authorOf;
+    protected ArrayList<UUID> authorOf; //professor wants arraylist of uuid so we can then access those groups later.
     private String emailAddress;
 
     public User(String userName, String password, String firstName, String lastName)
@@ -32,8 +34,8 @@ public class User {
 
     }
   
-    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age, String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
-            String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges)
+    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
+            String userProfileIsPublic, ArrayList<Group> favoriteGroups, JSONArray authorOf, String userAdminPrivileges)
     {
         this.userId = userID;
         this.password = password;
@@ -47,7 +49,7 @@ public class User {
         this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
         this.favoriteGroups = favoriteGroups;
         this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
-       
+        this.authorOf = authorOf; //create a loop to go through each element and give it to the arraylist of uuid's.
     }
 
     public User()

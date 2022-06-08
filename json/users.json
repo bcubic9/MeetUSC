@@ -2,7 +2,7 @@
     {
         "USER_ID" : "fd2a1d6d-3419-401c-a021-cbd2b444d86c", 
         "USER_PASSWORD" : "qwertyPASS",
-        "USER_NAME" : "JohnS00",
+        "USER_USERNAME" : "JohnS00",
         "USER_FIRSTNAME" : "John",
         "USER_LASTNAME" : "Smith",
         "USER_GENDER" : "Male",
