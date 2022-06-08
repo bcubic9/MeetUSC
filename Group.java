@@ -13,7 +13,7 @@ public class Group {
     private String authorContact;
     private UUID id;
 
-    private Group(String name, String desciption, ArrayList<Category> category) {
+    private Group(String name, String description, ArrayList<Category> category) {
 
         id = UUID.randomUUID();
         this.name = name;
@@ -26,7 +26,6 @@ public class Group {
             ArrayList<User> members, ArrayList<Event> events) {
         this.id = id;
         this.name = name;
-        this.description = description;
         this.description = description;
         this.category = category;
         this.members = members;
