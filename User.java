@@ -15,34 +15,33 @@ public class User {
     protected String gender;
     protected int age;
     protected Date dateCreated;
-    protected ArrayList<String> hobby; 
+    protected ArrayList<String> hobby;
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
-    protected ArrayList<Group> favoriteGroups; 
+    protected ArrayList<Group> favoriteGroups;
     protected boolean adminPrivileges;
     protected ArrayList<Category> categoriesOfInterest = new ArrayList<Category>();
     protected ArrayList<Group> groupsJoined = new ArrayList<Group>();
-    protected ArrayList<UUID> authorOf; //groups created. professor wants arraylist of uuid so we can then access those groups later. 
-    protected String emailAddress;
+    protected ArrayList<UUID> authorOf; // groups created. professor wants arraylist of uuid so we can then access those
+                                        // groups later.
+    private String emailAddress;
 
-    public User(String userName, String password, String firstName, String lastName)
-    {
+    public User(String userName, String password, String firstName, String lastName) {
         this.userId = UUID.randomUUID();
         this.userName = userName;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
 
-
     }
-  
-    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender, int age,
-            String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms, 
-            String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges)
-    {
+
+    public User(UUID userID, String password, String userName, String firstName, String lastName, String gender,
+            int age,
+            String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms,
+            String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges) {
         this.userId = userID;
         this.password = password;
-        this.userName =userName;
+        this.userName = userName;
         this.firstName = firstName;
         this.gender = gender;
         this.age = age;
@@ -52,11 +51,11 @@ public class User {
         this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
         this.favoriteGroups = favoriteGroups;
         this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
-        this.authorOf = authorOf; //create a loop to go through each element and give it to the arraylist of uuid's.
+        this.authorOf = authorOf; // create a loop to go through each element and give it to the arraylist of
+                                  // uuid's.
     }
 
-    public User()
-    {
+    public User() {
         this.userId = UUID.randomUUID();
         this.userName = "Guest";
         this.password = "Guest1";
@@ -87,7 +86,6 @@ public class User {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
 
     public String getUserName() {
         return userName;
@@ -125,14 +123,14 @@ public class User {
         return favoriteGroups;
     }
 
-    public void setFavoriteGroups(ArrayList<Group> favoriteGroups){
+    public void setFavoriteGroups(ArrayList<Group> favoriteGroups) {
         this.favoriteGroups = favoriteGroups;
     }
 
     public String getUserPassword() {
         return this.password;
     }
-    
+
     public String getUserGender() {
         return this.gender;
     }
@@ -148,6 +146,7 @@ public class User {
     public boolean getProfileIsPublic() {
         return false;
     }
+
     public boolean getAdminPrivileges() {
         return false;
     }
@@ -163,6 +162,7 @@ public class User {
     public ArrayList<Category> getCategoriesOfInterest() {
         return categoriesOfInterest;
     }
+<<<<<<< HEAD
     
     public ArrayList<Group> getFavoriteGroups(){
         return favoriteGroups;
@@ -175,8 +175,10 @@ public class User {
     }
     public void addFavoriteEvent(Event event){
         favoriteEvent.add(event);
+=======
+
+    public void addFavoriteGroup(Group group) {
+        favoriteGroups.add(group);
+>>>>>>> 9f48b1faa1257137f2b36aa6341c1b00399b124d
     }
-    
-    
-    
 }
