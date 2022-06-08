@@ -22,7 +22,7 @@ public class GroupList {
     return groups;
   }
 
-  public void addGroup(String name, String description, ArrayList<Category> category)
+  public Group addGroup(String name, String description, ArrayList<Category> category)
   {
     Group newGroup = new Group(name, description, category);
     groups.add(newGroup);
