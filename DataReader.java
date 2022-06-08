@@ -19,6 +19,8 @@ public class DataReader extends JsonConstants {
             JSONParser parser = new JSONParser();
             JSONArray userJSON = (JSONArray) parser.parse(reader);
             ArrayList<String> hobbies = new ArrayList<String>();
+            ArrayList<Category> interestCat = new ArrayList<Category>();
+            ArrayList<Group> groupsAuthored = new ArrayList<Group>();
             for (int i = 0; i < userJSON.size(); i++) {
                 // Need to make sure that these are not all strings when done.
                 JSONObject userJsonObject = (JSONObject) userJSON.get(i);
@@ -43,8 +45,18 @@ public class DataReader extends JsonConstants {
                 Boolean userAgreedToTerms = (Boolean) userJsonObject.get(USER_HAS_AGREED_TO_TERMS);
                 Boolean userProfileIsPublic = (Boolean) userJsonObject.get(USER_PROFILE_IS_PUBLIC);
                 JSONArray userCategoriesOfInterest = (JSONArray) userJsonObject.get(USER_CATEGORIES_OF_INTEREST);
+                if (userCategoriesOfInterest != null) {
+                    for (int k = 0; k < userCategoriesOfInterest.size(); k++) {
+                        interestCat.add(userCategoriesOfInterest.get(k));// loop through category enum.
+                    }
+                }
                 Boolean userAdminPrivileges = (Boolean) userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 JSONArray userAuthorOf = (JSONArray) userJsonObject.get(USER_AUTHOR_OF);
+                if (userAuthorOf != null) {
+                    for (int m = 0; m < userAuthorOf.size(); m++) {
+                        groupsAuthored.add(userAuthorOf.get(m)); // convert to group uuid and change json
+                    }
+                }
                 /*
                  * users.add(new User(userID, userPass, userDisplayName, userName, userGender,
                  * userAge,
