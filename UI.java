@@ -23,9 +23,7 @@ public class UI
 
    public User login()
    {
-       boolean isLoggedIn = false;
-
-       while(isLoggedIn)
+       while(true)
        {
            String choice = input.nextLine().trim().toLowerCase();
            switch (choice)
@@ -39,7 +37,6 @@ public class UI
                     User currentUser = facade.login(userName, password);
                     if(currentUser != null)
                     {
-                        isLoggedIn = true;
                         return currentUser;
                     }
                 break;
@@ -57,7 +54,6 @@ public class UI
                     User newUser = facade.addUser(newUserName, newPassword, newFirstName, newLastName);
                     if(newUser != UserList.getInstance().getUserByUserName(newUserName))
                     {
-                        isLoggedIn = true;
                         return newUser;
                     }
                 break;
@@ -72,7 +68,6 @@ public class UI
                 break;
            }
        }
-       return null;
    }
 
    public void showChoices()
