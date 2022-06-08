@@ -48,26 +48,9 @@ public class User {
         this.emailAddress = emailAddress;
         this.hasAgreedToTerms = Boolean.parseBoolean(userAgreedToTerms);
         this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
-        this.favoriteGroups = favoriteGroups;
         this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
         this.authorOf = authorOf; // create a loop to go through each element and give it to the arraylist of
                                   // uuid's.
-    }
-
-    public User() {
-        this.userId = UUID.randomUUID();
-        this.userName = "Guest";
-        this.password = "Guest1";
-        this.firstName = "John";
-        this.lastName = "Smith";
-        this.gender = "Other";
-        this.age = 18;
-        this.hobby = null;
-        this.emailAddress = "guest@email.com";
-        this.hasAgreedToTerms = true;
-        this.profilesPublic = true;
-        this.favoriteGroups = null;
-        this.adminPrivileges = false;
     }
 
     public String getFirstName() {
@@ -152,24 +135,5 @@ public class User {
 
     public ArrayList<Category> getCategoriesOfInterest() {
         return categoriesOfInterest;
-    }
-<<<<<<< HEAD
-    
-    public ArrayList<Group> getFavoriteGroups(){
-        return favoriteGroups;
-    }
-    public void addFavoriteGroup(Group group){
-        favoriteGroup.add(group);
-    }
-    public ArrayList<Event> getFavoriteEvents(){
-      return favoriteEvent;
-    }
-    public void addFavoriteEvent(Event event){
-        favoriteEvent.add(event);
-=======
-
-    public void addFavoriteGroup(Group group) {
-        favoriteGroups.add(group);
->>>>>>> 9f48b1faa1257137f2b36aa6341c1b00399b124d
     }
 }
