@@ -8,7 +8,6 @@ public class Group {
     private String name;
     private String description;
     private int rating;
-    private Author author;
     private ArrayList<String> chat;
     private String authorContact;
     private UUID id;
@@ -65,10 +64,7 @@ public class Group {
         return rating; 
     }
 
-    public Author getAuthor()
-    {
-        return null;
-    }
+
 
     public ArrayList<String> getMessages()
     {
@@ -110,10 +106,7 @@ public class Group {
         this.rating = rating;
     }
 
-    public void setAuthor(Author author)
-    {
-        this.author = author;
-    }
+
 
     public void addMessages(String message)
     {
@@ -126,6 +119,6 @@ public class Group {
     }
 
     public void addToAllGroups(Group group){
-        
+
     }
 }
