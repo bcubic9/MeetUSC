@@ -22,6 +22,11 @@ public class GroupList {
     return groups;
   }
 
+  public boolean addGroup(Group group){
+    return false;
+
+  }
+
   public Group removeGroup(Group group) {
     groups.remove(group);
     return group;

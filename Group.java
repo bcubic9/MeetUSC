@@ -124,4 +124,8 @@ public class Group {
     {
         this.authorContact = authorContact;
     }
+
+    public void addToAllGroups(Group group){
+        
+    }
 }

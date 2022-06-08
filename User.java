@@ -23,7 +23,7 @@ public class User {
     protected ArrayList<Category> categoriesOfInterest = new ArrayList<Category>();
     protected ArrayList<Group> groupsJoined = new ArrayList<Group>();
     protected ArrayList<UUID> authorOf; //groups created. professor wants arraylist of uuid so we can then access those groups later. 
-    private String emailAddress;
+    protected String emailAddress;
 
     public User(String userName, String password, String firstName, String lastName)
     {
@@ -165,7 +165,7 @@ public class User {
     }
     
     public ArrayList<Group> getFavoriteGroups(){
-        return favoriteGroup;
+        return favoriteGroups;
     }
     public void addFavoriteGroup(Group group){
         favoriteGroup.add(group);

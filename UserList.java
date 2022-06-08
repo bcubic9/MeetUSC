@@ -27,6 +27,7 @@ public class UserList {
   }
 
   public void addUser(User user) {
+    
     users.add(user);
   }
 
