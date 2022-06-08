@@ -70,10 +70,6 @@ public class UI
            }
        }
    }
-
-   public void displayUserMenu(User currentUser)
-   {
-   }
    public void showChoices()
    {
        for(int i = 0; i < choices.length; i++)
@@ -81,7 +77,6 @@ public class UI
            System.out.println("- " + choices[i]);
        }
    }
-
    public static void main(String[] args)
    {
        UI myUI = new UI();

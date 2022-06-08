@@ -56,4 +56,9 @@ class MeetUSCFacade
         return GroupList.getInstance().searchForGroupByName(name);
     }
 
+    public ArrayList<User> getAllUsersTest()
+    {
+        return UserList.getInstance().getAllUsers();
+    }
+
 }
