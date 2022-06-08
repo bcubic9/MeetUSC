@@ -37,7 +37,7 @@ public class User {
     public User(UUID userID, String password, String userName, String firstName, String lastName, String gender,
             int age,
             String userNumOfGroups, ArrayList<String> hobby, String emailAddress, String userAgreedToTerms,
-            String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges) {
+            String userProfileIsPublic, ArrayList<Group> favoriteGroups, String userAdminPrivileges, UUID authorOf) {
         this.userId = userID;
         this.password = password;
         this.userName = userName;
@@ -49,8 +49,7 @@ public class User {
         this.hasAgreedToTerms = Boolean.parseBoolean(userAgreedToTerms);
         this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
         this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
-        this.authorOf = authorOf; // create a loop to go through each element and give it to the arraylist of
-                                  // uuid's.
+        this.authorOf.add(authorOf); // need to make this a uuid
     }
 
     public String getFirstName() {
