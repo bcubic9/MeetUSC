@@ -24,11 +24,11 @@ public class DataReader extends JsonConstants {
                 JSONObject userJsonObject = (JSONObject) userJSON.get(i);
                 UUID userID = UUID.fromString((String) userJsonObject.get(USER_ID));
                 String userPass = (String) userJsonObject.get(USER_PASSWORD);
-                String userDisplayName = (String) userJsonObject.get(USER_DISPLAY_NAME);
-                String userName = (String) userJsonObject.get(USER_NAME);
+                String userUserName= (String) userJsonObject.get(USER_USERNAME);
+                String userFirstName = (String) userJsonObject.get(USER_FIRST_NAME);
+                String userLastName = (String) userJsonObject.get(USER_LAST_NAME);
                 String userGender = (String) userJsonObject.get(USER_GENDER);
                 int userAge = ((Long) userJsonObject.get(USER_AGE)).intValue();
-                String userCreationDate = (String) userJsonObject.get(USER_CREATION_DATE);
                 int userNumOfGroups = ((Long) userJsonObject.get(USER_NUMBER_OF_GROUPS)).intValue();
                 JSONArray userHobbies = (JSONArray) userJsonObject.get(USER_HOBBIES);
                 String userEmail = (String) userJsonObject.get(USER_EMAIL_ADDRESS);

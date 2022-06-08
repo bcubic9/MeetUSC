@@ -32,12 +32,12 @@ public class DataWriter extends JsonConstants {
         JSONObject userDetails = new JSONObject();
         userDetails.put(USER_ID, user.getUserId().toString());
         userDetails.put(USER_PASSWORD, user.getUserPassword().toString());
-        userDetails.put(USER_DISPLAY_NAME, user.getDisplayName().toString());
-        userDetails.put(USER_NAME, user.USER_USERNAME().toString());
+        userDetails.put(USER_USERNAME, user.getUserName().toString());
+        userDetails.put(USER_FIRST_NAME, user.getFirstName().toString());
+        userDetails.put(USER_LAST_NAME, user.getLastName().toString());
         userDetails.put(USER_GENDER, user.getUserGender().toString());
         userDetails.put(USER_AGE, user.getUserAge());
-        userDetails.put(USER_CREATION_DATE, user.getUserCreationDate().toString());
-        userDetails.put(USER_NUMBER_OF_GROUPS, user.getNumberOfGroups());
+        userDetails.put(USER_GROUPS_JOINED, user.getGroupsJoined());
         userDetails.put(USER_HOBBIES, user.getHobby().toString());
         userDetails.put(USER_EMAIL_ADDRESS, user.getEmailAddress().toString());
         userDetails.put(USER_HAS_AGREED_TO_TERMS, user.getHasAgreedToTerms());

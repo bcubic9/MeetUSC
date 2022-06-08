@@ -15,17 +15,18 @@ public abstract class JsonConstants {
     // User Constants
     public static final String USER_ID = "USER_ID";
     public static final String USER_PASSWORD = "USER_PASSWORD";
-    public static final String USER_DISPLAY_NAME = "USER_DISPLAY_NAME";
-    public static final String USER_NAME = "USER_NAME";
+    public static final String USER_USERNAME = "USER_USERNAME";
+    public static final String USER_FIRST_NAME = "USER_FIRST_NAME";
+    public static final String USER_LAST_NAME = "USER_LAST_NAME";
     public static final String USER_GENDER = "USER_GENDER";
     public static final String USER_AGE = "USER_AGE";
-    public static final String USER_CREATION_DATE = "USER_CREATION_DATE";
     public static final String USER_NUMBER_OF_GROUPS = "USER_NUMBER_OF_GROUPS";
     public static final String USER_HOBBIES = "USER_HOBBIES";
     public static final String USER_EMAIL_ADDRESS = "USER_EMAIL_ADDRESS";
     public static final String USER_HAS_AGREED_TO_TERMS = "USER_HAS_AGREED_TO_TERMS";
     public static final String USER_PROFILE_IS_PUBLIC = "USER_PROFILE_IS_PUBLIC";
     public static final String USER_FAVORITE_GROUPS = "USER_FAVORITE_GROUPS";
+    public static final String USER_GROUPS_JOINED = "USER_GROUPS_JOINED";
     public static final String USER_CATEGORIES_OF_INTEREST = "USER_CATEGORIES_OF_INTEREST";
     public static final String USER_ADMIN_PRIVILEGES = "USER_ADMIN_PRIVILEGES";
     public static final String USER_AUTHOR_OF = "USER_AUTHOR_OF";
