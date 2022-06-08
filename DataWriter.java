@@ -80,9 +80,10 @@ public class DataWriter extends JsonConstants {
             "EVENT_DESCRIPTION": "Aim for the head!",
             "EVENT_COMMENTS" : ["Dude you should have seen the target from our last axe throwing event", "Yeah, man. I wish I was able to go."]                 
          */
+        return eventDetails;
     }
 
-    public boolean saveGroups() {
+    public void saveGroups() {
         GroupList groups = GroupList.getInstance();
         ArrayList<Group> groupList = groups.getGroups();
         JSONArray jsonGroups = new JSONArray();

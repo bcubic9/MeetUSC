@@ -5,7 +5,7 @@ import java.util.UUID;
 public class Event {
     private boolean inPerson = true; //default is true
     private ArrayList<Category> categories;
-    private ArrayList <User> attendees;
+    private ArrayList<User> attendees;
     private String name;
     private String eventAddress; 
     private int eventSize;
