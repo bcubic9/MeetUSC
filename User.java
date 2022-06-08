@@ -162,23 +162,25 @@ public class User {
     public ArrayList<Category> getCategoriesOfInterest() {
         return categoriesOfInterest;
     }
-<<<<<<< HEAD
-    
-    public ArrayList<Group> getFavoriteGroups(){
-        return favoriteGroups;
-    }
-    public void addFavoriteGroup(Group group){
-        favoriteGroup.add(group);
-    }
-    public ArrayList<Event> getFavoriteEvents(){
-      return favoriteEvent;
-    }
-    public void addFavoriteEvent(Event event){
-        favoriteEvent.add(event);
-=======
 
     public void addFavoriteGroup(Group group) {
         favoriteGroups.add(group);
->>>>>>> 9f48b1faa1257137f2b36aa6341c1b00399b124d
     }
+
+    public void acceptAttendees(){
+
+    
+
+        
+
+    }
+
+    public void removeAttendees(User member, boolean adminPrivileges){
+
+
+    }
+
+    
+
+
 }

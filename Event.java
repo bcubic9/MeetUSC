@@ -39,13 +39,15 @@ public Event(UUID id, String name, String description,
     this.messages = messages;
     this.rsvpedUsers = rsvpedUsers;
 }
-    public void joinGroup(User attendee){
-        //attendee.acceptAttendees(attendee); //acceptattendees() hasn't been made in User.java yet
+    public void joinEvent(User attendee){
+        attendee.acceptAttendees();
+        attendees.add(attendee);
+       
     }
 
-    public void leaveGroup(User attendee){
-        //attendee.removeAttendees(attendee, true); //removeattendees() hasn't been made in User.java yet
-         
+    public void leaveEvent(User attendee){
+        attendee.removeAttendees(attendee, true);
+       
 
     }
 
@@ -116,7 +118,7 @@ public Event(UUID id, String name, String description,
 
     public void addToAllGroups(Group group){
 
-        //group.addToAllGroups(group); //addtoallgroups() hasn't been made in Group.java yet.
+        group.addToAllGroups(group); //addtoallgroups() hasn't been made in Group.java yet.
     }   
 
 
