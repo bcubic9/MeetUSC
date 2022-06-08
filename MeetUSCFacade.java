@@ -35,9 +35,10 @@ class MeetUSCFacade
         return null;
     }
 
-    public User login(String username, String password)
+    public User login(String userName, String password)
     {
-        return null;
+        currentUser = UserList.getInstance().login(userName, password);
+        return currentUser;
     }
 
     public Event searchForEvent(Event event)

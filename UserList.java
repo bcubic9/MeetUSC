@@ -54,4 +54,16 @@ public class UserList {
     }
     return null;
   }
+
+  public User login(String userName, String password)
+  {
+    User user = getUserByUserName(userName);
+    if(user.getUserPassword().equalsIgnoreCase(password))
+    {
+      return user;
+    }
+    return null;
+  }
+
+
 }
