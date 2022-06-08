@@ -25,7 +25,6 @@ public abstract class JsonConstants {
     public static final String USER_EMAIL_ADDRESS = "USER_EMAIL_ADDRESS";
     public static final String USER_HAS_AGREED_TO_TERMS = "USER_HAS_AGREED_TO_TERMS";
     public static final String USER_PROFILE_IS_PUBLIC = "USER_PROFILE_IS_PUBLIC";
-    public static final String USER_FAVORITE_GROUPS = "USER_FAVORITE_GROUPS";
     public static final String USER_GROUPS_JOINED = "USER_GROUPS_JOINED";
     public static final String USER_CATEGORIES_OF_INTEREST = "USER_CATEGORIES_OF_INTEREST";
     public static final String USER_ADMIN_PRIVILEGES = "USER_ADMIN_PRIVILEGES";
