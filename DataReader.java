@@ -180,11 +180,10 @@ public class DataReader extends JsonConstants {
      * Method to be deleted at a later time.
      */
     public static void main(String[] args) throws FileNotFoundException {
-        DataReader dr = new DataReader();
         ArrayList<User> allusers = new ArrayList<User>();
 
         System.out.println("Hello, this is a test of the json filereader class");
-        allusers = dr.getUsers();
+        allusers = DataReader.getUsers();
         for(User user: allusers) {
             System.out.println(user.firstName + " " + user.lastName);
         }
