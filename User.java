@@ -32,6 +32,14 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         //consider adding default values
+        this.gender = "None Selected";
+        this.age = 0;
+        this.email = "None given";
+        this.hobby = new ArrayList<String>();
+        hasAgreedToTerms = false;
+        profilesPublic = true;
+        adminPrivileges = false;
+        authorOf = new ArrayList<UUID>();
     }
     //connected to the datareader class
     public User (UUID userID, String userPass, String userUserName, String userFirstName, String userLastName, String userGender, int userAge, 
