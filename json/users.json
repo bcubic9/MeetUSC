@@ -12,7 +12,7 @@
         "USER_HAS_AGREED_TO_TERMS" : true,
         "USER_PROFILE_IS_PUBLIC" : false,
         "USER_GROUPS_JOINED" : ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "bc0113f6-c984-4bc4-8d14-b352fbee92ff"],
-        "USER_CATEGORIES_OF_INTEREST" : ["sports", "outdoors"],
+        "USER_CATEGORIES_OF_INTEREST" : ["SPORT", "OUTDOORS"],
         "USER_ADMIN_PRIVILEGES" : false,
         "USER_AUTHOR_OF" : ["bc0113f6-c984-4bc4-8d14-b352fbee92ff"]
     }, 
@@ -29,7 +29,7 @@
         "USER_HAS_AGREED_TO_TERMS" : true,
         "USER_PROFILE_IS_PUBLIC" : true,
         "USER_GROUPS_JOINED" : ["bc0113f6-c984-4bc4-8d14-b352fbee92ff"],
-        "USER_CATEGORIES_OF_INTEREST" : ["Construction", "outdoors"],
+        "USER_CATEGORIES_OF_INTEREST" : ["CONSTRUCTION", "OUTDOORS"],
         "USER_ADMIN_PRIVILEGES" : false,
         "USER_AUTHOR_OF" : ["bc0113f6-c984-4bc4-8d14-b352fbee92ff"]
     },
@@ -46,7 +46,7 @@
         "USER_HAS_AGREED_TO_TERMS" : true,
         "USER_PROFILE_IS_PUBLIC" : true,
         "USER_GROUPS_JOINED" : ["3bcfa771-6433-4c61-bd72-a66d628c7b20"],
-        "USER_CATEGORIES_OF_INTEREST" : ["Frisbee", "make-up"],
+        "USER_CATEGORIES_OF_INTEREST" : ["FRISBEE", "MAKEUP"],
         "USER_ADMIN_PRIVILEGES" : false,
         "USER_AUTHOR_OF" : ["2550890a-a64b-4ef8-9d0e-10501ae2e08f","3bcfa771-6433-4c61-bd72-a66d628c7b20"]
     }

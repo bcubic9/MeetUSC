@@ -1,8 +1,12 @@
 public enum Category{
 
     SPORTS,
+    OUTDOORS,
     SPIRITUAL,
     SOCIAL,
-    CULTURAL
+    CULTURAL,
+    CONSTRUCTION,
+    FRISBEE,
+    MAKEUP
     
 }
