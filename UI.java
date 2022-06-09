@@ -22,6 +22,34 @@ public class UI
         login();
    }
 
+   public void giveUserOptions() {
+       System.out.println("Press 'p' to view your profile.");
+       System.out.println("Press 'g' to see all of your groups.");
+       System.out.println("Press 'r' to see all of the available groups.");
+       System.out.println("Press 'v' to see all of your group events");
+       System.out.println("Press 'n' to see all available events");
+       System.out.println("Press 'x' to go back.");
+   }
+
+   public void getUserProfile(User currentUser) {
+        System.out.println("Name: " + currentUser.getFirstName() + " " + currentUser.getLastName());
+        System.out.println("Email: " + currentUser.getEmailAddress());
+        System.out.println("Profile is public: " + currentUser.getProfileIsPublic());
+        System.out.println("Categories of interest: " + currentUser.getCategoriesOfInterest().toString());
+        System.out.println("Gender: " + currentUser.getUserGender());
+        System.out.println("Age: " + currentUser.getUserAge());
+        System.out.println("Username: " + currentUser.getUserName());
+        System.out.println("Groups created: ");
+        GroupList gl = GroupList.getInstance();
+        /*for(Group g : gl.getGroups()) {
+            ArrayList<UUID> ug = currentUser.getGroupsCreated();
+            for(UUID u : ug)
+            if(currentUser.) {
+
+            }
+        }
+        */
+   }
    public User login()
    {
        while(true)
@@ -37,15 +65,27 @@ public class UI
                     String password = input.nextLine().trim().toLowerCase();
                     User currentUser = facade.login(userName, password);
                     if(currentUser != null)
-                    {
-                        return currentUser;
+                    {   
+                        while(true) {
+                            System.out.println("Welcome to Meet USC " + currentUser.getFirstName() + " " + currentUser.getLastName());
+                            System.out.println();
+                            System.out.println("What would you like to do ?");
+                            giveUserOptions();
+                            String userInput = input.nextLine().trim().toLowerCase();
+                            switch(userInput) {
+                                case "x":
+                                    break;
+                                case "p":
+                                    getUserProfile(currentUser);
+                            }
+                        }
                     }
                     else
                     {
                         System.out.println("User not found, please try again.");
                         continue;
                     }
-                break;
+                
 
                 case "c":
                     System.out.println("Please enter the following information:");
