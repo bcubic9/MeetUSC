@@ -25,7 +25,6 @@ public class UI
    public void giveUserOptions() {
        System.out.println("Press 'p' to view your profile.");
        System.out.println("Press 'g' to see all of your groups.");
-       System.out.println("Press 'r' to see all of the available groups.");
        System.out.println("Press 'v' to see all of your group events");
        System.out.println("Press 'n' to see all available events");
        System.out.println("Press 'x' to go back.");
@@ -77,9 +76,18 @@ public class UI
                             String userInput = input.nextLine().trim().toLowerCase();
                             switch(userInput) {
                                 case "x":
+                                    System.out.println("Have a nice day!");
+                                    System.exit(0);
                                     break;
                                 case "p":
                                     getUserProfile(currentUser);
+                                break;
+                                case "g":
+                                    GroupList.getInstance().getGroups();
+                                break;
+                                case "v":
+                                    EventList.getInstance().getEvents();
+                                break;
                             }
                         }
                     }
