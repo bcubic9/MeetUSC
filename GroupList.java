@@ -13,7 +13,7 @@ public class GroupList {
 /**
  * The getInstance method gets the current instance and returns it.
  * Used for the singleton
- * @return current instance
+ * @return GroupList to UI
  */
   public static GroupList getInstance() {
     if (groupList == null) {

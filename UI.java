@@ -71,7 +71,7 @@ public class UI
                         while(true) {
                             System.out.println("Welcome to Meet USC " + currentUser.getFirstName() + " " + currentUser.getLastName());
                             System.out.println();
-                            System.out.println("What would you like to do ?");
+                            System.out.println("What would you like to do?");
                             giveUserOptions();
                             String userInput = input.nextLine().trim().toLowerCase();
                             switch(userInput) {
