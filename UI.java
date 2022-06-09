@@ -45,7 +45,6 @@ public class UI
                         System.out.println("User not found, please try again.");
                         continue;
                     }
-                break;
 
                 case "c":
                     System.out.println("Please enter the following information:");
