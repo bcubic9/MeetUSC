@@ -8,7 +8,7 @@ public class UserList {
   private UserList() {
 
     this.users = DataReader.getUsers();
-
+    System.out.println("hi");
   }
 
   public static UserList getInstance() {
