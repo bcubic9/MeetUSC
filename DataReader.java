@@ -37,7 +37,7 @@ public class DataReader extends JsonConstants {
                  */
                 JSONArray userHobbies = (JSONArray) userJsonObject.get(USER_HOBBIES);
                 if (userHobbies != null) {
-                    for (int j = 0; j < userHobbies.size(); j++) {
+                    for (int j = 0; (j < userHobbies.size() - 1); j++) {
                         hobbies.add((String) userHobbies.get(i));
                     }
                 }
@@ -133,19 +133,24 @@ public class DataReader extends JsonConstants {
                 JSONArray groupUpcomingEvents = (JSONArray) groupJsonObject.get(GROUP_UPCOMING_EVENTS);
                 if(groupUpcomingEvents != null) {
                     for(int j = 0; j < groupUpcomingEvents.size(); j++) {
-                        groupUpcomingEvent.add((UUID)groupUpcomingEvents.get(j));
+                        groupUpcomingEvent.add(UUID.fromString(groupUpcomingEvents.get(j).toString()));
                     }
                 }
                 JSONArray groupCategoryTypes = (JSONArray) groupJsonObject.get(GROUP_CATEGORY_TYPES);
                 if(groupCategoryTypes != null) {
                     for(int j = 0; j < groupCategoryTypes.size(); j++) {
-                        groupCategories.add((Category)groupCategoryTypes.get(j));
+                        for(Category cat : Category.values()) {
+                            if(cat.toString().equals(groupCategoryTypes.toString())) {
+                                groupCategories.add(cat);// loop through category enum.
+                            }
+                        }
+                        //groupCategories.add((Category)groupCategoryTypes.get(j));
                     }
                 }
                 JSONArray groupMembers = (JSONArray) groupJsonObject.get(GROUP_MEMBERS);
                 if(groupMembers != null) {
                     for(int j = 0; j < groupMembers.size(); j++) {
-                        groupMemberList.add((UUID)groupMembers.get(j));
+                        groupMemberList.add(UUID.fromString(groupMembers.get(j).toString()));
                     }
                 }
                 String groupDescription = (String) groupJsonObject.get(GROUP_DESCRIPTION);
