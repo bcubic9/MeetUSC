@@ -32,7 +32,7 @@ public class UserList {
     users.add(newUser);
     return newUser;
   }
-
+  //connects to the user.java for the json and datareader
   public User addUser(UUID userID, String userPass, String userUserName, String userFirstName, String userLastName, String userGender, int userAge, 
                       ArrayList<String> userHobbies, String userEmail, boolean userAgreedToTerms, boolean userProfileIsPublic,
                       ArrayList<Category> userCategoriesOfInterest, ArrayList<UUID> groupsJoined, boolean userAdminPrivileges, ArrayList<UUID> userAuthorOf) 
