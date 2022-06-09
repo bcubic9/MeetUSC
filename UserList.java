@@ -47,7 +47,8 @@ public class UserList {
   }
 
   public User getUserByUserName(String userName) {
-    for (User user : users) {
+    UserList ul = UserList.getInstance();
+    for (User user : ul.getAllUsers()) {
       if (user.getUserName().equals(userName)) {
         return user;
       }
