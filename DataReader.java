@@ -65,7 +65,7 @@ public class DataReader extends JsonConstants {
                 JSONArray userAuthorOf = (JSONArray) userJsonObject.get(USER_AUTHOR_OF);
                 if (userAuthorOf != null) {
                     for (int m = 0; m < userAuthorOf.size(); m++) {
-                        groupsAuthored.add((UUID)userAuthorOf.get(m)); // convert to group uuid and change json
+                        groupsAuthored.add(UUID.fromString(userAuthorOf.get(m).toString())); // convert to group uuid and change json
                     }
                 }
                 users.add(new User(userID,userPass, userUserName, userFirstName, userLastName, userGender, userAge, 
