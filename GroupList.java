@@ -28,7 +28,7 @@ public class GroupList {
   }
 
   /**
-   * The method adds a new group to the Group Array List
+   * The method creates a group object and adds a new group to the Group Array List
    * @param name
    * @param description
    * @param categories
