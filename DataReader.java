@@ -185,7 +185,10 @@ public class DataReader extends JsonConstants {
 
         System.out.println("Hello, this is a test of the json filereader class");
         allusers = dr.getUsers();
-        System.out.println(users.toString());
+        for(User user: allusers) {
+            System.out.println(user.firstName + " " + user.lastName);
+        }
+        //System.out.println(users.toString());
         // System.out.println(users);
     }
 }
