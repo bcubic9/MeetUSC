@@ -24,14 +24,14 @@ public class User {
     protected ArrayList<UUID> authorOf; // groups created. professor wants arraylist of uuid so we can then access those
                                         // groups later.
     private String emailAddress;
-
+    //create new user constructor
     public User(String userName, String password, String firstName, String lastName) {
         this.userId = UUID.randomUUID();
         this.userName = userName;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-
+        //consider adding default values
     }
     //connected to the datareader class
     public User (UUID userID, String userPass, String userUserName, String userFirstName, String userLastName, String userGender, int userAge, 
