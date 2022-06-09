@@ -10,7 +10,11 @@ public class GroupList {
   public GroupList() {
     this.groups = new ArrayList<Group>();
   }
-
+/**
+ * The getInstance method gets the current instance and returns it.
+ * Used for the singleton
+ * @return current instance
+ */
   public static GroupList getInstance() {
     if (groupList == null) {
       groupList = new GroupList();
@@ -18,10 +22,18 @@ public class GroupList {
     return groupList;
   }
 
+
   public ArrayList<Group> getGroups() {
     return groups;
   }
 
+  /**
+   * The method adds a new group to the Group Array List
+   * @param name
+   * @param description
+   * @param categories
+   * @return newGroup
+   */
   public Group addGroup(String name, String description, ArrayList<Category> categories)
   {
     Group newGroup = new Group(name, description, categories);
