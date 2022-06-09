@@ -7,6 +7,7 @@ public class UI
     private MeetUSCFacade facade;
     private String header = "======MeetUSC======";
     private String[] choices = {"Login (l)", "Create User (c)", "Exit (e)"};
+    private String[] userOptions = {"View Profile (p)", "View Groups (g)", "View events (v)", "Exit (x)"};
 
     public UI()
    {
@@ -22,36 +23,6 @@ public class UI
         login();
    }
 
-   public void giveUserOptions() {
-       System.out.println("Press 'p' to view your profile.");
-       System.out.println("Press 'g' to see all of your groups.");
-       System.out.println("Press 'v' to see all of your group events");
-       System.out.println("Press 'n' to see all available events");
-       System.out.println("Press 'x' to go back.");
-   }
-
-   public void getUserProfile(User currentUser) {
-        System.out.println("Name: " + currentUser.getFirstName() + " " + currentUser.getLastName());
-        System.out.println("Email: " + currentUser.getEmailAddress());
-        System.out.println("Profile is public: " + currentUser.getProfileIsPublic());
-        System.out.println("Categories of interest: " + currentUser.getCategoriesOfInterest().toString());
-        System.out.println("Gender: " + currentUser.getUserGender());
-        System.out.println("Age: " + currentUser.getUserAge());
-        System.out.println("Username: " + currentUser.getUserName());
-        System.out.println("Groups created: ");
-        GroupList gl = GroupList.getInstance();
-        for(Group g : gl.getGroups()) {
-            //getGroupByUUID()
-            ArrayList<UUID> ug = currentUser.getGroupsCreated();
-            for(UUID u : ug) {
-                System.out.println(gl.getGroupByUUID(u).getGroupName());
-                //if(u.equals(gl.getGroupByUUID(u))) {
-
-                //}
-            }
-        }
-        
-   }
    public User login()
    {
        while(true)
@@ -71,7 +42,7 @@ public class UI
                         while(true) {
                             System.out.println("Welcome to Meet USC " + currentUser.getFirstName() + " " + currentUser.getLastName());
                             System.out.println();
-                            System.out.println("What would you like to do?");
+                            System.out.println("Select from the following options:");
                             giveUserOptions();
                             String userInput = input.nextLine().trim().toLowerCase();
                             switch(userInput) {
@@ -126,6 +97,15 @@ public class UI
            }
        }
    }
+
+   public void giveUserOptions()
+   {
+       for(int i = 0; i < userOptions.length; i++)
+       {
+           System.out.println(userOptions[i]);
+       }
+   }
+
    public void showChoices()
    {
        for(int i = 0; i < choices.length; i++)
@@ -133,6 +113,31 @@ public class UI
            System.out.println("- " + choices[i]);
        }
    }
+
+   public void getUserProfile(User currentUser) 
+   {
+        System.out.println("Name: " + currentUser.getFirstName() + " " + currentUser.getLastName());
+        System.out.println("Email: " + currentUser.getEmailAddress());
+        System.out.println("Profile is public: " + currentUser.getProfileIsPublic());
+        System.out.println("Categories of interest: " + currentUser.getCategoriesOfInterest().toString());
+        System.out.println("Gender: " + currentUser.getUserGender());
+        System.out.println("Age: " + currentUser.getUserAge());
+        System.out.println("Username: " + currentUser.getUserName());
+        System.out.println("Groups created: ");
+        GroupList gl = GroupList.getInstance();
+        for(Group g : gl.getGroups()) {
+        //getGroupByUUID()
+        ArrayList<UUID> ug = currentUser.getGroupsCreated();
+            for(UUID u : ug) {
+                System.out.println(gl.getGroupByUUID(u).getGroupName());
+                //if(u.equals(gl.getGroupByUUID(u))) {
+
+            //}
+        }
+    }
+    
+}
+
    public static void main(String[] args)
    {
        UI myUI = new UI();
