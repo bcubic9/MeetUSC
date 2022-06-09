@@ -7,12 +7,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class DataReader extends JsonConstants {
-    public static ArrayList<User> users = new ArrayList<User>();
-    public static ArrayList<Event> events = new ArrayList<Event>();
-    public static ArrayList<Group> groups = new ArrayList<Group>();
 
     public static ArrayList<User> getUsers() {
-        // ArrayList<User> users = new ArrayList<User>();
+        ArrayList<User> users = new ArrayList<User>();
 
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
@@ -36,11 +33,11 @@ public class DataReader extends JsonConstants {
                  * 
                  */
                 JSONArray userHobbies = (JSONArray) userJsonObject.get(USER_HOBBIES);
-                if (userHobbies != null) {
+                /*if (userHobbies != null) {
                     for (int j = 0; (j < userHobbies.size() - 1); j++) {
                         hobbies.add((String) userHobbies.get(i));
                     }
-                }
+                }*/
                 String userEmail = (String) userJsonObject.get(USER_EMAIL_ADDRESS);
                 Boolean userAgreedToTerms = (Boolean) userJsonObject.get(USER_HAS_AGREED_TO_TERMS);
                 Boolean userProfileIsPublic = (Boolean) userJsonObject.get(USER_PROFILE_IS_PUBLIC);
@@ -63,14 +60,13 @@ public class DataReader extends JsonConstants {
                 }
                 Boolean userAdminPrivileges = (Boolean) userJsonObject.get(USER_ADMIN_PRIVILEGES);
                 JSONArray userAuthorOf = (JSONArray) userJsonObject.get(USER_AUTHOR_OF);
-                if (userAuthorOf != null) {
+                /*if (userAuthorOf != null) {
                     for (int m = 0; m < userAuthorOf.size(); m++) {
                         groupsAuthored.add(UUID.fromString(userAuthorOf.get(m).toString())); // convert to group uuid and change json
                     }
-                }
-                users.add(new User(userID,userPass, userUserName, userFirstName, userLastName, userGender, userAge, 
-                                   userHobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
-                                   userCategoriesOfInterest, groupsJoined, userAdminPrivileges, userAuthorOf));
+                }*/
+                users.add(new User(userID,userPass, userUserName, userFirstName, userLastName, userGender, userAge, hobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
+                interestCat, groupsJoined, userAdminPrivileges, groupsAuthored));
             }
 
             return users;
@@ -82,6 +78,7 @@ public class DataReader extends JsonConstants {
     }
 
     public static ArrayList<Event> getEvent() {
+        ArrayList<Event> events = new ArrayList<Event>();
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();
@@ -116,6 +113,7 @@ public class DataReader extends JsonConstants {
     }
 
     public static ArrayList<Group> getGroup() {
+        ArrayList<Group> groups = new ArrayList<Group>();
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();

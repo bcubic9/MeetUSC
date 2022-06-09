@@ -10,10 +10,10 @@
         "USER_EMAIL_ADDRESS": "jsmith00@gmail.com",
         "USER_HAS_AGREED_TO_TERMS": true,
         "USER_PROFILE_IS_PUBLIC": false,
-        "USER_GROUPS_JOINED": ["ColumbiaFireFliesWatchers", "River-Rafters of Columbia"],
+        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "2550890a-a64b-4ef8-9d0e-10501ae2e08f"],
         "USER_CATEGORIES_OF_INTEREST": ["sports", "outdoors"],
         "USER_ADMIN_PRIVILEGES": false,
-        "USER_AUTHOR_OF": ["UUID of groups that they're an author of"]
+        "USER_AUTHOR_OF": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f"]
     },
     {
         "USER_ID": "8258b3b4-bbb6-45a5-9bf2-267d3af21191",
@@ -27,7 +27,7 @@
         "USER_EMAIL_ADDRESS": "bobbyboy@gmail.com",
         "USER_HAS_AGREED_TO_TERMS": true,
         "USER_PROFILE_IS_PUBLIC": true,
-        "USER_GROUPS_JOINED": ["Builders of America", "Home Building for the Homeless"],
+        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f"],
         "USER_CATEGORIES_OF_INTEREST": ["Construction", "outdoors"],
         "USER_ADMIN_PRIVILEGES": false,
         "USER_AUTHOR_OF": ["UUID"]
@@ -44,7 +44,7 @@
         "USER_EMAIL_ADDRESS": "samami@gmail.com",
         "USER_HAS_AGREED_TO_TERMS": true,
         "USER_PROFILE_IS_PUBLIC": true,
-        "USER_GROUPS_JOINED": ["Park Frisbee Group"],
+        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f"],
         "USER_CATEGORIES_OF_INTEREST": ["Frisbee", "make-up"],
         "USER_ADMIN_PRIVILEGES": false,
         "USER_AUTHOR_OF": ["UUID"]
