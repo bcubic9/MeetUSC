@@ -45,7 +45,7 @@ public class UI
             //getGroupByUUID()
             ArrayList<UUID> ug = currentUser.getGroupsCreated();
             for(UUID u : ug) {
-                System.out.println(gl.getGroupByUUID(u));
+                System.out.println(gl.getGroupByUUID(u).getGroupName());
                 //if(u.equals(gl.getGroupByUUID(u))) {
 
                 //}
