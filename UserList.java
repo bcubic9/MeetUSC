@@ -10,7 +10,11 @@ public class UserList {
     this.users = DataReader.getUsers();
     System.out.println("hi");
   }
-
+ /**
+  *The method getInstance method gets the current instance and returns it.
+  *Used for the singleton
+  * @return the current instance of UserList
+  */
   public static UserList getInstance() {
     if (userList == null) {
       userList = new UserList();
