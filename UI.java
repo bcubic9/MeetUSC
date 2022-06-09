@@ -40,6 +40,11 @@ public class UI
                     {
                         return currentUser;
                     }
+                    else
+                    {
+                        System.out.println("User not found, please try again.");
+                        continue;
+                    }
                 break;
 
                 case "c":
