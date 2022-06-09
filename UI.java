@@ -41,14 +41,17 @@ public class UI
         System.out.println("Username: " + currentUser.getUserName());
         System.out.println("Groups created: ");
         GroupList gl = GroupList.getInstance();
-        /*for(Group g : gl.getGroups()) {
+        for(Group g : gl.getGroups()) {
+            //getGroupByUUID()
             ArrayList<UUID> ug = currentUser.getGroupsCreated();
-            for(UUID u : ug)
-            if(currentUser.) {
+            for(UUID u : ug) {
+                System.out.println(gl.getGroupByUUID(u));
+                //if(u.equals(gl.getGroupByUUID(u))) {
 
+                //}
             }
         }
-        */
+        
    }
    public User login()
    {
