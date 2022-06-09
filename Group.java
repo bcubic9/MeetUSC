@@ -103,11 +103,6 @@ public class Group {
         return rating; 
     }
 
-    public ArrayList<String> getMessages()
-    {
-        return chat; 
-    }
-
     public String getContact()
     {
         return authorContact;
@@ -141,13 +136,6 @@ public class Group {
     public void setGroupRating(int rating)
     {
         this.rating = rating;
-    }
-
-
-
-    public void addMessages(String message)
-    {
-        chat.add(message);
     }
 
     public void setAuthorContact(String authorContact)//Author's email
