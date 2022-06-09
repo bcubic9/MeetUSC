@@ -33,6 +33,17 @@ public class UserList {
     return newUser;
   }
 
+  public User addUser(UUID userID, String userPass, String userUserName, String userFirstName, String userLastName, String userGender, int userAge, 
+                      ArrayList<String> userHobbies, String userEmail, boolean userAgreedToTerms, boolean userProfileIsPublic,
+                      ArrayList<Category> userCategoriesOfInterest, ArrayList<UUID> groupsJoined, boolean userAdminPrivileges, ArrayList<UUID> userAuthorOf) 
+  {
+    User newUser = new User(userID, userPass, userUserName, userFirstName, userLastName, userGender, userAge, 
+                            userHobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
+                            userCategoriesOfInterest, groupsJoined, userAdminPrivileges, userAuthorOf); 
+    users.add(newUser);
+    return newUser;
+  }
+
   public ArrayList<User> getUsers() {
     return users;
   }
@@ -47,8 +58,8 @@ public class UserList {
   }
 
   public User getUserByUserName(String userName) {
-    UserList ul = UserList.getInstance();
-    for (User user : ul.getAllUsers()) {
+    
+    for (User user : getAllUsers()) {
       if (user.getUserName().equals(userName)) {
         return user;
       }

@@ -60,6 +60,11 @@ public class User {
         this.groupsJoined = groupsJoined;
         this.adminPrivileges = userAdminPrivileges;
         this.authorOf = userAuthorOf;
+
+        UserList ul = UserList.getInstance();
+        ul.addUser(userID, userPass, userUserName, userFirstName, userLastName, userGender, userAge, 
+        userHobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
+        userCategoriesOfInterest, groupsJoined, userAdminPrivileges, userAuthorOf);
     }
 
     public User(UUID userID, String password, String userName, String firstName, String lastName, String gender,
