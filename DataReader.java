@@ -11,7 +11,7 @@ public class DataReader extends JsonConstants {
     public static ArrayList<Event> events = new ArrayList<Event>();
     public static ArrayList<Group> groups = new ArrayList<Group>();
 
-    public ArrayList<User> getUsers() {
+    public static ArrayList<User> getUsers() {
         // ArrayList<User> users = new ArrayList<User>();
 
         try {
@@ -81,7 +81,7 @@ public class DataReader extends JsonConstants {
         return null;
     }
 
-    public ArrayList<Event> getEvent() {
+    public static ArrayList<Event> getEvent() {
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();
@@ -115,7 +115,7 @@ public class DataReader extends JsonConstants {
         return null;
     }
 
-    public ArrayList<Group> getGroup() {
+    public static ArrayList<Group> getGroup() {
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
             JSONParser parser = new JSONParser();

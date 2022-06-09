@@ -4,14 +4,10 @@ import java.util.UUID;
 public class UserList {
   private static UserList userList = null;
   private ArrayList<User> users;
-  private ArrayList<User> tempBannedUsers;
-  private ArrayList<User> bannedUsers;
 
   private UserList() {
 
-    this.users = new ArrayList<>();
-    this.tempBannedUsers = new ArrayList<>();
-    this.bannedUsers = new ArrayList<>();
+    this.users = DataReader.getUsers();
 
   }
 
