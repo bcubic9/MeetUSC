@@ -25,7 +25,7 @@ class MeetUSCFacade
         return EventList.getInstance().addEvent(name, description, categories);
     }
 
-    public ArrayList<UUID> getJoinedGroups()
+    public ArrayList<String> getJoinedGroups()
     {
         return currentUser.getJoinedGroups();
     }

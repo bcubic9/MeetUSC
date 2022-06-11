@@ -47,7 +47,7 @@
         "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f"],
         "USER_CATEGORIES_OF_INTEREST": ["Frisbee", "make-up"],
         "USER_ADMIN_PRIVILEGES": false,
-        "USER_AUTHOR_OF": ["UUID"]
+        "USER_AUTHOR_OF": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "3bcfa771-6433-4c61-bd72-a66d628c7b20"]
     }
 
 ]

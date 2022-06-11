@@ -8,7 +8,7 @@ public class UserList {
   private UserList() {
 
     this.users = DataReader.getUsers();
-    System.out.println("hi");
+    //System.out.println("hi");
   }
  /**
   *The method getInstance method gets the current instance and returns it.

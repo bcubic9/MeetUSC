@@ -125,19 +125,12 @@ public class UI
         System.out.println("Gender: " + currentUser.getUserGender());
         System.out.println("Age: " + currentUser.getUserAge());
         System.out.println("Username: " + currentUser.getUserName());
-        System.out.println("Groups created: ");
-        System.out.println();
-        System.out.println();
-        GroupList gl = GroupList.getInstance();
-        for(Group g : gl.getGroups()) {
-        //getGroupByUUID()
-        ArrayList<UUID> ug = currentUser.getGroupsCreated();
-            for(UUID u : ug) {
-                System.out.println(gl.getGroupByUUID(u).getGroupName());
-                //if(u.equals(gl.getGroupByUUID(u))) {
+        System.out.println("Groups joined: " + currentUser.getJoinedGroups());
+    
+    }
+    
 
-            //}
-        }
+
    public static void main(String[] args)
    {
        UI myUI = new UI();

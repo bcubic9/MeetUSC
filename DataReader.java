@@ -185,6 +185,7 @@ public class DataReader extends JsonConstants {
         for(User user: allusers) {
             System.out.println(user.firstName + " " + user.lastName);
             System.out.println(user.email);
+            System.out.println(user.groupsJoined);
             System.out.println(user.categoriesOfInterest);
         }
         //System.out.println(users.toString());

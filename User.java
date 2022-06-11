@@ -155,8 +155,17 @@ public class User {
         return authorOf;
     }
 
-    public ArrayList<UUID> getJoinedGroups() {
-        return groupsJoined;
+    public ArrayList<String> getJoinedGroups() {
+        ArrayList<String> joinedGroupsNames = new ArrayList<String>();
+        GroupList gl = GroupList.getInstance();
+        for(Group group : gl.getGroups()) {
+            for(UUID g : groupsJoined) {
+                if(g.equals(group.getGroupId()))
+                joinedGroupsNames.add(group.getGroupName());
+            }
+        }
+        
+        return joinedGroupsNames;
     }
 
     public ArrayList<Category> getCategoriesOfInterest() {
