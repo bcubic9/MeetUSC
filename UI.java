@@ -8,6 +8,7 @@ public class UI
     private String header = "======MeetUSC======";
     private String[] choices = {"Login (l)", "Create User (c)", "Exit (e)"};
     private String[] userOptions = {"View Profile (p)", "View Groups (g)", "View events (v)", "Exit (x)"};
+    private static final String divider = "=================";
 
     public UI()
    {
@@ -40,6 +41,7 @@ public class UI
                     if(currentUser != null)
                     {   
                         while(true) {
+                            System.out.println(divider);
                             System.out.println("Welcome to Meet USC " + currentUser.getFirstName() + " " + currentUser.getLastName());
                             System.out.println();
                             System.out.println("Select from the following options:");
@@ -102,7 +104,7 @@ public class UI
    {
        for(int i = 0; i < userOptions.length; i++)
        {
-           System.out.println(userOptions[i]);
+           System.out.print(userOptions[i]+ " ");
        }
    }
 
