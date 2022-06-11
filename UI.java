@@ -33,7 +33,7 @@ public class UI
                case "l":
                     System.out.println("Enter your credentials:");
                     System.out.print("Username: ");
-                    String userName = input.nextLine().trim().toLowerCase();
+                    String userName = input.nextLine();
                     System.out.print("Password: ");
                     String password = input.nextLine().trim().toLowerCase();
                     User currentUser = facade.login(userName, password);

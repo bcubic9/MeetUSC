@@ -140,15 +140,15 @@ public class User {
     }
 
     public boolean getHasAgreedToTerms() {
-        return false;
+        return hasAgreedToTerms;
     }
 
     public boolean getProfileIsPublic() {
-        return false;
+        return profilesPublic;
     }
 
     public boolean getAdminPrivileges() {
-        return false;
+        return adminPrivileges;
     }
 
     public ArrayList<UUID> getGroupsCreated() {
