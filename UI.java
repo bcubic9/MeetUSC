@@ -126,6 +126,8 @@ public class UI
         System.out.println("Age: " + currentUser.getUserAge());
         System.out.println("Username: " + currentUser.getUserName());
         System.out.println("Groups created: ");
+        System.out.println();
+        System.out.println();
         GroupList gl = GroupList.getInstance();
         for(Group g : gl.getGroups()) {
         //getGroupByUUID()
@@ -136,10 +138,6 @@ public class UI
 
             //}
         }
-    }
-    
-}
-
    public static void main(String[] args)
    {
        UI myUI = new UI();
