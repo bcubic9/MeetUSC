@@ -72,7 +72,7 @@ public class User {
         this.gender = gender;
         this.age = age;
         this.hobby = hobby;
-        this.emailAddress = emailAddress;
+        this.email = emailAddress;
         this.hasAgreedToTerms = Boolean.parseBoolean(userAgreedToTerms);
         this.profilesPublic = Boolean.parseBoolean(userProfileIsPublic);
         this.adminPrivileges = Boolean.parseBoolean(userAdminPrivileges);
@@ -104,11 +104,11 @@ public class User {
     }
 
     public String getEmailAddress() {
-        return emailAddress;
+        return email;
     }
 
     public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+        this.email = emailAddress;
     }
 
     public UUID getUserId() {
