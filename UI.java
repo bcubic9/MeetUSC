@@ -116,6 +116,7 @@ public class UI
        }
    }
 
+
    public void getUserProfile(User currentUser) 
    {
         System.out.println("Name: " + currentUser.getFirstName() + " " + currentUser.getLastName());
