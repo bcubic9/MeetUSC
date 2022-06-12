@@ -10,10 +10,10 @@
         "USER_EMAIL_ADDRESS": "jsmith00@gmail.com",
         "USER_HAS_AGREED_TO_TERMS": true,
         "USER_PROFILE_IS_PUBLIC": false,
-        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "2550890a-a64b-4ef8-9d0e-10501ae2e08f"],
-        "USER_CATEGORIES_OF_INTEREST": ["sports", "outdoors"],
+        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "e3ed1534-72fe-4d8c-8501-39765454e951"],
+        "USER_CATEGORIES_OF_INTEREST": ["SPORTS", "OUTDOORS"],
         "USER_ADMIN_PRIVILEGES": false,
-        "USER_AUTHOR_OF": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f"]
+        "USER_AUTHOR_OF": ["bc0113f6-c984-4bc4-8d14-b352fbee92ff"]
     },
     {
         "USER_ID": "8258b3b4-bbb6-45a5-9bf2-267d3af21191",
@@ -27,10 +27,10 @@
         "USER_EMAIL_ADDRESS": "bobbyboy@gmail.com",
         "USER_HAS_AGREED_TO_TERMS": true,
         "USER_PROFILE_IS_PUBLIC": true,
-        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f"],
-        "USER_CATEGORIES_OF_INTEREST": ["Construction", "outdoors"],
+        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "e3ed1534-72fe-4d8c-8501-39765454e951"],
+        "USER_CATEGORIES_OF_INTEREST": ["CONSTRUCTION", "OUTDOORS"],
         "USER_ADMIN_PRIVILEGES": false,
-        "USER_AUTHOR_OF": ["UUID"]
+        "USER_AUTHOR_OF": ["e3ed1534-72fe-4d8c-8501-39765454e951"]
     },
     {
         "USER_ID": "3cdec68b-0b06-4a8a-8bf3-76390bce6ae9",
@@ -44,8 +44,8 @@
         "USER_EMAIL_ADDRESS": "samami@gmail.com",
         "USER_HAS_AGREED_TO_TERMS": true,
         "USER_PROFILE_IS_PUBLIC": true,
-        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f"],
-        "USER_CATEGORIES_OF_INTEREST": ["Frisbee", "make-up"],
+        "USER_GROUPS_JOINED": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "e3ed1534-72fe-4d8c-8501-39765454e951", "3bcfa771-6433-4c61-bd72-a66d628c7b20"],
+        "USER_CATEGORIES_OF_INTEREST": ["FRISBEE", "MAKEUP"],
         "USER_ADMIN_PRIVILEGES": false,
         "USER_AUTHOR_OF": ["2550890a-a64b-4ef8-9d0e-10501ae2e08f", "3bcfa771-6433-4c61-bd72-a66d628c7b20"]
     }

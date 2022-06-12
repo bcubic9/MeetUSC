@@ -19,7 +19,7 @@ public class User {
     protected Boolean hasAgreedToTerms;
     protected Boolean profilesPublic;
     protected boolean adminPrivileges;
-    protected ArrayList<Category> categoriesOfInterest = new ArrayList<Category>();
+    protected ArrayList<Category> categoriesOfInterest;
     protected ArrayList<UUID> groupsJoined = new ArrayList<UUID>();
     protected ArrayList<UUID> authorOf; // groups created. professor wants arraylist of uuid so we can then access those
                                         // groups later.
