@@ -78,10 +78,10 @@ public class DataReader extends JsonConstants {
         return null;
     }
 
-    public static ArrayList<Event> getEvent() {
+    public static ArrayList<Event> getEvents() {
         ArrayList<Event> events = new ArrayList<Event>();
         try {
-            FileReader reader = new FileReader(USER_FILE_NAME);
+            FileReader reader = new FileReader(EVENT_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray eventJSON = (JSONArray) parser.parse(reader);
             ArrayList<String> eComment = new ArrayList<String>();
@@ -113,10 +113,10 @@ public class DataReader extends JsonConstants {
         return null;
     }
 
-    public static ArrayList<Group> getGroup() {
+    public static ArrayList<Group> getGroups() {
         ArrayList<Group> groups = new ArrayList<Group>();
         try {
-            FileReader reader = new FileReader(USER_FILE_NAME);
+            FileReader reader = new FileReader(GROUP_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray groupJSON = (JSONArray) parser.parse(reader);
             ArrayList<UUID> groupUpcomingEvent = new ArrayList<UUID>();
@@ -196,5 +196,13 @@ public class DataReader extends JsonConstants {
         }
         //System.out.println(users.toString());
         // System.out.println(users);
+
+        System.out.println("This is a test of the event information.");
+        ArrayList<Event> allevents;
+        allevents = DataReader.getEvents();
+        for(Event event : allevents) {
+            System.out.println(event.getEventName() + " ");
+            System.out.println(event.getEventAddress());
+        }
     }
 }
