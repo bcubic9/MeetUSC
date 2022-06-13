@@ -11,6 +11,9 @@ public class GroupTest {
 
     @BeforeEach
     public void setUp(){
+       //group.clear();//there is no clear method in group
+       //wrong parameters for group.
+       //Group beeGroup = new Group("803-454-3344", "Bee Keeper Club", "Saving the Bees!", Category.SOCIAL, "Jake", "Our goal is to spread Bee awarness", 5, "Hello fellow bee lovers!", "DG@email.sc.edu");
         
      
     }
@@ -21,6 +24,16 @@ public class GroupTest {
     }
     //@Test
     //public void test
+
+    @Test
+    public void testAddMessage(){
+
+    }
+
+    @Test 
+    public void testAddMember(){
+        
+    }
 
     
 }
