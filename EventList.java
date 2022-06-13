@@ -16,11 +16,7 @@ public class EventList {
   *Used for the singleton
   * @return the current instance of evenList
   */
-<<<<<<< HEAD
-  public  EventList getInstance() {
-=======
   public static EventList getInstance() {
->>>>>>> ce94dced7118328a9f518faab922162ce8da8419
     if (eventList == null) {
       eventList = new EventList();
     }
