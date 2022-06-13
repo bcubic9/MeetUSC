@@ -13,12 +13,12 @@ public class Group {
     private UUID id;
     private ArrayList<String> messageList;
 
-    public Group(String name, String description, ArrayList<Category> categories) {
+    public Group(String name, String description, ArrayList<Category> categories2) {
 
         id = UUID.randomUUID();
         this.name = name;
         this.description = description;
-        this.categories = categories;
+        this.categories = categories2;
 
     }
 
