@@ -79,82 +79,123 @@ public class User {
         this.authorOf.add(authorOf); // need to make this a uuid
     }
 
+/*
+@param getFirstName returns the string firstName
+*/
     public String getFirstName() {
         return firstName;
     }
-
+/*
+@param setFirstName passes in the firstName and
+*/
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
+/*
+@param getFirstName returns the string firstName
+*/
     public String getLastName() {
         return lastName;
     }
-
+/*
+@param getFirstName intializes this.lastname
+*/
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
+/*
+@param getUserName returns the userName
+*/
     public String getUserName() {
         return userName;
     }
-
+/*
+@param getFirstName returns the string firstName
+*/
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
+/*
+@param getEmailAddress returns the emailAddress
+*/
     public String getEmailAddress() {
-        return email;
+        return emailAddress;
     }
-
+/*
+@param setEmailAddress 
+*/
     public void setEmailAddress(String emailAddress) {
-        this.email = emailAddress;
+        this.emailAddress = emailAddress;
     }
-
+/*
+@param getUserID returns the user's UUID
+*/
     public UUID getUserId() {
         return userId;
     }
-
+/*
+@param set returns the string firstName
+*/
     public void setUserId(UUID userId) {
         this.userId = userId;
     }
-
+/*
+@param getHobby returns the string ArrayList of hobbies
+*/
     public ArrayList<String> getHobby() {
         return hobby;
     }
-
+/*
+@param getFirstName returns the string firstName
+*/
     public void setHobby(ArrayList<String> hobby) {
         this.hobby = hobby;
     }
-
+    /*
+    @param getuserPassword returns password
+    */
     public String getUserPassword() {
         return this.password;
     }
-
+    /*
+    @param getUserGender returns gender
+    */
     public String getUserGender() {
         return this.gender;
     }
-
+    /*
+    @param getUserAge returns age
+    */
     public int getUserAge() {
         return this.age;
     }
-
+    /*
+    @param getHasAgreedToTerms returns whether or not the user has agreed to the terms of service
+    */
     public boolean getHasAgreedToTerms() {
         return hasAgreedToTerms;
     }
-
+    /*
+    @param getProfileIsPublic returns whether or not the profile is public
+    */
     public boolean getProfileIsPublic() {
         return profilesPublic;
     }
-
+/*
+@param getAdminPrivileges returns whether or not the user has adminPriveleges
+*/
     public boolean getAdminPrivileges() {
         return adminPrivileges;
     }
-
+    /*
+    @param getGroupsCreated returns password returns the author of a group created.
+    */
     public ArrayList<UUID> getGroupsCreated() {
         return authorOf;
     }
-
+    /*
+    @param getJoinedGroups returns the groups that the user has joined
+    */
     public ArrayList<String> getJoinedGroups() {
         ArrayList<String> joinedGroupsNames = new ArrayList<String>();
         GroupList gl = GroupList.getInstance();
@@ -167,7 +208,9 @@ public class User {
         
         return joinedGroupsNames;
     }
-
+    /*
+    @param getuserPassword returns categories of interest
+    */
     public ArrayList<Category> getCategoriesOfInterest() {
         return categoriesOfInterest;
     }
