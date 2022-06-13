@@ -47,111 +47,160 @@ public class Group {
 
     }
 */
+ */
+/*
+@param getEventID returns an arrayList of the events UUID
+*/
     public ArrayList<UUID> getEventID()
     {
         return events;
     }
-
+/*
+@param addEventID takes in eventID as a parameter and adds the eventID to the array of events
+*/
     public void addEventID(UUID eventID)
     {
         events.add(eventID);
     }
+    /*
+    @parram getMessageList is an arrayList of strings that will return the messageList
+    */
     public ArrayList<String> getMessageList()
     {
         return messageList;
     }
-
+/*
+@param addMessage takes in message as a parameter and adds it to the string arraylist of messages.
+*/
     public void addMessage(String message)
     {
         messageList.add(message);
     }
-
+/*
+@param getDescription returns description
+*/
     public String getDescription() {
         return description;
     }
-
+/*
+@param getGroupName returns name
+*/
     public String getGroupName() {
         return name;
     }
-
+/*
+@param getGroupID returns id
+*/
     public UUID getGroupId() {
         return id;
     }
-
+/*
+@param getUpcomingEvents returns description
+*/
     public ArrayList<Event> getUpcomingEvents()
     {
         return null;
     }
-
+/*
+@param getDescription returns description
+*/
     public ArrayList<String> getCategoryTypes()
     {
         return null;
     }
-
+/*
+@param getGroupMembers returns members
+*/
     public ArrayList<UUID> getGroupMembers()
     {
         return members;
     }
-
+/*
+@param addMembers takes in memberID as parameter and then adds it to the arrayList of members.
+*/
     public void addMembers(UUID memberID)
     {
         members.add(memberID);
     }
-
+/*
+@param getGroupRating returns the integer rating
+*/
     public int getGroupRating()
     {
         return rating; 
     }
-
+/*
+@param getDescription returns the string authorContact
+*/
     public String getContact()
     {
         return authorContact;
     }
-
+/*
+@param setDescription  sets the descirption for the group
+*/
     public void setDescription(String description)
     {
         this.description = description;
     }
-
+/*
+@param setGroupName sets the name for the group
+*/
     public void setGroupName(String name)
     {
         this.name = name;
     }
-
+/*
+@param setDescription  sets the id for the group
+*/
     public void setGroupId(UUID id)
     {
         this.id = id;
     }
-
+/*
+@param setUpcomingEvents  sets the events for the group
+*/
     public void setUpcomingEvents(ArrayList<UUID> events)
     {
         this.events = events;
     }
-
+/*
+@param setCategoryTypes  sets the categories for the group
+*/
     public void setCategoryTypes(ArrayList<Category> category)
     {
         this.categories = category;
     }
-
+/*
+@param setDescription  sets the descirption for the group
+*/
     public void setGroupRating(int rating)
     {
         this.rating = rating;
     }
-
+/*
+@param setDescription  sets the descirption for the group
+*/
     public void setAuthorContact(String authorContact)//Author's email
     {
         this.authorContact = authorContact;
     }
-
+/*
+@param addToAllGroups  sets the descirption for the group
+*/
     public void addToAllGroups(Group group){
 
     }
-
+/*
+@param hasCategory  returns whether or not it is true that a group is part of a category.
+*/
     public boolean hasCategory(Category category)
     {
         return categories.contains(category);
     }
-
+/*
+@param UUID getAuthor will return an authors UUID
+*/
     public UUID getAuthor() {
         UUID author;
         UserList ul = UserList.getInstance();
