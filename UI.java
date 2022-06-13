@@ -130,9 +130,9 @@ public class UI
     
     }
     
-    public static void getEventInfo()
+    public void getEventInfo()
     {
-        EventList el = new EventList.getInstance();
+        EventList el = EventList.getInstance();
         el.getEvents();
     }
 
