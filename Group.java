@@ -8,7 +8,7 @@ public class Group {
     private String name;
     private String description;
     private int rating;
-    private ArrayList<String> chat;
+    //private ArrayList<String> chat; //believe it is a duplicate of the messageList variable
     private String authorContact;
     private UUID id;
     private ArrayList<String> messageList;

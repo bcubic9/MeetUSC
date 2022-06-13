@@ -119,13 +119,13 @@ public class User {
 @param getEmailAddress returns the emailAddress
 */
     public String getEmailAddress() {
-        return emailAddress;
+        return this.email;
     }
 /*
 @param setEmailAddress 
 */
     public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+        this.email = emailAddress;
     }
 /*
 @param getUserID returns the user's UUID
