@@ -40,7 +40,10 @@ public class DataWriter extends JsonConstants {
         userDetails.put(USER_AGE, user.getUserAge());
         GroupList gl = GroupList.getInstance();
         for(Group group : gl.getGroups()) {
-            userDetails.put(USER_GROUPS_JOINED, group);
+            for(String g : user.getJoinedGroups())
+            if(group.getGroupName().equals(g)) {
+                userDetails.put(USER_GROUPS_JOINED, g);
+            }
         }
         //userDetails.put(USER_GROUPS_JOINED, user.getJoinedGroups());
         //userDetails.put(USER_HOBBIES, user.getHobby().toString());
