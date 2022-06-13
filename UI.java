@@ -16,6 +16,10 @@ public class UI
         facade = new MeetUSCFacade();
    }
    
+   /**
+    * Method starts the console application by desplaying choice
+    * allowing the user to login
+    */
    public void run()
    { 
         System.out.println(header);
@@ -24,6 +28,11 @@ public class UI
         login();
    }
 
+   /**
+    * Method uses a switch funciton to log in the user and then another switch function 
+    * for the user to get the appropriate information based on what the User's input is
+    * @return the appropriate information for the user's input
+    */
    public User login()
    {
        while(true)
@@ -116,7 +125,11 @@ public class UI
        }
    }
 
-
+   /**
+    * method gathers the Profile information of the current user
+    * and prints it in the console
+    * @param currentUser
+    */
    public void getUserProfile(User currentUser) 
    {
         System.out.println("Name: " + currentUser.getFirstName() + " " + currentUser.getLastName());
