@@ -84,7 +84,7 @@ public class GroupList {
   }
 
   /**
-   * the method searches group based on categories
+   * The method searches group based on categories.
    * @param category
    * @return groups that are associated with the category searched
    */
@@ -98,6 +98,6 @@ public class GroupList {
           groupCategories.add(e);
         }
     }
-    return null;
+    return groupCategories;
   }
 }
