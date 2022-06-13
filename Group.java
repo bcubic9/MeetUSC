@@ -47,7 +47,7 @@ public class Group {
 
     }
 */
- */
+ 
 /*
 @param getEventID returns an arrayList of the events UUID
 */
