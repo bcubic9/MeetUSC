@@ -146,13 +146,20 @@ public class UI
     public void getEventInfo()
     {
         EventList el = EventList.getInstance();
-        el.getEvents();
+        for(Event e : el.getEvents()) {
+            System.out.println("Event name: " + e.getEventName());
+            System.out.println("Event description: " + e.getDescription());
+        }
+        //el.getEvents();
     }
 
     public void getGroupInfo()
     {
-        GroupList gl = new GroupList().getInstance();
-        gl.getGroups();
+        GroupList gl = GroupList.getInstance();
+        for(Group g : gl.getGroups()) {
+            System.out.println("Group name: " + g.getGroupName());
+        }
+        //gl.getGroups();
     }
 
    public static void main(String[] args)
