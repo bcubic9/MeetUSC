@@ -130,7 +130,17 @@ public class UI
     
     }
     
+    public void getEventInfo()
+    {
+        EventList el = EventList.getInstance();
+        el.getEvents();
+    }
 
+    public void getGroupInfo()
+    {
+        GroupList gl = new GroupList().getInstance();
+        gl.getGroups();
+    }
 
    public static void main(String[] args)
    {

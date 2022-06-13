@@ -38,8 +38,19 @@ public class DataWriter extends JsonConstants {
         userDetails.put(USER_LAST_NAME, user.getLastName().toString());
         userDetails.put(USER_GENDER, user.getUserGender().toString());
         userDetails.put(USER_AGE, user.getUserAge());
-        userDetails.put(USER_GROUPS_JOINED, user.getJoinedGroups());
-        userDetails.put(USER_HOBBIES, user.getHobby().toString());
+        GroupList gl = GroupList.getInstance();
+        for(Group group : gl.getGroups()) {
+            for(String g : user.getJoinedGroups())
+            if(group.getGroupName().equals(g)) {
+                userDetails.put(USER_GROUPS_JOINED, g);
+            }
+        }
+        //userDetails.put(USER_GROUPS_JOINED, user.getJoinedGroups());
+        //userDetails.put(USER_HOBBIES, user.getHobby().toString());
+        for(String hobby : user.getHobby()) {
+            userDetails.put(USER_HOBBIES, hobby);
+        }
+
         userDetails.put(USER_EMAIL_ADDRESS, user.getEmailAddress().toString());
         userDetails.put(USER_HAS_AGREED_TO_TERMS, user.getHasAgreedToTerms());
         userDetails.put(USER_PROFILE_IS_PUBLIC, user.getProfileIsPublic());
