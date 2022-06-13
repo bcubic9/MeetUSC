@@ -65,10 +65,10 @@ public class UI
                                     getUserProfile(currentUser);
                                 break;
                                 case "g":
-                                    GroupList.getInstance().getGroups();
+                                    getGroupInfo();
                                 break;
                                 case "v":
-                                    EventList.getInstance().getEvents();
+                                    getEventInfo();
                                 break;
                             }
                         }
