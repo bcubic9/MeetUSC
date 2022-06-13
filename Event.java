@@ -44,6 +44,7 @@ private Event(UUID id, String name, String description,
     this.categories = categories;
     this.attendees = attendees;
 }
+    
     public void joinGroup(User attendee){
         //attendee.acceptAttendees(attendee); //acceptattendees() hasn't been made in User.java yet
     }
@@ -51,40 +52,59 @@ private Event(UUID id, String name, String description,
     public void leaveGroup(User attendee){
         //attendee.removeAttendees(attendee, true); //removeattendees() hasn't been made in User.java yet
     }
-
+/*
+@param String getEventAddress returns the eventAdress as a String
+*/
     public String getEventAddress() {
         return eventAddress;
     }
-
+/*
+@param getEventSize returns the size of the event as an integer.
+*/
     public int getEventSize() {
         return eventSize;
     }
-
+/*
+@param getInPerson returns a boolean on whether or not a given event will be in person or not.
+*/
     public boolean getInPerson() {
         return inPerson;
     }
-
+/*
+@param getDescription returns a discription of the event as a string
+*/
     public String getDescription() {
         return description;
     }
-
+/*
+@param hasCategory takes in a category as a parameter and returns true or false based on whether or not an event has a category.
+*/
     public boolean hasCategory(Category category){
         return categories.contains(category);
     }
+    /*
+* @param getEventName returns the name of the event
+*/
     public String getEventName() {
         return this.name;
     }
 
-
+/*
+@param getEventID returns the events id
+*/
     public UUID getEventId() {
         return id;
     }
-     
+/*
+@param toString
+*/
     public String toString(){
       // double check this
         return name;
     }
-
+/*
+@param getcomments returns the eventComments
+*/
     public ArrayList<String> getComments() {
         return eventComments;
     }
