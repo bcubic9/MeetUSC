@@ -8,7 +8,7 @@ public class GroupList {
   // private static ArrayList<User> favoriteGroup;
 
   public GroupList() {
-    this.groups = new ArrayList<Group>();
+    this.groups = DataReader.getGroups();
   }
 /**
  * The getInstance method gets the current instance and returns it.

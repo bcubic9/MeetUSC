@@ -201,7 +201,7 @@ public class DataReader extends JsonConstants {
             System.out.println(user.firstName + " " + user.lastName);
             System.out.println(user.email);
             System.out.println(user.groupsJoined);
-            System.out.println();
+            System.out.println(); //to make look cleaner
             System.out.println(user.categoriesOfInterest);
             System.out.println();
             System.out.println(user.authorOf);
@@ -223,8 +223,8 @@ public class DataReader extends JsonConstants {
         ArrayList<Group> allGroups;
         allGroups = DataReader.getGroups();
         for(Group group : allGroups) {
-            System.out.println(group.getGroupName());
-            System.out.println(group.getDescription());
+            System.out.println("Group Name: " + group.getGroupName());
+            System.out.println("Group Description: " + group.getDescription());
         }
     }
 }
