@@ -135,7 +135,7 @@ public class UI
         System.out.println("Name: " + currentUser.getFirstName() + " " + currentUser.getLastName());
         System.out.println("Email: " + currentUser.getEmailAddress());
         System.out.println("Profile is public: " + currentUser.getProfileIsPublic());
-        System.out.println("Categories of interest: " + currentUser.getCategoriesOfInterest().toString());
+        System.out.println("Categories of interest: " + currentUser.getCategoriesOfInterest());
         System.out.println("Gender: " + currentUser.getUserGender());
         System.out.println("Age: " + currentUser.getUserAge());
         System.out.println("Username: " + currentUser.getUserName());
@@ -146,9 +146,13 @@ public class UI
     public void getEventInfo()
     {
         EventList el = EventList.getInstance();
+        System.out.println();
+        System.out.println("ALL EVENTS and some information about them: ");
+        System.out.println();
         for(Event e : el.getEvents()) {
             System.out.println("Event name: " + e.getEventName());
             System.out.println("Event description: " + e.getDescription());
+            System.out.println();
         }
         //el.getEvents();
     }
@@ -156,8 +160,13 @@ public class UI
     public void getGroupInfo()
     {
         GroupList gl = GroupList.getInstance();
+        System.out.println();
+        System.out.println("ALL GROUPS and some information about them: ");
+        System.out.println();
         for(Group g : gl.getGroups()) {
             System.out.println("Group name: " + g.getGroupName());
+            System.out.println("Group description: " + g.getDescription());
+            System.out.println();
         }
         //gl.getGroups();
     }

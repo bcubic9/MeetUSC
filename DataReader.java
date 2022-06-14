@@ -45,7 +45,7 @@ public class DataReader extends JsonConstants {
                 if (userCategoriesOfInterest != null) {
                     for (int k = 0; k < userCategoriesOfInterest.size(); k++) {
                         for(Category cat : Category.values()) {
-                            if(cat.toString().equals(userCategoriesOfInterest.toString())) {
+                            if(!interestCat.contains(cat) && userCategoriesOfInterest.contains(cat.toString())) {
                                 interestCat.add(cat);// loop through category enum.
                             }
                         }
