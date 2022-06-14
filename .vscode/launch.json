@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch UI",
             "request": "launch",
             "mainClass": "UI",
@@ -26,17 +27,12 @@
         },
         {
             "type": "java",
+=======
+>>>>>>> 1a61c7a130ac608fa286e1961f31a6d8c75b3512
             "name": "Launch UI",
             "request": "launch",
             "mainClass": "UI",
-            "projectName": "MeetUSC_789f072"
-        },
-        {
-            "type": "java",
-            "name": "Launch UUIDMaker",
-            "request": "launch",
-            "mainClass": "UUIDMaker",
-            "projectName": "MeetUSC_789f072"
+            "projectName": "MeetUSC_11595df1"
         }
     ]
 }

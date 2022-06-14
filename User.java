@@ -119,13 +119,13 @@ public class User {
 @param getEmailAddress returns the emailAddress
 */
     public String getEmailAddress() {
-        return emailAddress;
+        return this.email;
     }
 /*
 @param setEmailAddress 
 */
     public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+        this.email = emailAddress;
     }
 /*
 @param getUserID returns the user's UUID
@@ -201,8 +201,9 @@ public class User {
         GroupList gl = GroupList.getInstance();
         for(Group group : gl.getGroups()) {
             for(UUID g : groupsJoined) {
-                if(g.equals(group.getGroupId()))
-                joinedGroupsNames.add(group.getGroupName());
+                if(g.equals(group.getGroupId()) && !joinedGroupsNames.contains(group.getGroupName())) {
+                    joinedGroupsNames.add(group.getGroupName());
+                }
             }
         }
         
@@ -212,6 +213,14 @@ public class User {
     @param getuserPassword returns categories of interest
     */
     public ArrayList<Category> getCategoriesOfInterest() {
+        ArrayList<Category> cats = new ArrayList<>();
+        /*for(Category cat: categoriesOfInterest) {
+            if (cat.equals(Category.CONSTRUCTION)) {
+                cats.add(Category.CONSTRUCTION);
+            }
+            
+        }
+        */
         return categoriesOfInterest;
     }
 }

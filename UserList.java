@@ -69,10 +69,15 @@ public class UserList {
 
   public User login(String userName, String password)
   {
-    User user = getUserByUserName(userName);
-    if(user.getUserPassword().equalsIgnoreCase(password))
-    {
-      return user;
+    try {
+      User user = getUserByUserName(userName);
+      if(user.getUserPassword().equalsIgnoreCase(password))
+      {
+        return user;
+      } 
+    } catch(Exception e) {
+      System.out.println("You've entered an incorrect username or password");
+      e.printStackTrace();
     }
     return null;
   }
