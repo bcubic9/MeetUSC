@@ -8,7 +8,7 @@ public class Group {
     private String name;
     private String description;
     private int rating;
-    //private ArrayList<String> chat; //believe it is a duplicate of the messageList variable
+    
     private String authorContact;
     private UUID id;
     private ArrayList<String> messageList;
@@ -35,29 +35,17 @@ public class Group {
         this.messageList = groupMessageList;
         this.authorContact = groupAuthorContact;
     }
-
-/*    public Group(UUID id, String name, String description, ArrayList<Category> categories,
-            ArrayList<User> members, ArrayList<Event> events) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.categories = categories;
-        this.members = members;
-        this.events = events;
-
-    }
-*/
  
-/*
-@param getEventID returns an arrayList of the events UUID
-*/
+    /*
+    @param getEventID returns an arrayList of the events UUID
+    */
     public ArrayList<UUID> getEventID()
     {
         return events;
     }
-/*
-@param addEventID takes in eventID as a parameter and adds the eventID to the array of events
-*/
+    /*
+    @param addEventID takes in eventID as a parameter and adds the eventID to the array of events
+    */
     public void addEventID(UUID eventID)
     {
         events.add(eventID);
@@ -69,34 +57,34 @@ public class Group {
     {
         return messageList;
     }
-/*
-@param addMessage takes in message as a parameter and adds it to the string arraylist of messages.
-*/
+    /*
+    @param addMessage takes in message as a parameter and adds it to the string arraylist of messages.
+    */
     public void addMessage(String message)
     {
         messageList.add(message);
     }
-/*
-@param getDescription returns description
-*/
+    /*
+    @param getDescription returns description
+    */
     public String getDescription() {
         return description;
     }
-/*
-@param getGroupName returns name
-*/
+    /*
+    @param getGroupName returns name
+    */
     public String getGroupName() {
         return name;
     }
-/*
-@param getGroupID returns id
-*/
+    /*
+    @param getGroupID returns id
+    */
     public UUID getGroupId() {
         return id;
     }
-/*
-@param getUpcomingEvents returns description
-*/
+    /*
+    @param getUpcomingEvents returns description
+    */
     public ArrayList<Event> getUpcomingEvents()
     {
         return null;
