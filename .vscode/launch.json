@@ -6,6 +6,29 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
+            "name": "Launch UI",
+            "request": "launch",
+            "mainClass": "UI",
+            "projectName": "MeetUSC_50d198f4"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataReader",
+            "request": "launch",
+            "mainClass": "DataReader",
+            "projectName": "MeetUSC_789f072"
+        },
+        {
+            "type": "java",
+=======
+>>>>>>> 1a61c7a130ac608fa286e1961f31a6d8c75b3512
             "name": "Launch UI",
             "request": "launch",
             "mainClass": "UI",
