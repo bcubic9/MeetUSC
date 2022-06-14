@@ -119,7 +119,7 @@ public class DataReader extends JsonConstants {
             FileReader reader = new FileReader(GROUP_FILE_NAME);
             JSONParser parser = new JSONParser();
             JSONArray groupJSON = (JSONArray) parser.parse(reader);
-            ArrayList<UUID> groupUpcomingEvent = new ArrayList<UUID>();
+            ArrayList<String> groupUpcomingEvent = new ArrayList<String>();
             ArrayList<Category> groupCategories = new ArrayList<Category>();
             ArrayList<UUID> groupMemberList = new ArrayList<UUID>();
             ArrayList<String> groupMessageList = new ArrayList<String>();
@@ -132,7 +132,7 @@ public class DataReader extends JsonConstants {
                 JSONArray groupUpcomingEvents = (JSONArray) groupJsonObject.get(GROUP_UPCOMING_EVENTS);
                 if(groupUpcomingEvents != null) {
                     for(int j = 0; j < groupUpcomingEvents.size(); j++) {
-                        groupUpcomingEvent.add(UUID.fromString(groupUpcomingEvents.get(j).toString()));
+                        groupUpcomingEvent.add(groupUpcomingEvents.get(j).toString());
                     }
                 }
                 JSONArray groupCategoryTypes = (JSONArray) groupJsonObject.get(GROUP_CATEGORY_TYPES);
@@ -149,11 +149,12 @@ public class DataReader extends JsonConstants {
                 JSONArray groupMembers = (JSONArray) groupJsonObject.get(GROUP_MEMBERS);
                 if(groupMembers != null) {
                     for(int j = 0; j < groupMembers.size(); j++) {
-                        groupMemberList.add(UUID.fromString(groupMembers.get(j).toString()));
+                        groupMemberList.add(UUID.fromString((String) groupMembers.get(j)));
                     }
                 }
                 String groupDescription = (String) groupJsonObject.get(GROUP_DESCRIPTION);
                 int groupRating = ((Long) groupJsonObject.get(GROUP_RATING)).intValue();
+                String groupAuthor = (String) groupJsonObject.get(GROUP_AUTHOR);
                 JSONArray groupMessages = (JSONArray) groupJsonObject.get(GROUP_MESSAGES);
                 if(groupMessages != null) {
                     for(int j = 0; j < groupMessages.size(); j++) {
@@ -163,8 +164,21 @@ public class DataReader extends JsonConstants {
                 String groupAuthorContact = (String) groupJsonObject.get(GROUP_AUTHOR_CONTACT);
 
                 groups.add(new Group(groupID, groupName, groupUpcomingEvent, groupCategories,
-                                    groupMemberList, groupDescription, groupRating, groupMessageList,
+                                    groupMemberList, groupDescription, groupRating, groupAuthor, groupMessageList,
                                     groupAuthorContact));
+
+                /**
+                 * GROUP_ID":"e3ed1534-72fe-4d8c-8501-39765454e951",
+        "GROUP_NAME":"Builders of America",
+        "GROUP_UPCOMING_EVENTS" : ["None"],
+        "GROUP_CATEGORY_TYPES" : ["Outdoors", "Construction"],
+        "GROUP_MEMBERS" : ["fd2a1d6d-3419-401c-a021-cbd2b444d86c", "3cdec68b-0b06-4a8a-8bf3-76390bce6ae9", "Robert Builder"],
+        "GROUP_DESCRIPTION" : "This group is for the purpose of helping others who have suffered at the hands of natural disasters, fires, etc.",
+        "GROUP_RATING" : 5,
+        "GROUP_AUTHOR" : "Robert Builder",
+        "GROUP_MESSAGES" : ["Hello, everyone reading this. I hope you would like to come and help us help others"],
+        "GROUP_AUTHOR_CONTACT"
+                 */
             }
 
             return groups;
@@ -203,6 +217,14 @@ public class DataReader extends JsonConstants {
         for(Event event : allevents) {
             System.out.println(event.getEventName() + " ");
             System.out.println(event.getEventAddress());
+        }
+
+        System.out.println("This is a test of the group information.");
+        ArrayList<Group> allGroups;
+        allGroups = DataReader.getGroups();
+        for(Group group : allGroups) {
+            System.out.println(group.getGroupName());
+            System.out.println(group.getDescription());
         }
     }
 }

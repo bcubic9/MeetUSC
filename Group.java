@@ -4,8 +4,9 @@ public class Group {
 
     private ArrayList<Category> categories;
     private ArrayList<UUID> members;
-    private ArrayList<UUID> events;
+    private ArrayList<String> events;
     private String name;
+    private String author;
     private String description;
     private int rating;
     
@@ -22,8 +23,8 @@ public class Group {
 
     }
 
-    public Group(UUID groupID, String groupName, ArrayList<UUID> groupUpcomingEvent, ArrayList<Category> groupCategories,
-                 ArrayList<UUID> groupMemberList, String groupDescription, int groupRating, ArrayList<String> groupMessageList,
+    public Group(UUID groupID, String groupName, ArrayList<String> groupUpcomingEvent, ArrayList<Category> groupCategories,
+                 ArrayList<UUID> groupMemberList, String groupDescription, int groupRating, String groupAuthor, ArrayList<String> groupMessageList,
                  String groupAuthorContact) {
         this.id = groupID;
         this.name = groupName;
@@ -32,21 +33,23 @@ public class Group {
         this.members = groupMemberList;
         this.description = groupDescription;
         this.rating = groupRating;
+        this.author = groupAuthor;
         this.messageList = groupMessageList;
         this.authorContact = groupAuthorContact;
     }
  
     /*
-    @param getEventID returns an arrayList of the events UUID
+    @param getEventID returns an arrayList of the events UUID //no long returns UUID because they weren't set up.
     */
-    public ArrayList<UUID> getEventID()
+    public ArrayList<String> getEventID()
     {
         return events;
     }
     /*
-    @param addEventID takes in eventID as a parameter and adds the eventID to the array of events
+    @param addEventID takes in eventID as a parameter and adds the eventID to the array of events. // no longer adds event UUID
+    as it was implemented
     */
-    public void addEventID(UUID eventID)
+    public void addEventID(String eventID)
     {
         events.add(eventID);
     }
@@ -148,7 +151,7 @@ public class Group {
 /*
 @param setUpcomingEvents  sets the events for the group
 */
-    public void setUpcomingEvents(ArrayList<UUID> events)
+    public void setUpcomingEvents(ArrayList<String> events)
     {
         this.events = events;
     }
@@ -185,6 +188,13 @@ public class Group {
     public boolean hasCategory(Category category)
     {
         return categories.contains(category);
+    }
+    /**
+     * This method returns the authors name, not the UUID
+     * @return a String of the group's author's name.
+     */
+    public String getGroupAuthor() {
+        return this.author;
     }
 /*
 @param UUID getAuthor will return an authors UUID
