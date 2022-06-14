@@ -44,12 +44,13 @@ public class DataReader extends JsonConstants {
                 JSONArray userCategoriesOfInterest = (JSONArray) userJsonObject.get(USER_CATEGORIES_OF_INTEREST);
                 if (userCategoriesOfInterest != null) {
                     for (int k = 0; k < userCategoriesOfInterest.size(); k++) {
-                        for(Category cat : Category.values()) {
-                            if(!interestCat.contains(cat) && userCategoriesOfInterest.contains(cat.toString())) {
+                        for (Category cat : Category.values()) {
+                            if (!interestCat.contains(cat) && userCategoriesOfInterest.contains(cat.toString())) {
                                 interestCat.add(cat);// loop through category enum.
                             }
                         }
-                        //interestCat.add((Category)userCategoriesOfInterest.get(k));// loop through category enum.
+                        // interestCat.add((Category)userCategoriesOfInterest.get(k));// loop through
+                        // category enum.
                     }
                 }
                 JSONArray userGroupsJoined = (JSONArray) userJsonObject.get(USER_GROUPS_JOINED);
@@ -62,12 +63,14 @@ public class DataReader extends JsonConstants {
                 JSONArray userAuthorOf = (JSONArray) userJsonObject.get(USER_AUTHOR_OF);
                 if (userAuthorOf != null) {
                     for (int m = 0; m < userAuthorOf.size(); m++) {
-                        groupsAuthored.add(UUID.fromString(userAuthorOf.get(m).toString())); // convert to group uuid and change json
+                        groupsAuthored.add(UUID.fromString(userAuthorOf.get(m).toString())); // convert to group uuid
+                                                                                             // and change json
                     }
                 }
-                
-                users.add(new User(userID,userPass, userUserName, userFirstName, userLastName, userGender, userAge, hobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
-                interestCat, groupsJoined, userAdminPrivileges, groupsAuthored));
+
+                users.add(new User(userID, userPass, userUserName, userFirstName, userLastName, userGender, userAge,
+                        hobbies, userEmail, userAgreedToTerms, userProfileIsPublic,
+                        interestCat, groupsJoined, userAdminPrivileges, groupsAuthored));
             }
 
             return users;
@@ -86,7 +89,6 @@ public class DataReader extends JsonConstants {
             JSONArray eventJSON = (JSONArray) parser.parse(reader);
             ArrayList<String> eComment = new ArrayList<String>();
 
-
             for (int i = 0; i < eventJSON.size(); i++) {
                 JSONObject eventJsonObject = (JSONObject) eventJSON.get(i);
                 UUID eventID = UUID.fromString((String) eventJsonObject.get(EVENT_ID));
@@ -97,12 +99,12 @@ public class DataReader extends JsonConstants {
                 String eventDescription = (String) eventJsonObject.get(EVENT_DESCRIPTION);
                 JSONArray eventComments = (JSONArray) eventJsonObject.get(EVENT_COMMENTS);
                 if (eventComments != null) {
-                    for(int n = 0; n < eventComments.size(); n++) {
-                        eComment.add((String)eventComments.get(n));
+                    for (int n = 0; n < eventComments.size(); n++) {
+                        eComment.add((String) eventComments.get(n));
                     }
                 }
-                events.add(new Event(eventID, eventName, eventAddress, eventSize, 
-                                  eventInPerson, eventDescription, eComment));
+                events.add(new Event(eventID, eventName, eventAddress, eventSize,
+                        eventInPerson, eventDescription, eComment));
             }
 
             return events;
@@ -130,25 +132,25 @@ public class DataReader extends JsonConstants {
                 UUID groupID = UUID.fromString((String) groupJsonObject.get(GROUP_ID));
                 String groupName = (String) groupJsonObject.get(GROUP_NAME);
                 JSONArray groupUpcomingEvents = (JSONArray) groupJsonObject.get(GROUP_UPCOMING_EVENTS);
-                if(groupUpcomingEvents != null) {
-                    for(int j = 0; j < groupUpcomingEvents.size(); j++) {
+                if (groupUpcomingEvents != null) {
+                    for (int j = 0; j < groupUpcomingEvents.size(); j++) {
                         groupUpcomingEvent.add(groupUpcomingEvents.get(j).toString());
                     }
                 }
                 JSONArray groupCategoryTypes = (JSONArray) groupJsonObject.get(GROUP_CATEGORY_TYPES);
-                if(groupCategoryTypes != null) {
-                    for(int j = 0; j < groupCategoryTypes.size(); j++) {
-                        for(Category cat : Category.values()) {
-                            if(cat.toString().equals(groupCategoryTypes.toString())) {
+                if (groupCategoryTypes != null) {
+                    for (int j = 0; j < groupCategoryTypes.size(); j++) {
+                        for (Category cat : Category.values()) {
+                            if (cat.toString().equals(groupCategoryTypes.toString())) {
                                 groupCategories.add(cat);// loop through category enum.
                             }
                         }
-                        //groupCategories.add((Category)groupCategoryTypes.get(j));
+                        // groupCategories.add((Category)groupCategoryTypes.get(j));
                     }
                 }
                 JSONArray groupMembers = (JSONArray) groupJsonObject.get(GROUP_MEMBERS);
-                if(groupMembers != null) {
-                    for(int j = 0; j < groupMembers.size(); j++) {
+                if (groupMembers != null) {
+                    for (int j = 0; j < groupMembers.size(); j++) {
                         groupMemberList.add(UUID.fromString((String) groupMembers.get(j)));
                     }
                 }
@@ -156,29 +158,16 @@ public class DataReader extends JsonConstants {
                 int groupRating = ((Long) groupJsonObject.get(GROUP_RATING)).intValue();
                 String groupAuthor = (String) groupJsonObject.get(GROUP_AUTHOR);
                 JSONArray groupMessages = (JSONArray) groupJsonObject.get(GROUP_MESSAGES);
-                if(groupMessages != null) {
-                    for(int j = 0; j < groupMessages.size(); j++) {
-                        groupMessageList.add((String)groupMessages.get(j));
+                if (groupMessages != null) {
+                    for (int j = 0; j < groupMessages.size(); j++) {
+                        groupMessageList.add((String) groupMessages.get(j));
                     }
                 }
                 String groupAuthorContact = (String) groupJsonObject.get(GROUP_AUTHOR_CONTACT);
 
                 groups.add(new Group(groupID, groupName, groupUpcomingEvent, groupCategories,
-                                    groupMemberList, groupDescription, groupRating, groupAuthor, groupMessageList,
-                                    groupAuthorContact));
-
-                /**
-                 * GROUP_ID":"e3ed1534-72fe-4d8c-8501-39765454e951",
-        "GROUP_NAME":"Builders of America",
-        "GROUP_UPCOMING_EVENTS" : ["None"],
-        "GROUP_CATEGORY_TYPES" : ["Outdoors", "Construction"],
-        "GROUP_MEMBERS" : ["fd2a1d6d-3419-401c-a021-cbd2b444d86c", "3cdec68b-0b06-4a8a-8bf3-76390bce6ae9", "Robert Builder"],
-        "GROUP_DESCRIPTION" : "This group is for the purpose of helping others who have suffered at the hands of natural disasters, fires, etc.",
-        "GROUP_RATING" : 5,
-        "GROUP_AUTHOR" : "Robert Builder",
-        "GROUP_MESSAGES" : ["Hello, everyone reading this. I hope you would like to come and help us help others"],
-        "GROUP_AUTHOR_CONTACT"
-                 */
+                        groupMemberList, groupDescription, groupRating, groupAuthor, groupMessageList,
+                        groupAuthorContact));
             }
 
             return groups;
@@ -197,24 +186,24 @@ public class DataReader extends JsonConstants {
 
         System.out.println("Hello, this is a test of the json filereader class");
         allusers = DataReader.getUsers();
-        for(User user: allusers) {
+        for (User user : allusers) {
             System.out.println(user.firstName + " " + user.lastName);
             System.out.println(user.email);
             System.out.println(user.groupsJoined);
-            System.out.println(); //to make look cleaner
+            System.out.println(); // to make look cleaner
             System.out.println(user.categoriesOfInterest);
             System.out.println();
             System.out.println(user.authorOf);
             System.out.println();
             System.out.println();
         }
-        //System.out.println(users.toString());
+        // System.out.println(users.toString());
         // System.out.println(users);
 
         System.out.println("This is a test of the event information.");
         ArrayList<Event> allevents;
         allevents = DataReader.getEvents();
-        for(Event event : allevents) {
+        for (Event event : allevents) {
             System.out.println(event.getEventName() + " ");
             System.out.println(event.getEventAddress());
         }
@@ -222,7 +211,7 @@ public class DataReader extends JsonConstants {
         System.out.println("This is a test of the group information.");
         ArrayList<Group> allGroups;
         allGroups = DataReader.getGroups();
-        for(Group group : allGroups) {
+        for (Group group : allGroups) {
             System.out.println("Group Name: " + group.getGroupName());
             System.out.println("Group Description: " + group.getDescription());
         }
